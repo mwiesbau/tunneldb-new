@@ -36,7 +36,7 @@ test:
 production:
   adapter: mysql
   encoding: utf8
-  database: tunneldb-new-production
-  username: root
+  database: tunneldb
+  username: webadmin
   password: www.apc.com
   host: localhost

@@ -7,3 +7,14 @@ if RAILS_ENV == "development"
     ENV['DYLD_LIBRARY_PATH'] = Paperclip.options[:magick_home] + "/lib"
   end
 end 
+
+
+if RAILS_ENV == "production"
+ Paperclip.options[:command_path] = '/usr/bin'
+ Paperclip.options[:magick_home] = '/usr/bin'
+
+  if Paperclip.options[:magick_home]
+    ENV['MAGICK_HOME'] = Paperclip.options[:magick_home]
+    ENV['DYLD_LIBRARY_PATH'] = Paperclip.options[:magick_home] + "/lib"
+  end
+end 

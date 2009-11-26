@@ -2,7 +2,7 @@
 # REQUIRED VARIABLES
 # =============================================================================
 set :application, "tunneldb-new"
-set :repository,  "git://github.com/mwiesbau/tunneldb-new.git"
+set :repository,  "git@github.com:mwiesbau/tunneldb-new.git"
 
 # =============================================================================
 # ROLES
@@ -16,8 +16,11 @@ role :db,  "webserver"
 # =============================================================================
 # OPTIONAL VARIABLES
 # =============================================================================
+default_run_options[:pty] = true 
 set :deploy_to, "/var/www/apps/tunneldb-new"
 set :scm, :git
+set :scm_username, "mwiesbau"
+set :scm_passphrase, "Intelcore2duo'"
 set :branch, "master"
 # set :deploy_via, :remote_cache
 set :use_sudo, false
