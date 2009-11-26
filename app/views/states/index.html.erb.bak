@@ -1,0 +1,30 @@
+<div  class="wrapper">
+<h1>Listing states</h1>
+
+<table class="list">
+  <tr>
+    <th>Symbol</th>
+   <th>Name</th>
+    <th></th>
+   
+    
+  </tr>
+
+  
+  
+  
+<% for state in @states %>
+  <tr>
+    <td><%=h state.symbol %></td>
+    <td><%=h state.name %> | 
+    <td><%= link_to 'Show', state %> | 
+    <td><%= link_to 'Edit', edit_state_path(state) %> | 
+    <td><%= link_to 'Destroy', state, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New state', new_state_path %>
+</div>

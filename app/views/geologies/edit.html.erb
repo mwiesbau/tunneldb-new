@@ -1,0 +1,18 @@
+
+<h1>Editing geology</h1>
+
+<%= error_messages_for :geology %>
+
+<% form_for(@geology) do |f| %>
+  <p>
+    <b>Name</b><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @geology %> |
+<%= link_to 'Back', geologies_path %>

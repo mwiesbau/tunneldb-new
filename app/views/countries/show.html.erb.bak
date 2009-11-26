@@ -1,0 +1,53 @@
+<div  class="wrapper">
+
+<p>
+  <b>Symbol:</b>
+  <%=h @country.symbol %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @country.name %>
+</p>
+
+
+
+<table class="list">
+  <tr>
+    <th>Symbol</th>
+   <th>Name</th>
+    <th></th>
+   
+    
+  </tr>
+
+  
+  
+  
+<% for state in @states %>
+  <tr>
+    <td><%=h state.symbol %></td>
+    <td><%=h state.name %></td>
+    <td><%= link_to 'Show', state %> | 
+    <%= link_to 'Edit', edit_state_path(state) %> | 
+    <%= link_to 'Destroy', state, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%= link_to 'Edit', edit_country_path(@country) %> |
+<%= link_to 'Back', countries_path %>
+</div>

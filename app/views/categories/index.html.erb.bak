@@ -1,0 +1,21 @@
+<h1>Listing categories</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% for category in @categories %>
+  <tr>
+    <td><%=h category.name %></td>
+    <td><%= link_to '&nbsp Show |', category %></td>
+    <td><%= link_to '&nbsp Edit |', edit_category_path(category) %></td>
+    <td><%= link_to '&nbsp Delete', category, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New category', new_category_path %>
+<%= link_to 'Back to Projects', projects_path %>

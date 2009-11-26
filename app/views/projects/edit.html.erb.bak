@@ -1,0 +1,116 @@
+<div  class="wrapper">
+<h1>Edit Project</h1>
+<br>
+<% form_for :project, @project, :url => {:action => 'update', :id => @project.id} do |f| %>
+
+<table class = "form">
+<tr>
+<td width=50%;>
+<label for="project_number">Number</label>:<%= text_field 'project', 'number' %>
+</td>
+<td width=50%;>
+<label for="project_name">Name</label>:<%= text_field 'project', 'name' %>
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="project_activity">Activity</label>:
+<%= collection_select(:project,:activity_id,@activities,:id,:name) %>
+</td>
+<td>
+<label for="project_owner">Owner</label>:
+<%= collection_select(:project,:owner_id,@owners,:id,:name) %>
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="project_Designer">Designer</label>:
+<%= collection_select(:project,:designer_id,@designers,:id,:name) %>
+</td>
+<td>
+<label for="project_contractor">Contractor</label>:
+<%= collection_select(:project,:contractor_id,@contractors,:id,:name) %>
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="project_client">Client</label>:
+<%= collection_select(:project,:client_id,@clients,:id,:name) %>
+</td>
+<td>
+<label for="project_country">Country</label>:
+<%= collection_select(:project,:country_id,@countries,:id,:name) %>
+</td>
+</tr>
+
+</table>
+
+<p><label for="project_description">Description</label><br/>
+<%= text_area 'project', 'description', :cols =>10, :rows => 10 %></p>
+
+<p><label for="project_technical_data">Technical Data</label><br/>
+<%= text_area 'project', 'technical_data', :cols =>10, :rows => 10 %></p>
+
+<p>
+</p>
+<table width = 100%>
+<tr>
+<table class = "form">
+<tr>
+<td width=25%;><%= link_to 'Category', {:controller => 'categories' }  %><br/>
+<% for category in @categories %>
+	<input type ="checkbox",
+	id="<%=category.id%>",
+	name="category_ids[]",
+	value="<%=category.id%>",
+	<% if @project.categories.include? category%>checked="checked"<%end%>
+	> <%=category.name%><br>
+	<% end %>
+</td>
+
+<td width=25%;><label for="project_geology">Geology</label><br/>
+<% for geology in @geologies %>
+	<input type ="checkbox",
+	id="<%=geology.id%>",
+	name="geology_ids[]",
+	value="<%=geology.id%>",
+	<% if @project.geologies.include? geology%>checked="checked"<%end%>
+	> <%=geology.name%><br>
+	<% end %>
+</td>
+
+
+<td width=25%;><label for="project_service">Service</label><br/>
+<% for service in @services %>
+	<input type ="checkbox",
+	id="<%=service.id%>",
+	name="service_ids[]",
+	value="<%=service.id%>",
+	<% if @project.services.include? service%>checked="checked"<%end%>
+	> <%=service.name%><br>
+	<% end %>
+</td>
+
+
+
+</tr>
+</table>
+
+<p>
+ </p>
+
+
+<p>
+ </p>
+
+
+
+
+
+<%= submit_tag "Save" %>
+<% end  %>
+<%= link_to 'Back', {:action => 'index'} %>
+</div>

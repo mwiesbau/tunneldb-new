@@ -1,0 +1,87 @@
+(in C:/InstantRails-2.0-win/rails_apps/tunneldb-new)
+               projects GET    /projects                        {:controller=>"projects", :action=>"index"}
+     formatted_projects GET    /projects.:format                {:controller=>"projects", :action=>"index"}
+                        POST   /projects                        {:controller=>"projects", :action=>"create"}
+                        POST   /projects.:format                {:controller=>"projects", :action=>"create"}
+            new_project GET    /projects/new                    {:controller=>"projects", :action=>"new"}
+  formatted_new_project GET    /projects/new.:format            {:controller=>"projects", :action=>"new"}
+           edit_project GET    /projects/:id/edit               {:controller=>"projects", :action=>"edit"}
+ formatted_edit_project GET    /projects/:id/edit.:format       {:controller=>"projects", :action=>"edit"}
+                project GET    /projects/:id                    {:controller=>"projects", :action=>"show"}
+      formatted_project GET    /projects/:id.:format            {:controller=>"projects", :action=>"show"}
+                        PUT    /projects/:id                    {:controller=>"projects", :action=>"update"}
+                        PUT    /projects/:id.:format            {:controller=>"projects", :action=>"update"}
+                        DELETE /projects/:id                    {:controller=>"projects", :action=>"destroy"}
+                        DELETE /projects/:id.:format            {:controller=>"projects", :action=>"destroy"}
+                 states GET    /states                          {:controller=>"states", :action=>"index"}
+       formatted_states GET    /states.:format                  {:controller=>"states", :action=>"index"}
+                        POST   /states                          {:controller=>"states", :action=>"create"}
+                        POST   /states.:format                  {:controller=>"states", :action=>"create"}
+              new_state GET    /states/new                      {:controller=>"states", :action=>"new"}
+    formatted_new_state GET    /states/new.:format              {:controller=>"states", :action=>"new"}
+             edit_state GET    /states/:id/edit                 {:controller=>"states", :action=>"edit"}
+   formatted_edit_state GET    /states/:id/edit.:format         {:controller=>"states", :action=>"edit"}
+                  state GET    /states/:id                      {:controller=>"states", :action=>"show"}
+        formatted_state GET    /states/:id.:format              {:controller=>"states", :action=>"show"}
+                        PUT    /states/:id                      {:controller=>"states", :action=>"update"}
+                        PUT    /states/:id.:format              {:controller=>"states", :action=>"update"}
+                        DELETE /states/:id                      {:controller=>"states", :action=>"destroy"}
+                        DELETE /states/:id.:format              {:controller=>"states", :action=>"destroy"}
+              countries GET    /countries                       {:controller=>"countries", :action=>"index"}
+    formatted_countries GET    /countries.:format               {:controller=>"countries", :action=>"index"}
+                        POST   /countries                       {:controller=>"countries", :action=>"create"}
+                        POST   /countries.:format               {:controller=>"countries", :action=>"create"}
+            new_country GET    /countries/new                   {:controller=>"countries", :action=>"new"}
+  formatted_new_country GET    /countries/new.:format           {:controller=>"countries", :action=>"new"}
+           edit_country GET    /countries/:id/edit              {:controller=>"countries", :action=>"edit"}
+ formatted_edit_country GET    /countries/:id/edit.:format      {:controller=>"countries", :action=>"edit"}
+                country GET    /countries/:id                   {:controller=>"countries", :action=>"show"}
+      formatted_country GET    /countries/:id.:format           {:controller=>"countries", :action=>"show"}
+                        PUT    /countries/:id                   {:controller=>"countries", :action=>"update"}
+                        PUT    /countries/:id.:format           {:controller=>"countries", :action=>"update"}
+                        DELETE /countries/:id                   {:controller=>"countries", :action=>"destroy"}
+                        DELETE /countries/:id.:format           {:controller=>"countries", :action=>"destroy"}
+               services GET    /services                        {:controller=>"services", :action=>"index"}
+     formatted_services GET    /services.:format                {:controller=>"services", :action=>"index"}
+                        POST   /services                        {:controller=>"services", :action=>"create"}
+                        POST   /services.:format                {:controller=>"services", :action=>"create"}
+            new_service GET    /services/new                    {:controller=>"services", :action=>"new"}
+  formatted_new_service GET    /services/new.:format            {:controller=>"services", :action=>"new"}
+           edit_service GET    /services/:id/edit               {:controller=>"services", :action=>"edit"}
+ formatted_edit_service GET    /services/:id/edit.:format       {:controller=>"services", :action=>"edit"}
+                service GET    /services/:id                    {:controller=>"services", :action=>"show"}
+      formatted_service GET    /services/:id.:format            {:controller=>"services", :action=>"show"}
+                        PUT    /services/:id                    {:controller=>"services", :action=>"update"}
+                        PUT    /services/:id.:format            {:controller=>"services", :action=>"update"}
+                        DELETE /services/:id                    {:controller=>"services", :action=>"destroy"}
+                        DELETE /services/:id.:format            {:controller=>"services", :action=>"destroy"}
+              geologies GET    /geologies                       {:controller=>"geologies", :action=>"index"}
+    formatted_geologies GET    /geologies.:format               {:controller=>"geologies", :action=>"index"}
+                        POST   /geologies                       {:controller=>"geologies", :action=>"create"}
+                        POST   /geologies.:format               {:controller=>"geologies", :action=>"create"}
+            new_geology GET    /geologies/new                   {:controller=>"geologies", :action=>"new"}
+  formatted_new_geology GET    /geologies/new.:format           {:controller=>"geologies", :action=>"new"}
+           edit_geology GET    /geologies/:id/edit              {:controller=>"geologies", :action=>"edit"}
+ formatted_edit_geology GET    /geologies/:id/edit.:format      {:controller=>"geologies", :action=>"edit"}
+                geology GET    /geologies/:id                   {:controller=>"geologies", :action=>"show"}
+      formatted_geology GET    /geologies/:id.:format           {:controller=>"geologies", :action=>"show"}
+                        PUT    /geologies/:id                   {:controller=>"geologies", :action=>"update"}
+                        PUT    /geologies/:id.:format           {:controller=>"geologies", :action=>"update"}
+                        DELETE /geologies/:id                   {:controller=>"geologies", :action=>"destroy"}
+                        DELETE /geologies/:id.:format           {:controller=>"geologies", :action=>"destroy"}
+             categories GET    /categories                      {:controller=>"categories", :action=>"index"}
+   formatted_categories GET    /categories.:format              {:controller=>"categories", :action=>"index"}
+                        POST   /categories                      {:controller=>"categories", :action=>"create"}
+                        POST   /categories.:format              {:controller=>"categories", :action=>"create"}
+           new_category GET    /categories/new                  {:controller=>"categories", :action=>"new"}
+ formatted_new_category GET    /categories/new.:format          {:controller=>"categories", :action=>"new"}
+          edit_category GET    /categories/:id/edit             {:controller=>"categories", :action=>"edit"}
+formatted_edit_category GET    /categories/:id/edit.:format     {:controller=>"categories", :action=>"edit"}
+               category GET    /categories/:id                  {:controller=>"categories", :action=>"show"}
+     formatted_category GET    /categories/:id.:format          {:controller=>"categories", :action=>"show"}
+                        PUT    /categories/:id                  {:controller=>"categories", :action=>"update"}
+                        PUT    /categories/:id.:format          {:controller=>"categories", :action=>"update"}
+                        DELETE /categories/:id                  {:controller=>"categories", :action=>"destroy"}
+                        DELETE /categories/:id.:format          {:controller=>"categories", :action=>"destroy"}
+                               /:controller/:action/:id         
+                               /:controller/:action/:id.:format 

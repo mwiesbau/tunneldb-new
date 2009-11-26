@@ -1,0 +1,28 @@
+<div  class="wrapper">
+<h1>Listing Countries</h1>
+<p>
+    <b>Symbol</b><br />
+    <%= text_field %>
+  </p>
+<table class="list">
+  <tr>
+    <th>Symbol</th>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% for country in @countries %>
+  <tr>
+    <td><%=link_to country.symbol, country %></td>
+    <td><%=h country.name %></td>
+    <td><%= link_to 'Edit', edit_country_path(country) %></td>
+    <td><%= link_to 'Destroy', country, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New country', new_country_path %>
+</div>

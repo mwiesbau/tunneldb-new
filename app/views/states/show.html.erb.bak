@@ -1,0 +1,21 @@
+<div  class="wrapper">
+<p>
+  <b>Symbol:</b>
+  <%=h @state.symbol %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @state.name %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @country.name %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_state_path(@state) %> |
+<%= link_to 'Back', states_path %>
+</div>
