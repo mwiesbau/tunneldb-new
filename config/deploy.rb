@@ -2,7 +2,7 @@
 # REQUIRED VARIABLES
 # =============================================================================
 set :application, "tunneldb-new"
-set :repository,  "git@github.com:mwiesbau/tunneldb-new.git"
+set :repository,  "git://github.com/mwiesbau/tunneldb-new.git"
 
 # =============================================================================
 # ROLES
@@ -19,7 +19,7 @@ role :db,  "webserver"
 set :deploy_to, "/var/www/apps/tunneldb-new"
 set :scm, :git
 set :branch, "master"
-set :deploy_via, :remote_cache
+# set :deploy_via, :remote_cache
 set :use_sudo, false
 set :user, "webadmin"
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
