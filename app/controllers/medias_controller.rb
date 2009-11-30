@@ -25,7 +25,7 @@ class MediasController < ApplicationController
   # GET /medias/new.xml
   def new
     @media = Media.new
-
+    @projects = Project.find(:all)
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @media }
@@ -41,7 +41,7 @@ class MediasController < ApplicationController
   # POST /medias.xml
   def create
     @media = Media.new(params[:media])
-
+    
     respond_to do |format|
       if @media.save
         flash[:notice] = 'Media was successfully created.'
@@ -50,6 +50,7 @@ class MediasController < ApplicationController
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @media.errors, :status => :unprocessable_entity }
+		@projects = Project.find(:all)
       end
     end
   end

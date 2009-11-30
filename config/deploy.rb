@@ -17,7 +17,7 @@ role :db,  "webserver"
 # OPTIONAL VARIABLES
 # =============================================================================
 default_run_options[:pty] = true 
-set :deploy_to, "/var/www/apps/tunneldb-new"
+set :deploy_to, "/var/www/apps/#{application}"
 set :scm, :git
 set :scm_username, "mwiesbau"
 set :scm_passphrase, "Intelcore2duo'"

@@ -17,8 +17,8 @@
 development:
   adapter: mysql
   encoding: utf8
-  database: tunneldb-new-development
-  username: root
+  database: tunneldb
+  username: webadmin
   password: www.apc.com
   host: localhost
 
@@ -28,8 +28,8 @@ development:
 test:
   adapter: mysql
   encoding: utf8
-  database: tunneldb-new-test
-  username: root
+  database: tunneldb
+  username: webadmin
   password: www.apc.com
   host: localhost
 

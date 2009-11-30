@@ -1,277 +1,258 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
-  <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <title>Ruby on Rails: Welcome aboard</title>
-    <style type="text/css" media="screen">
-      body {
-        margin: 0;
-        margin-bottom: 25px;
-        padding: 0;
-        background-color: #f0f0f0;
-        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
-        font-size: 13px;
-        color: #333;
-      }
-      
-      h1 {
-        font-size: 28px;
-        color: #000;
-      }
-      
-      a  {color: #03c}
-      a:hover {
-        background-color: #03c;
-        color: white;
-        text-decoration: none;
-      }
-      
-      
-      #page {
-        background-color: #f0f0f0;
-        width: 750px;
-        margin: 0;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      
-      #content {
-        float: left;
-        background-color: white;
-        border: 3px solid #aaa;
-        border-top: none;
-        padding: 25px;
-        width: 500px;
-      }
-      
-      #sidebar {
-        float: right;
-        width: 175px;
-      }
-
-      #footer {
-        clear: both;
-      }
-      
-
-      #header, #about, #getting-started {
-        padding-left: 75px;
-        padding-right: 30px;
-      }
+<link href="./stylesheets/header.css" rel="stylesheet" type="text/css">
+<link href="./stylesheets/style.css" rel="stylesheet" type="text/css">
 
 
-      #header {
-        background-image: url("images/rails.png");
-        background-repeat: no-repeat;
-        background-position: top left;
-        height: 64px;
-      }
-      #header h1, #header h2 {margin: 0}
-      #header h2 {
-        color: #888;
-        font-weight: normal;
-        font-size: 16px;
-      }
-      
-      
-      #about h3 {
-        margin: 0;
-        margin-bottom: 10px;
-        font-size: 14px;
-      }
-      
-      #about-content {
-        background-color: #ffd;
-        border: 1px solid #fc0;
-        margin-left: -11px;
-      }
-      #about-content table {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-size: 11px;
-        border-collapse: collapse;
-      }
-      #about-content td {
-        padding: 10px;
-        padding-top: 3px;
-        padding-bottom: 3px;
-      }
-      #about-content td.name  {color: #555}
-      #about-content td.value {color: #000}
-      
-      #about-content.failure {
-        background-color: #fcc;
-        border: 1px solid #f00;
-      }
-      #about-content.failure p {
-        margin: 0;
-        padding: 10px;
-      }
-      
-      
-      #getting-started {
-        border-top: 1px solid #ccc;
-        margin-top: 25px;
-        padding-top: 15px;
-      }
-      #getting-started h1 {
-        margin: 0;
-        font-size: 20px;
-      }
-      #getting-started h2 {
-        margin: 0;
-        font-size: 14px;
-        font-weight: normal;
-        color: #333;
-        margin-bottom: 25px;
-      }
-      #getting-started ol {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #getting-started li {
-        font-size: 18px;
-        color: #888;
-        margin-bottom: 25px;
-      }
-      #getting-started li h2 {
-        margin: 0;
-        font-weight: normal;
-        font-size: 18px;
-        color: #333;
-      }
-      #getting-started li p {
-        color: #555;
-        font-size: 13px;
-      }
-      
-      
-      #search {
-        margin: 0;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        font-size: 11px;
-      }
-      #search input {
-        font-size: 11px;
-        margin: 2px;
-      }
-      #search-text {width: 170px}
-      
-      
-      #sidebar ul {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #sidebar ul h3 {
-        margin-top: 25px;
-        font-size: 16px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #ccc;
-      }
-      #sidebar li {
-        list-style-type: none;
-      }
-      #sidebar ul.links li {
-        margin-bottom: 5px;
-      }
-      
-    </style>
-    <script type="text/javascript" src="javascripts/prototype.js"></script>
-    <script type="text/javascript" src="javascripts/effects.js"></script>
-    <script type="text/javascript">
-      function about() {
-        if (Element.empty('about-content')) {
-          new Ajax.Updater('about-content', 'rails/info/properties', {
-            method:     'get',
-            onFailure:  function() {Element.classNames('about-content').add('failure')},
-            onComplete: function() {new Effect.BlindDown('about-content', {duration: 0.25})}
-          });
-        } else {
-          new Effect[Element.visible('about-content') ? 
-            'BlindUp' : 'BlindDown']('about-content', {duration: 0.25});
-        }
-      }
-      
-      window.onload = function() {
-        $('search-text').value = '';
-        $('search').onsubmit = function() {
-          $('search-text').value = 'site:rubyonrails.org ' + $F('search-text');
-        }
-      }
-    </script>
-  </head>
-  <body>
-    <div id="page">
-      <div id="sidebar">
-        <ul id="sidebar-items">
-          <li>
-            <form id="search" action="http://www.google.com/search" method="get">
-              <input type="hidden" name="hl" value="en" />
-              <input type="text" id="search-text" name="q" value="site:rubyonrails.org " />
-              <input type="submit" value="Search" /> the Rails site
-            </form>
-          </li>
-        
-          <li>
-            <h3>Join the community</h3>
-            <ul class="links">
-              <li><a href="http://www.rubyonrails.org/">Ruby on Rails</a></li>
-              <li><a href="http://weblog.rubyonrails.org/">Official weblog</a></li>
-              <li><a href="http://lists.rubyonrails.org/">Mailing lists</a></li>
-              <li><a href="http://wiki.rubyonrails.org/rails/pages/IRC">IRC channel</a></li>
-              <li><a href="http://wiki.rubyonrails.org/">Wiki</a></li>
-              <li><a href="http://dev.rubyonrails.org/">Bug tracker</a></li>
+<div id="header"><%= image_tag('logo.png') %>
+  <form action="/search" name="search" method="">
+    <a href="#>HOME</a> | <a href="http://dr-sauer.com/site">SITE INDEX</a> | <a href="#">LOG IN</a> |
+    <label for="keyword">SEARCH
+      <input id="keyword" name="keyword" class="text" type="text">
+    </label>
+    <input src="/images/submit_arrow.png" type="image">
+  </form>
+</div>
+<div id="top-nav">
+	<ul>
+			<li class=""><label for="keyword"><a href="http://dr-sauer.com"> <span>HOME</span></a></label></li>
+			 <li class=""><label for="keyword"><a href="/projects"><span>PROJECTS</span></a></label></li>
+			 <li class=""><label for="keyword"><a href="/medias"><span>MEDIA</span></a></label></li>
+			 <li class=""><label for="keyword"><a href="#"><span>RISK</span></a></label></li>
+			 
+	</ul>
+</div>
+
+
+
+<!-- <div id="top-nav">
+ <ul>
+          <li class="">
+            <label for="keyword"><a href=
+            "/web/guest/company"><span>COMPANY</span></a></label>
+            <ul class="child-menu">
+              <li>
+                <label for="keyword"><a href=
+                "/web/guest/19">Overview</a></label>
+              </li>
+              <li>
+                <label for="keyword"><a href=
+                "/web/guest/company/company_history">Company
+                History</a></label>
+              </li>
+              <li>
+                <label for="keyword"><a href=
+                "/web/guest/company/office_locations">Office
+                Locations</a></label>
+              </li>
+              <li>
+                <label for="keyword"><a href="/web/guest/key_staff">Key
+                Staff</a></label>
+              </li>
+              <li>
+                <label for="keyword"><a href="/web/guest/23">Owners/
+                Agencies</a></label>
+              </li>
+              <li>
+                <label for="keyword"><a href=
+                "/web/guest/company/clients">Clients</a></label>
+              </li>
             </ul>
           </li>
-          
-          <li>
-            <h3>Browse the documentation</h3>
-            <ul class="links">
-              <li><a href="http://api.rubyonrails.org/">Rails API</a></li>
-              <li><a href="http://stdlib.rubyonrails.org/">Ruby standard library</a></li>
-              <li><a href="http://corelib.rubyonrails.org/">Ruby core</a></li>
+          <li class="">
+            <label for="keyword"><a href=
+            "/web/guest/services"><span>SERVICES</span></a></label>
+            <ul class="child-menu">
+              <li>
+                <label for="keyword"><a href=
+                "/web/guest/overview">Overview</a></label>
+              </li>
+              <li>
+                <label for="keyword"><a href=
+                "/web/guest/services/tunnel_design_and_specialties">Tunnel
+                Design &amp; Specialties</a></label>
+              </li>
+              <li>
+                <label for="keyword"><a href=
+                "/web/guest/services/geotechnical_engineering">Geotechnical
+                Engineering</a></label>
+              </li>
+              <li>
+                <label for="keyword"><a href=
+                "/web/guest/services/waterproofing_and_water_control">Waterproofing
+                &amp; Water Control</a></label>
+              </li>
+              <li>
+                <label for="keyword"><a href=
+                "/web/guest/services/site_supervision_and_cm_qa_qc">Site
+                Supervision &amp; CM, QA/QC</a></label>
+              </li>
+              <li>
+                <label for="keyword"><a href=
+                "/web/guest/services/documentation_and_monitoring">Documentation
+                &amp; Monitoring</a></label>
+              </li>
+              <li>
+                <label for="keyword"><a href=
+                "/web/guest/services/inspection_and_maintainance">Inspection
+                &amp; Maintainance</a></label>
+              </li>
+              <li>
+                <label for="keyword"><a href=
+                "/web/guest/services/rehabilitation_and_tunnel_widening">Rehabilitation
+                &amp; Tunnel Widening</a></label>
+              </li>
+            </ul>
+          </li>
+          <li class="">
+            <label for="keyword"><a href=
+            "/web/guest/projects"><span>PROJECTS</span></a></label>
+            <ul class="child-menu">
+              <li>
+                <label for="keyword"><a href=
+                "/web/guest/projects/overview">Overview</a></label>
+              </li>
+              <li>
+                <label for="keyword"><a href=
+                "/web/guest/projects/featured_projects">Featured
+                Projects</a></label>
+              </li>
+              <li>
+                <label for="keyword"><a href=
+                "/web/guest/projects/advanced_search">Advanced
+                Search</a></label>
+              </li>
+            </ul>
+          </li>
+          <li class="">
+            <label for="keyword"><a href=
+            "/web/guest/news"><span>NEWS</span></a></label>
+            <ul class="child-menu">
+              <li>
+                <label for="keyword"><a href=
+                "/web/guest/29">Overview</a></label>
+              </li>
+              <li>
+                <label for="keyword"><a href="/web/guest/30">Industry
+                News</a></label>
+              </li>
+              <li>
+                <label for="keyword"><a href="/web/guest/31">Events</a></label>
+              </li>
+            </ul>
+          </li>
+          <li class="">
+            <label for="keyword"><a href=
+            "/web/guest/technical_info"><span>TECHNICAL INFO</span></a></label>
+            <ul class="child-menu">
+              <li>
+                <label for="keyword"><a href=
+                "/web/guest/technical_info/overview">Overview</a></label>
+              </li>
+              <li>
+                <label for="keyword"><a href=
+                "/web/guest/technical_info/natm">NATM</a></label>
+              </li>
+              <li>
+                <label for="keyword"><a href=
+                "/web/guest/technical_info/tunnel_design">Tunnel
+                Design</a></label>
+              </li>
+              <li>
+                <label for="keyword"><a href=
+                "/web/guest/technical_info/special_construction_methods">Special
+                Construction Methods</a></label>
+              </li>
+              <li>
+                <label for="keyword"><a href=
+                "/web/guest/technical_info/geotechnical_engineering">Geotechnical
+                Engineering</a></label>
+              </li>
+              <li>
+                <label for="keyword"><a href=
+                "/web/guest/technical_info/monitoring_and_documentation">Monitoring
+                &amp; Documentation</a></label>
+              </li>
+              <li>
+                <label for="keyword"><a href=
+                "/web/guest/technical_info/tunnel_inspection">Tunnel
+                Inspection</a></label>
+              </li>
+              <li>
+                <label for="keyword"><a href=
+                "/web/guest/technical_info/tunnel_widening-and_rehabilitation">Tunnel
+                Widening &amp; Rehabilitation</a></label>
+              </li>
+              <li>
+                <label for="keyword"><a href=
+                "/web/guest/technical_info/waterproofing-and-water-control">Waterproofing
+                &amp; Water Control</a></label>
+              </li>
+              <li>
+                <label for="keyword"><a href="/web/guest/43">Project Management
+                &amp; Contracting Strategies</a></label>
+              </li>
+            </ul>
+          </li>
+          <li class="">
+            <label for="keyword"><a href=
+            "/web/guest/resources"><span>RESOURCES</span></a></label>
+            <ul class="child-menu">
+              <li>
+                <label for="keyword"><a href=
+                "/web/guest/overview1">Overview</a></label>
+              </li>
+              <li>
+                <label for="keyword"><a href=
+                "/web/guest/resources/presentations_and_lectures">Presentations
+                and Lectures</a></label>
+              </li>
+              <li>
+                <label for="keyword"><a href=
+                "/web/guest/resources/publications">Publications</a></label>
+              </li>
+              <li>
+                <label for="keyword"><a href=
+                "/web/guest/resources/links">Links</a></label>
+              </li>
+            </ul>
+          </li>
+          <li class="">
+            <label for="keyword"><a href=
+            "/web/guest/faqs"><span>FAQS</span></a></label>
+            <ul class="child-menu">
+              <li>
+                <label for="keyword"><a href=
+                "/web/guest/28">Overview</a></label>
+              </li>
+            </ul>
+          </li>
+          <li class="">
+            <label for="keyword"><a href=
+            "/web/guest/careers"><span>CAREERS</span></a></label>
+            <ul class="child-menu">
+              <li>
+                <label for="keyword"><a href=
+                "/web/guest/careers/overview">Overview</a></label>
+              </li>
+              <li>
+                <label for="keyword"><a href=
+                "/web/guest/careers/internships">Internships</a></label>
+              </li>
+            </ul>
+          </li>
+          <li class="">
+            <label for="keyword"><a href="/web/guest/contact_us"><span>CONTACT
+            US</span></a></label>
+            <ul class="child-menu">
+              <li>
+                <label for="keyword"><a href=
+                "/web/guest/25">Overview</a></label>
+              </li>
+              <li>
+                <label for="keyword"><a href="/web/guest/27">Office
+                Locations</a></label>
+              </li>
             </ul>
           </li>
         </ul>
-      </div>
 
-      <div id="content">
-        <div id="header">
-          <h1>Welcome aboard</h1>
-          <h2>You&rsquo;re riding Ruby on Rails!</h2>
-        </div>
-
-        <div id="about">
-          <h3><a href="rails/info/properties" onclick="about(); return false">About your application&rsquo;s environment</a></h3>
-          <div id="about-content" style="display: none"></div>
-        </div>
-        
-        <div id="getting-started">
-          <h1>Getting started</h1>
-          <h2>Here&rsquo;s how to get rolling:</h2>
-          
-          <ol>
-            <li>
-              <h2>Create your databases and edit <tt>config/database.yml</tt></h2>
-              <p>Rails needs to know your login and password.</p>
-            </li>
-          
-            <li>
-              <h2>Use <tt>script/generate</tt> to create your models and controllers</h2>
-              <p>To see all available options, run it without parameters.</p>
-            </li>
-            
-            <li>
-              <h2>Set up a default route and remove or rename this file</h2>
-              <p>Routes are set up in config/routes.rb.</p>
-            </li>
-          </ol>
-        </div>
-      </div>
-      
-      <div id="footer">&nbsp;</div>
-    </div>
-  </body>
-</html>
+</div> -->

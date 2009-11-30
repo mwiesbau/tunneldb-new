@@ -17,6 +17,7 @@ class Project < ActiveRecord::Base
 	belongs_to			:type
 	has_and_belongs_to_many	:tunneling_under
 	has_and_belongs_to_many	:groundwater_control
+	belongs_to				:media
 	
 	validates_presence_of :number, :name, :city, :message=>"Error Message"
 

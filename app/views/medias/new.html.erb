@@ -4,6 +4,10 @@
   <%= f.error_messages %>
 
   <p>
+  <%= collection_select("project","media_id",@projects,"id","number") %>
+ </p> 
+  
+  <p>
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </p>

@@ -1,19 +1,21 @@
 <h1>Listing medias</h1>
 
-<table>
+<table class='list'>
   <tr>
+     <th>Image</th>
     <th>Title</th>
     <th>Description</th>
+	<th></th>
+	<th</th>
   </tr>
 
 <% @medias.each do |media| %>
-  <tr>
+  <tr class="<%= alternate %>">
     
-	<td><%= image_tag media.photo.url(:small) rescue nil %></td>
+	<td><%=image_tag media.photo.url(:small) rescue nil %></td>
 	
-	<td><%=h media.title %></td>
+	<td><%= link_to media.title, media %></td>
     <td><%=h media.description %></td>
-    <td><%= link_to 'Show', media %></td>
     <td><%= link_to 'Edit', edit_media_path(media) %></td>
     <td><%= link_to 'Destroy', media, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>

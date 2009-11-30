@@ -19,6 +19,12 @@
   <%= @project.currency.name %>
 <% end %>
 <br>
+
+<label>Image:</label><%= @project.media.title rescue nil%><br>
+<%= image_tag @project.media.photo.url(:medium) rescue nil %><br>
+
+
+
 <label>Units:</label><br>
 <% if @project.unit %>
   <%= @project.unit.name %>
