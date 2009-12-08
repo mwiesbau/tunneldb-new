@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 27) do
+ActiveRecord::Schema.define(:version => 28) do
 
   create_table "activities", :force => true do |t|
     t.string   "symbol",     :default => "", :null => false
@@ -116,7 +116,7 @@ ActiveRecord::Schema.define(:version => 27) do
     t.datetime "updated_at"
   end
 
-  create_table "medias", :force => true do |t|
+  create_table "media", :force => true do |t|
     t.string   "title"
     t.text     "description"
     t.datetime "created_at"
@@ -124,6 +124,13 @@ ActiveRecord::Schema.define(:version => 27) do
     t.string   "photo_file_name"
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
+  end
+
+  create_table "media_projects", :id => false, :force => true do |t|
+    t.integer  "project_id"
+    t.integer  "medium_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "owners", :force => true do |t|

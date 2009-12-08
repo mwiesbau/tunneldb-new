@@ -1,24 +1,24 @@
 class Project < ActiveRecord::Base
-	belongs_to 			:activity
+	belongs_to 				:activity
 	has_and_belongs_to_many	:categories
-	belongs_to 			:client
+	belongs_to 				:client
 	has_and_belongs_to_many	:construction_methods
 	has_and_belongs_to_many	:construction_techniques
-	belongs_to 			:contractor
-	belongs_to			:country
-	belongs_to			:designer
+	belongs_to 				:contractor
+	belongs_to				:country
+	belongs_to				:designer
 	has_and_belongs_to_many	:geologies
-	belongs_to			:owner
+	belongs_to				:owner
 	has_and_belongs_to_many	:services
-	belongs_to			:currency
-	belongs_to			:state
-	belongs_to			:unit
-	belongs_to			:currency
-	belongs_to			:type
+	belongs_to				:currency
+	belongs_to				:state
+	belongs_to				:unit
+	belongs_to				:currency
+	belongs_to				:type
 	has_and_belongs_to_many	:tunneling_under
 	has_and_belongs_to_many	:groundwater_control
-	belongs_to				:media
+	has_and_belongs_to_many	:media
 	
-	validates_presence_of :number, :name, :city, :message=>"Error Message"
+	validates_presence_of :number, :name, :message=>"Error Message"
 
 end

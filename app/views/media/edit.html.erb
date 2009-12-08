@@ -1,0 +1,35 @@
+<h1>Editing medium</h1>
+
+<% form_for(@medium) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+        <h2>Project Name</h2>
+        </label>
+        <% for project in Project.find(:all) %>
+        <div> <%= check_box_tag"medium[project_ids][]",project.id,@medium.projects.include?(project) %> <%= [project.number, "-", project.name, ] %> </div>
+        <% end %>
+ </p> 
+  
+  
+  
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  
+   <p>
+<%= image_tag @media.photo.url(:original) rescue nil %>
+  </p>
+  
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @medium %> |
+<%= link_to 'Back', media_path %>

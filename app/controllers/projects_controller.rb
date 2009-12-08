@@ -1,19 +1,13 @@
 class ProjectsController < ApplicationController
 layout 'projects'
-  
+ 
   # GET /categories
   # GET /categories.xml
   def index
-  
-
-
-
- 
-
-
-
- @projects = Project.find(:all)
+   @projects = Project.find(:all)
   @countries = Country.find(:all)
+
+
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @project }
@@ -53,7 +47,7 @@ layout 'projects'
     @tunneling_unders = TunnelingUnder.find(:all)
     @types = Type.find(:all)       
     @units = Unit.find(:all)
-    
+    @media = Medium.find(:all)
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @project }
@@ -79,6 +73,7 @@ layout 'projects'
     @tunneling_unders = TunnelingUnder.find(:all)
     @types = Type.find(:all)       
     @units = Unit.find(:all)
+	@media = Medium.find(:all)
  end
 
   # POST /categories
@@ -108,6 +103,7 @@ layout 'projects'
 	@tunneling_unders = TunnelingUnder.find(:all)
 	@types = Type.find(:all)       
 	@units = Unit.find(:all)
+	@media = Medium.find(:all)
 	
         format.html { render :action => "new" }
         format.xml  { render :xml => @project.errors, :status => :unprocessable_entity }
@@ -139,6 +135,7 @@ layout 'projects'
     @currencies = Currency.find(:all)
     @units = Unit.find(:all)
     @types = Type.find(:all)
+	@media = Medium.find(:all)
         format.html { render :action => "edit" }
         format.xml  { render :xml => @project.errors, :status => :unprocessable_entity }
       end
@@ -156,15 +153,6 @@ layout 'projects'
       format.xml  { head :ok }
     end
   end
-  
-   def show_categories
-      @category = Category.find(params[:id])
-   end
-
-  
-  
-  
-  
   
   
 end

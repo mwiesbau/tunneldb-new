@@ -10,6 +10,8 @@
 <%= stylesheet_link_tag "style.css" %>
 <%= stylesheet_link_tag "header.css" %>
 <%= dhtml_calendar_includes %>
+
+
 </head>
 <body>
 
@@ -26,15 +28,15 @@
 	<ul>
 			<li class=""><label for="keyword"><a href="http://dr-sauer.com"> <span>HOME</span></a></label></li>
 			 <li class=""><label for="keyword"><a href="../projects"><span>PROJECTS</span></a></label></li>
-			 <li class=""><label for="keyword"><a href="../medias"><span>MEDIA</span></a></label></li>
+			 <li class=""><label for="keyword"><a href="../media"><span>MEDIA</span></a></label></li>
 			 <li class=""><label for="keyword"><a href="#"><span>RISK</span></a></label></li>
 			 
 	</ul>
 </div>
 
-<div  class="wrapper">
+<div  class="wrapper", id="content">
 
-<%= yield -%>
+<%= yield %>
 
 </div>
 </body>

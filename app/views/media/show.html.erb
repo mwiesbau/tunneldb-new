@@ -1,0 +1,35 @@
+<p>
+
+<td>
+      <label for="project">Projects</label><br>
+      <ul>
+	  <% for project in @medium.projects.find(:all) %>
+	    <li>
+	      <div>
+	        <%=[project.number, "-", project.name] %>
+	      </div>
+          </li>
+	  <% end %>
+      </ul>
+    </td>
+
+
+
+
+<p>
+  <b>Title:</b>
+  <%=h @medium.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @medium.description %>
+  
+</p>
+
+<p>
+<%= image_tag @medium.photo.url(:original) rescue nil %>
+</p>
+
+<%= link_to 'Edit', edit_medium_path(@medium) %> |
+<%= link_to 'Back', media_path %>
