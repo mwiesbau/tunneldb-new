@@ -1,18 +1,8 @@
 <p>
 
-<td>
-      <label for="project">Projects</label><br>
-      <ul>
-	  <% for project in @medium.projects.find(:all) %>
-	    <li>
-	      <div>
-	        <%=[project.number, "-", project.name] %>
-	      </div>
-          </li>
-	  <% end %>
-      </ul>
-    </td>
 
+
+<label>Project:</label><%= @medium.project.name rescue nil%><br>
 
 
 
@@ -24,8 +14,88 @@
 <p>
   <b>Description:</b>
   <%=h @medium.description %>
-  
 </p>
+
+<p>
+  <b>Author:</b>
+  <%=h @medium.author %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%=h @medium.date %>
+</p>
+
+<p>
+  <b>Publisher:</b>
+  <%=h @medium.publisher %>
+</p>
+
+<p>
+  <b>Magazine:</b>
+  <%=h @medium.magazine %>
+</p>
+
+<p>
+  <b>Volume:</b>
+  <%=h @medium.volume %>
+</p>
+
+<p>
+  <b>Number:</b>
+  <%=h @medium. number %>
+</p>
+
+
+<p>
+  <b>ISBN:</b>
+  <%=h @medium.isbn %>
+</p>
+
+<td>
+      <label for="medium_construction_methods">Construction Methods</label><br>
+      <ul>
+	  <% for construction_method in @medium.construction_methods.find(:all) %>
+	    <li>
+	      <div>
+	        <%= construction_method.name %>
+	      </div>
+          </li>
+	  <% end %>
+      </ul>
+    </td>
+
+<td>
+      <label for="medium_construction_technique">Construction Techniques</label><br>
+      <ul>
+	  <% for construction_technique in @medium.construction_techniques.find(:all) %>
+	    <li>
+	      <div>
+	        <%= construction_technique.name %>
+	      </div>
+          </li>
+	  <% end %>
+      </ul>
+    </td>
+
+<td>
+      <label for="medium_geology">Geologies</label><br>
+      <ul>
+	  <% for geology in @medium.geologies.find(:all) %>
+	    <li>
+	      <div>
+	        <%= geology.name %>
+	      </div>
+          </li>
+	  <% end %>
+      </ul>
+    </td>
+
+
+
+
+
+
 
 <p>
 <%= image_tag @medium.photo.url(:original) rescue nil %>

@@ -20,19 +20,15 @@
 <% end %>
 <br>
 
-<label>Image:</label><%= @project.media.title rescue nil%><br>
-<%= image_tag @project.media.photo.url(:medium) rescue nil %><br>
-
-
 <td>
       <label for="project_media">Project Media</label><br>
       <ul>
 	  <% for medium in @project.media.find(:all) %>
 	    
-	      <div>
-		   <label>Image:</label><%= medium.title rescue nil%><br>
-	       <%= image_tag medium.photo.url(:med) rescue nil %>
-	      </div>
+		<td style=width="30%";>
+	       <label>Image:</label><%= medium.title rescue nil%>
+	       <%= image_tag medium.photo.url(:thumbnail) rescue nil %>
+	    </td>
           
 	  <% end %>
       </ul>

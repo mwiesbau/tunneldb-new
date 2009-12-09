@@ -1,29 +1,48 @@
 <h1>Add new Project</h1>
 <br>
+
+
+<%= error_messages_for :project %>
 <% form_tag :action => 'create'  do %>
 
 <table class = "form">
   <tr>
     <td class="input-long" input-long colspan="3"><label for="project_name">Name:</label><br><%= text_field 'project', 'name' %></td>
-	
-    <td class="input-small"><label for="project_number">Number</label>
-      :<br>
-      <%= text_field 'project', 'number' %> </td>
+    <td class="input-small"><label for="project_number">Number:</label><br><%= text_field 'project', 'number' %> </td>
     <td><label for="project_owner">Owner:</label>
-	<%= collection_select(:project,:owner_id,@owners,:id,:name) %> </td>
+	<%= collection_select(:project,:owner_id,@owners,:id,:name, {:include_blank => 'None'}) %> </td>
   </tr>
   <tr>
-    <td><%= link_to 'Country', {:controller => 'countries' }  %><br/>
-      <%= collection_select(:project,:country_id,@countries,:id,:name) %> </td>
-    <td><%= link_to 'State', {:controller => 'states' }  %><br/>
-      <%= collection_select(:project,:state_id,@states,:id,:name) %> </td>
+    <p>
+	<td><label for="project_country_id">Country:</label><br/>
+      <%= collection_select(:project,:country_id,@countries,:id,:name, {:include_blank => 'None'}) %> </td>
+	
+	<%= observe_field :project_country_id, :url => { :action => :state_select_box },
+      :update => :project_state_id,
+      :with => :country_id
+      %>
+
+	
+	
+	</p>  
+   
+	<td>
+	  <label for="project_state_id">State or Province:</label><br/>
+      <%= collection_select(:project,:state_id,@states,:id,:name, {:include_blank => 'None'}) %> </td>
+	
+
+
+	
+	
+	
+	  
     <td><label for="project_city">City:</label><br>
 	<%= text_field 'project', 'city' %> </td>
     <td class="input-small"><label for="project_type">Project Type:</label>
 	<br>
-      <%= collection_select(:project,:type_id,@types,:id,:name) %> </td>
+      <%= collection_select(:project,:type_id,@types,:id,:name, {:include_blank => 'None'}) %> </td>
     <td><label for="project_activity">Activity:</label>
-	<%= collection_select(:project,:activity_id,@activities,:id,:name) %> </td>
+	<%= collection_select(:project,:activity_id,@activities,:id,:name, {:include_blank => 'None'}) %> </td>
   </tr>
 </table>
 
@@ -32,12 +51,12 @@
 <table class = "form">
 <tr>
   <td><label for="project_client">Client</label>
-    : <%= collection_select(:project,:client_id,@clients,:id,:name) %> </td>
+    : <%= collection_select(:project,:client_id,@clients,:id,:name, {:include_blank => 'None'}) %> </td>
 
  <td><label for="project_Designer">Designer</label>
-    : <%= collection_select(:project,:designer_id,@designers,:id,:name) %> </td>
+    : <%= collection_select(:project,:designer_id,@designers,:id,:name, {:include_blank => 'None'}) %> </td>
   <td><label for="project_contractor">Contractor</label>
-    : <%= collection_select(:project,:contractor_id,@contractors,:id,:name) %> </td>
+    : <%= collection_select(:project,:contractor_id,@contractors,:id,:name, {:include_blank => 'None'}) %> </td>
 	<td><label for="project_published">Published on Website :</label><br>
   <%= radio_button :project, :published, "true" %>Yes <%= radio_button :project, :published, "false" %>No </td>
 

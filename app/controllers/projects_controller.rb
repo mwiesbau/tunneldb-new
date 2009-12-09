@@ -5,7 +5,7 @@ layout 'projects'
   # GET /categories.xml
   def index
    @projects = Project.find(:all)
-  @countries = Country.find(:all)
+  
 
 
     respond_to do |format|
@@ -153,6 +153,12 @@ layout 'projects'
       format.xml  { head :ok }
     end
   end
+
+def state_select_box
+    @country = Country.find(params[:country_id]) unless params[:country_id].empty?
+    render :layout => false
+  end
+
   
   
 end

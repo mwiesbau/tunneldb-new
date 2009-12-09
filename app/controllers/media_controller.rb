@@ -26,6 +26,7 @@ class MediaController < ApplicationController
   def new
     @medium = Medium.new
     @projects = Project.find(:all)
+	@construction_methods = ConstructionMethod.find(:all)
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @medium }
@@ -35,6 +36,7 @@ class MediaController < ApplicationController
   # GET /medias/1/edit
   def edit
     @medium = Medium.find(params[:id])
+	@projects = Project.find(:all)
   end
 
   # POST /medias

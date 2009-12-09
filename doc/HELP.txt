@@ -1,0 +1,46 @@
+
+Programmers Blog
+
+    * Home
+    * Articles
+    * About
+
+dependant dropdowns (select menus) using rails
+
+There are multiple solutions on the net for dynamic select menus. By saying “dynamic menus” I mean that we have a form with two select dropdowns. When we change the first one, the content of the second one is updated.
+The most promising that I have found are:
+A. http://railscasts.com/episodes/88-dynamic-select-menus
+This one includes writing JS code. I don’t like writing JS code.
+B. http://github.com/splendeo/dependent_select
+This one does not use AJAX. It generates the whole thing in JS and sends it to the client. Can be useful when dealing with not big data.
+C. http://pullmonkey.com/2008/3/30/dynamic-select-boxes-ruby-on-rails/
+A very nice one but in my opinion a bit complicated for a beginner.
+
+I had to develop my own solution. This is what I came up with. Lets assume we have a form for Foo model that has a select dropdown with Bar1 model and select dropdown with Bar2 model, that is dependent on Bar1 current selection.
+A. In the Foo model form, add a field observer:
+
+  <%= observe_field :foo_box1_id, :url => { :action => :box2_select_box },
+      :update => :foo_box2_id,
+      :with => :box1_id
+      %>
+
+B. In the FooController add:
+
+  def box2_select_box
+    @box1 = Box1.find(params[:box1_id]) unless params[:box1_id].empty?
+    render :layout => false
+  end
+
+C. In the view for the above action (box2_select_box.html.erb) put:
+
+<%=
+if @box1
+  options_from_collection_for_select(@box1.box2s, :id, :name)
+else
+  options_for_select([["Nothing to select", ""]])
+end
+%>
+
+
+No JS code writing. Working with AJAX. Simple.
+

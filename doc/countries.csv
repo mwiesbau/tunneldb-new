@@ -1,222 +1,247 @@
-A , Austria 
-AFG , Afghanistan 
-AG , Antigua and Barbuda 
-AL , Albania 
-AND , Andorra 
-ANG , Angola 
-ARK* ,Antarctica 
-AM , Armenia 
-ARU* , Aruba 
-AUS , Australia 
-AX* , ≈land Islands 
-AXA , Anguilla 
-AZ , Azerbaijan 
-B , Belgium 
-BD , Bangladesh 
-BDS , Barbados 
-BF , Burkina Faso 
-BG , Bulgaria 
-BHT , Bhutan 
-BIH , Bosnia and Herzegovina 
-BOL , Bolivia 
-BR , Brazil 
-BRN , Bahrain 
-BRU , Brunei 
-BS , Bahamas 
-BU , Burundi 
-BY , Belarus 
-BZ , Belize 
-C , Cuba 
-CAM , Cameroon 
-CDN , Canada 
-CGO , Democratic Republic of the Congo 
-CH , Switzerland 
-CI , CÙte d'Ivoire (Ivory Coast) 
-CL , Sri Lanka 
-CN , People's Republic of China 
-CO , Colombia 
-COM , Comoros 
-CR , Costa Rica 
-CV , Cape Verde 
-CY , Cyprus 
-CYM* , Wales 
-CZ , Czech Republic 
-D , Germany 
-DJI , Djibouti 
-DK , Denmark 
-DOM , Dominican Republic 
-DY , Benin 
-DZ , Algeria 
-E , Spain 
-EAK , Kenya 
-EAT , Tanzania 
-EAU , Uganda 
-EC , Ecuador 
-ENG* , England 
-ER , Eritrea 
-ES , El Salvador 
-EST , Estonia 
-ET , Egypt 
-ETH , Ethiopia 
-F , France 
-FIN , Finland 
-FJI , Fiji 
-FL , Liechtenstein 
-FO , Faroe Islands 
-FSM , Federated States of Micronesia 
-G , Gabon 
-GB , United Kingdom (of Great Britain and Northern Ireland) 
-GBA , Alderney 
-GBG , Guernsey 
-GBJ , Jersey 
-GBM , Isle of Man 
-GBZ , Gibraltar 
-GCA , Guatemala 
-GE , Georgia 
-GH , Ghana 
-"GW, RGB ", Guinea-Bissau 
-GQ, Equatorial Guinea 
-GR , Greece 
-GUY , Guyana 
-H , Hungary 
-HK , Hong Kong 
-HKJ , Jordan 
-HN , Honduras 
-HR , Croatia 
-I , Italy 
-IL , Israel 
-IND , India 
-IR , Iran 
-IRL , Ireland 
-IRQ , Iraq 
-IS , Iceland 
-J , Japan 
-JA , Jamaica 
-K , Cambodia 
-KAN, Saint Kitts and Nevis 
-KN, Greenland 
-KOS , Kosovo 
-KS , Kyrgyzstan 
-KIR , Kiribati 
-KP , Democratic People's Republic of Korea 
-KSA , Saudi Arabia 
-KWT , Kuwait 
-KZ , Kazakhstan 
-L , Luxembourg 
-LAO , Laos 
-LAR , Libya 
-LB, Liberia 
-LS , Lesotho 
-LT , Lithuania 
-LV , Latvia 
-M , Malta 
-MA , Morocco 
-MAL , Malaysia 
-MC , Monaco 
-MD , Moldova 
-MEX , Mexico 
-MGL , Mongolia 
-MH , Marshall Islands 
-MK , Macedonia 
-MNE , Montenegro 
-MO , Macau 
-MOC , Mozambique 
-MS , Mauritius 
-MV, Maldives 
-MW , Malawi 
-MYA , Myanmar 
-N , Norway 
-NA , Netherlands Antilles 
-NAM , Namibia 
-NAU , Nauru 
-NC , New Caledonia 
-NEP,Flag of Nepal.svg Nepal 
-NIC , Nicaragua 
-NI,Northern Ireland 
-NL , Netherlands 
-NZ , New Zealand 
-OM , Oman 
-P , Portugal 
-PA , Panama 
-PAK , Pakistan 
-PAL , Palau 
-PE , Peru 
-PL , Poland 
-PMR, Transnistria 
-PNG, Papua New Guinea 
-PR , Puerto Rico 
-PS , Palestinian Authority 
-PY , Paraguay 
-Q , Qatar 
-RA , Argentina 
-RB , Botswana 
-RC , Republic of China (Taiwan) 
-RCA , Central African Republic 
-RCB , Republic of the Congo 
-RCH , Chile 
-RG , Guinea 
-RH , Haiti 
-RI , Indonesia 
-RIM , Mauritania 
-RL , Lebanon 
-RM , Madagascar 
-RMM , Mali 
-RN , Niger 
-RO , Romania 
-ROK , Republic of Korea 
-ROU , Uruguay 
-RP , Philippines 
-RSM , San Marino 
-RT , Togo 
-RUS , Russia 
-RWA , Rwanda 
-S , Sweden 
-SA , Saudi Arabia 
-SCO, Scotland 
-SD , Swaziland 
-SGP , Singapore 
-SK , Slovakia 
-SLE, Sierra Leone 
-SLO , Slovenia 
-SME , Suriname 
-SMOM , Sovereign Military Order of Malta 
-SN , Senegal 
-SO , Somalia 
-SOL , Solomon Islands 
-SRB , Serbia 
-STP , S„o TomÈ and PrÌncipe 
-SUD , Sudan 
-SY , Seychelles 
-SYR , Syria 
-T , Thailand 
-TCH, Chad 
-TG , Togo 
-TJ , Tajikistan 
-TL , Timor-Leste 
-TM , Turkmenistan 
-TN , Tunisia 
-TO , Tonga 
-TR , Turkey 
-TT , Trinidad and Tobago 
-TUV , Tuvalu 
-UA , Ukraine 
-UAE , United Arab Emirates 
-USA , United States 
-UZ , Uzbekistan 
-V , Vatican City 
-VN , Vietnam 
-VU , Vanuatu 
-WAG , Gambia 
-WAL , Sierra Leone 
-WAN , Nigeria 
-WD , Dominica 
-WG , Grenada 
-WL , Saint Lucia 
-WS , Samoa 
-WSA,Western Sahara 
-WV , Saint Vincent and the Grenadines 
-YEM , Yemen 
-YV , Venezuela 
-Z , Zambia 
-ZA , South Africa 
-ZW , Zimbabwe 
+AFGHANISTAN ,AF
+èLAND ISLANDS ,AX
+ALBANIA ,AL
+ALGERIA ,DZ
+AMERICAN SAMOA ,AS
+ANDORRA ,AD
+ANGOLA ,AO
+ANGUILLA ,AI
+ANTARCTICA ,AQ
+ANTIGUA AND BARBUDA ,AG
+ARGENTINA ,AR
+ARMENIA ,AM
+ARUBA ,AW
+AUSTRALIA ,AU
+AUSTRIA ,AT
+AZERBAIJAN ,AZ
+BAHAMAS ,BS
+BAHRAIN ,BH
+BANGLADESH ,BD
+BARBADOS ,BB
+BELARUS ,BY
+BELGIUM ,BE
+BELIZE ,BZ
+BENIN ,BJ
+BERMUDA ,BM
+BHUTAN ,BT
+"BOLIVIA, PLURINATIONAL STATE OF ",BO
+BOSNIA AND HERZEGOVINA ,BA
+BOTSWANA ,BW
+BOUVET ISLAND ,BV
+BRAZIL ,BR
+BRITISH INDIAN OCEAN TERRITORY ,IO
+BRUNEI DARUSSALAM ,BN
+BULGARIA ,BG
+BURKINA FASO ,BF
+BURUNDI ,BI
+CAMBODIA ,KH
+CAMEROON ,CM
+CANADA ,CA
+CAPE VERDE ,CV
+CAYMAN ISLANDS ,KY
+CENTRAL AFRICAN REPUBLIC ,CF
+CHAD ,TD
+CHILE ,CL
+CHINA ,CN
+CHRISTMAS ISLAND ,CX
+COCOS (KEELING) ISLANDS ,CC
+COLOMBIA ,CO
+COMOROS ,KM
+CONGO ,CG
+"CONGO, THE DEMOCRATIC REPUBLIC OF THE ",CD
+COOK ISLANDS ,CK
+COSTA RICA ,CR
+C?TE D'IVOIRE ,CI
+CROATIA ,HR
+CUBA ,CU
+CYPRUS ,CY
+CZECH REPUBLIC ,CZ
+DENMARK ,DK
+DJIBOUTI ,DJ
+DOMINICA ,DM
+DOMINICAN REPUBLIC ,DO
+ECUADOR ,EC
+EGYPT ,EG
+EL SALVADOR ,SV
+EQUATORIAL GUINEA ,GQ
+ERITREA ,ER
+ESTONIA ,EE
+ETHIOPIA ,ET
+FALKLAND ISLANDS (MALVINAS) ,FK
+FAROE ISLANDS ,FO
+FIJI ,FJ
+FINLAND ,FI
+FRANCE ,FR
+FRENCH GUIANA ,GF
+FRENCH POLYNESIA ,PF
+FRENCH SOUTHERN TERRITORIES ,TF
+GABON ,GA
+GAMBIA ,GM
+GEORGIA ,GE
+GERMANY ,DE
+GHANA ,GH
+GIBRALTAR ,GI
+GREECE ,GR
+GREENLAND ,GL
+GRENADA ,GD
+GUADELOUPE ,GP
+GUAM ,GU
+GUATEMALA ,GT
+GUERNSEY ,GG
+GUINEA ,GN
+GUINEA-BISSAU ,GW
+GUYANA ,GY
+HAITI ,HT
+HEARD ISLAND AND MCDONALD ISLANDS ,HM
+HOLY SEE (VATICAN CITY STATE) ,VA
+HONDURAS ,HN
+HONG KONG ,HK
+HUNGARY ,HU
+ICELAND ,IS
+INDIA ,IN
+INDONESIA ,ID
+"IRAN, ISLAMIC REPUBLIC OF ",IR
+IRAQ ,IQ
+IRELAND ,IE
+ISLE OF MAN ,IM
+ISRAEL ,IL
+ITALY ,IT
+JAMAICA ,JM
+JAPAN ,JP
+JERSEY ,JE
+JORDAN ,JO
+KAZAKHSTAN ,KZ
+KENYA ,KE
+KIRIBATI ,KI
+"KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF ",KP
+"KOREA, REPUBLIC OF ",KR
+KUWAIT ,KW
+KYRGYZSTAN ,KG
+LAO PEOPLE'S DEMOCRATIC REPUBLIC ,LA
+LATVIA ,LV
+LEBANON ,LB
+LESOTHO ,LS
+LIBERIA ,LR
+LIBYAN ARAB JAMAHIRIYA ,LY
+LIECHTENSTEIN ,LI
+LITHUANIA ,LT
+LUXEMBOURG ,LU
+MACAO ,MO
+"MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF ",MK
+MADAGASCAR ,MG
+MALAWI ,MW
+MALAYSIA ,MY
+MALDIVES ,MV
+MALI ,ML
+MALTA ,MT
+MARSHALL ISLANDS ,MH
+MARTINIQUE ,MQ
+MAURITANIA ,MR
+MAURITIUS ,MU
+MAYOTTE ,YT
+MEXICO ,MX
+"MICRONESIA, FEDERATED STATES OF ",FM
+"MOLDOVA, REPUBLIC OF ",MD
+MONACO ,MC
+MONGOLIA ,MN
+MONTENEGRO ,ME
+MONTSERRAT ,MS
+MOROCCO ,MA
+MOZAMBIQUE ,MZ
+MYANMAR ,MM
+NAMIBIA ,NA
+NAURU ,NR
+NEPAL ,NP
+NETHERLANDS ,NL
+NETHERLANDS ANTILLES ,AN
+NEW CALEDONIA ,NC
+NEW ZEALAND ,NZ
+NICARAGUA ,NI
+NIGER ,NE
+NIGERIA ,NG
+NIUE ,NU
+NORFOLK ISLAND ,NF
+NORTHERN MARIANA ISLANDS ,MP
+NORWAY ,NO
+OMAN ,OM
+PAKISTAN ,PK
+PALAU ,PW
+"PALESTINIAN TERRITORY, OCCUPIED ",PS
+PANAMA ,PA
+PAPUA NEW GUINEA ,PG
+PARAGUAY ,PY
+PERU ,PE
+PHILIPPINES ,PH
+PITCAIRN ,PN
+POLAND ,PL
+PORTUGAL ,PT
+PUERTO RICO ,PR
+QATAR ,QA
+RêUNION ,RE
+ROMANIA ,RO
+RUSSIAN FEDERATION ,RU
+RWANDA ,RW
+SAINT BARTHêLEMY ,BL
+SAINT HELENA ,SH
+SAINT KITTS AND NEVIS ,KN
+SAINT LUCIA ,LC
+SAINT MARTIN ,MF
+SAINT PIERRE AND MIQUELON ,PM
+SAINT VINCENT AND THE GRENADINES ,VC
+SAMOA ,WS
+SAN MARINO ,SM
+SAO TOME AND PRINCIPE ,ST
+SAUDI ARABIA ,SA
+SENEGAL ,SN
+SERBIA ,RS
+SEYCHELLES ,SC
+SIERRA LEONE ,SL
+SINGAPORE ,SG
+SLOVAKIA ,SK
+SLOVENIA ,SI
+SOLOMON ISLANDS ,SB
+SOMALIA ,SO
+SOUTH AFRICA ,ZA
+SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS ,GS
+SPAIN ,ES
+SRI LANKA ,LK
+SUDAN ,SD
+SURINAME ,SR
+SVALBARD AND JAN MAYEN ,SJ
+SWAZILAND ,SZ
+SWEDEN ,SE
+SWITZERLAND ,CH
+SYRIAN ARAB REPUBLIC ,SY
+"TAIWAN, PROVINCE OF CHINA ",TW
+TAJIKISTAN ,TJ
+"TANZANIA, UNITED REPUBLIC OF ",TZ
+THAILAND ,TH
+TIMOR-LESTE ,TL
+TOGO ,TG
+TOKELAU ,TK
+TONGA ,TO
+TRINIDAD AND TOBAGO ,TT
+TUNISIA ,TN
+TURKEY ,TR
+TURKMENISTAN ,TM
+TURKS AND CAICOS ISLANDS ,TC
+TUVALU ,TV
+UGANDA ,UG
+UKRAINE ,UA
+UNITED ARAB EMIRATES ,AE
+UNITED KINGDOM ,GB
+UNITED STATES ,US
+UNITED STATES MINOR OUTLYING ISLANDS ,UM
+URUGUAY ,UY
+UZBEKISTAN ,UZ
+VANUATU ,VU
+VATICAN CITY STATE ,see HOLY SEE
+"VENEZUELA, BOLIVARIAN REPUBLIC OF ",VE
+VIET NAM ,VN
+"VIRGIN ISLANDS, BRITISH ",VG
+"VIRGIN ISLANDS, U.S. ",VI
+WALLIS AND FUTUNA ,WF
+WESTERN SAHARA ,EH
+YEMEN ,YE
+ZAMBIA ,ZM
+ZIMBABWE ,ZW 

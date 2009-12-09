@@ -11,12 +11,24 @@
       <%= text_field 'project', 'number' %> </td>
     <td><label for="project_owner">Owner:</label>
 	<%= collection_select(:project,:owner_id,@owners,:id,:name) %> </td>
-  </tr>
   <tr>
-    <td><%= link_to 'Country', {:controller => 'countries' }  %><br/>
-      <%= collection_select(:project,:country_id,@countries,:id,:name) %> </td>
-    <td><%= link_to 'State', {:controller => 'states' }  %><br/>
-      <%= collection_select(:project,:state_id,@states,:id,:name) %> </td>
+    <p>
+	<td><label for="project_country_id">Country:</label><br/>
+      <%= collection_select(:project,:country_id,@countries,:id,:name, {:include_blank => 'None'}) %> </td>
+	
+	<%= observe_field :project_country_id, :url => { :action => :state_select_box },
+      :update => :project_state_id,
+      :with => :country_id
+      %>
+
+	
+	
+	</p>  
+   
+	<td>
+	  <label for="project_state_id">State or Province:</label><br/>
+      <%= collection_select(:project,:state_id,@states,:id,:name, {:include_blank => 'None'}) %> </td>
+	
     <td><label for="project_city">City:</label><br>
 	<%= text_field 'project', 'city' %> </td>
     <td class="input-small"><label for="project_type">Project Type:</label>

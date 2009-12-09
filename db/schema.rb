@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 28) do
+ActiveRecord::Schema.define(:version => 30) do
 
   create_table "activities", :force => true do |t|
     t.string   "symbol",     :default => "", :null => false
@@ -44,6 +44,13 @@ ActiveRecord::Schema.define(:version => 28) do
     t.datetime "updated_at"
   end
 
+  create_table "construction_methods_media", :id => false, :force => true do |t|
+    t.integer  "medium_id"
+    t.integer  "construction_method_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "construction_methods_projects", :id => false, :force => true do |t|
     t.integer  "project_id"
     t.integer  "construction_method_id"
@@ -53,6 +60,13 @@ ActiveRecord::Schema.define(:version => 28) do
 
   create_table "construction_techniques", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "construction_techniques_media", :id => false, :force => true do |t|
+    t.integer  "medium_id"
+    t.integer  "construction_technique_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -96,6 +110,13 @@ ActiveRecord::Schema.define(:version => 28) do
     t.datetime "updated_at"
   end
 
+  create_table "geologies_media", :id => false, :force => true do |t|
+    t.integer  "medium_id"
+    t.integer  "geology_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "geologies_projects", :id => false, :force => true do |t|
     t.integer  "project_id"
     t.integer  "geology_id"
@@ -119,18 +140,19 @@ ActiveRecord::Schema.define(:version => 28) do
   create_table "media", :force => true do |t|
     t.string   "title"
     t.text     "description"
+    t.integer  "project_id"
+    t.string   "author"
+    t.date     "date"
+    t.string   "publisher"
+    t.string   "magazine"
+    t.string   "volume"
+    t.string   "number"
+    t.string   "isbn"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "photo_file_name"
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
-  end
-
-  create_table "media_projects", :id => false, :force => true do |t|
-    t.integer  "project_id"
-    t.integer  "medium_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "owners", :force => true do |t|
@@ -145,7 +167,6 @@ ActiveRecord::Schema.define(:version => 28) do
     t.integer  "activity_id"
     t.integer  "country_id"
     t.integer  "owner_id"
-    t.integer  "media_id"
     t.integer  "client_id"
     t.integer  "contractor_id"
     t.integer  "designer_id"

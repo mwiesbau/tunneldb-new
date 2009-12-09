@@ -6,7 +6,6 @@ class Projects < ActiveRecord::Migration
   t.integer		:activity_id
   t.integer		:country_id
   t.integer		:owner_id
-  t.integer		:media_id
   t.integer		:client_id
   t.integer		:contractor_id
   t.integer		:designer_id
