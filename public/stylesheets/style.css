@@ -31,36 +31,9 @@ a:hover {
 	text-decoration: underline;
 }
 
-/* a.more {
-	display: block;
-	clear: both;
-	margin: 16px 0px 0px 14px;
-	padding-left: 13px;
-	background-image: url("/images/arrow.gif");
-	background-position: 0px 3px;
-	background-repeat: no-repeat;
-	font-weight: bold;
-	font-size: 10px;
-	color: #BC7712;
-	text-decoration: none;
-}
-
-a.product {
-	display: block;
-	margin: 0px 0px 15px 30px;
-	padding-left: 18px;
-	background-image: url("/images/boxed_arrow_right.gif");
-	background-position: 0px 2px;
-	background-repeat: no-repeat;
-	font-weight: bold;
-}
- */
 img {
 	border: none;
 }
-/* div {
-	
-} */
 	
 div.wrapper {
 	padding:20px;
@@ -72,41 +45,43 @@ div.wrapper {
 	width:90%;
 }
 
-/* .center
-{
+.framediv  {
+	position:relative;
+	padding:15px;
+	background-color: #F2F2F2;	
+	width: 175px;
+	height:175px;
 	margin-left:auto;
 	margin-right:auto;
-	text-align:left;
-} */
-/* 
+	float: left; 
+}
+
+
+
+
 fieldset {
 	margin: 5px;
 	padding: 3px;
 	border: grat;
 }
- */
+
 h1 {
 	margin: 3px 0px;
 	font-size: 14px;
 	color: #396080;
 }
 
-/* 
 h1.title {
 	font-size: 14px;
 	margin: 16px 0px 20px 0px;
 }
- */
+
 h2 {
 	margin: 2px 0px;
 	font-size: 12px;
 	color: #396080;
 }
 
-/* img.title {
-	margin: 11px 0px 15px 0px;
-} */
-/* 
 input.btn { 
 	color:#050; 
 	font: bold 84% 'trebuchet ms',helvetica,sans-serif; 
@@ -114,12 +89,13 @@ input.btn {
 	border:1px solid; 
 	border-color: #696 #363 #363 #696; 
 } 
- */
+
 .input-small input{
 	width:50px;
 }
+
 .input-date{
-	width:60px;
+	width:50px;
 }
 
 .input-long input{
@@ -128,74 +104,33 @@ input.btn {
 
 textarea{
 	width: 99%;
-
 }
 
-
-/* input.text {
-	border-top: 2px inset #1F1F1F;
-	border-left: 2px inset #1F1F1F;
-	width: 116px;
-	font-size: 10px;
-} */
-
-p {
+p{
 	margin: 0px 0px 10px 0px;
 	line-height: 130%;
 }
 
-/* .overview {
-	float: left;
-	margin: 0px 15px 15px 0px;
-} */
-
 select {
-
 	width:100%;
 	size: 20;
 }
-/* 
-span.caption {
-	font-size: 9px;
-}
- */
-/* tr {
-	border-bottom: 1px solid #8DA5BA;
-} */
-/* 
-th, td{
-padding: 2px 15px 2px 2px;
 
-} */
 table{
 	width: 100%;	
-	
-
 }
 
-table.list{
-	border-collapse: collapse;
-	width:100%;	
-	
-}
 
-table.list tr , td{
-	
-	border-collapse: collapse;
 }
 
 table.form-view tr , td{
-	
-	border-collapse: collapse;
 	padding: 5px 10px 5px 10px;
-	
 }	
-label{
 
+label{
 	font-weight: bold;
 	color: #396080;
 	font-size: 11px;
-	
 }	
 	
 tr.odd td{
@@ -205,39 +140,27 @@ tr.odd td{
 tr.even td{
  background-color: #ccc; 
 }
-/* 
-tr.list{[/color][snip][color=blue] border-bottom: 5px solid black;}[/color]
 
-}
-
-tr.alternate {
-	border-bottom: 1px dotted #8DA5BA;
-} */
-
-/* .list table td{color:red;}
-
-.list table {
-	color:red;
+.list{
 	border-collapse: collapse;
-} */
-
-/* tr.list{
-	
-	padding:0px 0px 0px 0px;
-	background-color: #F2F2F2;
-	border-bottom: 1px dotted #8DA5BA;
-	color: black;
-} */
-
-.list tr {
-	border-bottom: 1px solid #8DA5BA;
 
 }
+
+.list tr{
+	border-bottom: 1px solid #8DA5BA;
+	vertical-align:middle;
+
+}
+
+.list td, tr{
+	padding: 0px 8px 0px 8px;	
+} 
 
 .list th{
-	text-align:left;
-	border-bottom: 1px solid gray;
 	font-weight: bold;
+	text-align:left;
+	font-size: 11px;
+	border-bottom: 1px solid gray;
 	background-color: #8DA5BA;
 	color: white;
 }
@@ -248,45 +171,24 @@ table.form  td , tr{
 	padding:5px;
 	background-color: #ccc;
 	border-bottom: 1px solid gray;
-	border-right: 1px solid gray;
 	vertical-align: top;
-
-
-
 }
 
-/* 
-table.branch-office {
-	color: #396080;  
-}
-
-table.branch-office h2 {
-	margin: 19px 0px 2px 0px;
-}
- */
-/* h6 {
-	text-align: justify;
-	font-weight: normal;
-}
-
- */
-/* Start ------ This is the list-icon styles code -----------------------*/
-
-#list-icons div{
+/* #list-icons div{
 	visibility: hidden;
 
 }
-#list-icons table{
-	
 
+#list-icons table{
 }
+
 #list-icons table{
 	border-collapse: collapse;
 	margin:0px;
 	padding:0px;
 	border: 0px;
-	
 }
+
 #list-icons td{
 	margin:0px;
 	padding:0px;
@@ -294,8 +196,7 @@ table.branch-office h2 {
 	width: auto;
 	}
 
-
-#list-icons td a {
+#list-icons td, a {
 	display: block;
 	margin:0px;
 	padding:0px;
@@ -306,12 +207,12 @@ table.branch-office h2 {
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 }
-
-#list-icons td a:hover, #topnav td a:hover {
+ */
+/* #list-icons td a:hover, #top-nav td a:hover {
 	text-decoration: none;
-}
+} */
 
-#list-icons td a.icon-view {
+/* #list-icons td a.icon-view {
 	background-image: url("/images/list-icons/icon-view-off.png");
 	background-color: #F2F2F2;
 }
@@ -350,56 +251,45 @@ table.branch-office h2 {
 	background-image: url("/images/icon-publish-on.png");
 	background-color: #E5E5E5;
 }
-a.icon-delete{
-    position:relative; /*this is the key*/
-    z-index:24; background-color:#ccc;
-    color:#000;
-    text-decoration:none}
+ */
 
-	
-
-	
-	
-.fieldWithErrors {
-  padding: 2px;
-  background-color: red;
-  display: table;
-}
-
-#errorExplanation {
-  width: 400px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
-}
-
-#errorExplanation h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 5px 5px 15px;
-  font-size: 12px;
-  margin: -7px;
-  background-color: #c00;
-  color: #fff;
-}
-
-#errorExplanation p {
-  color: #333;
-  margin-bottom: 0;
-  padding: 5px;
-}
-
-#errorExplanation ul li {
-  font-size: 12px;
-  list-style: square;
-}	
-	
-	
-	
 /* End  ------ This is the list-icon styles code -----------------------*/	
 
+
+div.pagination {
+padding: 3px;
+margin: 3px;
+}
+
+div.pagination a {
+padding: 2px 5px 2px 5px;
+margin: 2px;
+border: 1px solid #AAAADD;
+
+text-decoration: none; /* no underline */
+color: #000099;
+}
+div.pagination a:hover, div.pagination a:active {
+border: 1px solid #000099;
+
+color: #000;
+}
+div.pagination span.current {
+padding: 2px 5px 2px 5px;
+margin: 2px;
+border: 1px solid #000099;
+
+font-weight: bold;
+background-color: #000099;
+color: #FFF;
+}
+div.pagination span.disabled {
+padding: 2px 5px 2px 5px;
+margin: 2px;
+border: 1px solid #EEE;
+
+color: #DDD;
+}
 
 
 

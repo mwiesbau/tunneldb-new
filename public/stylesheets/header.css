@@ -1,5 +1,9 @@
 /* ---------------- header -------------------- */
-
+.print-content{
+	display: none;
+	margin: 0px;
+	padding: 0px;
+}
 #header {
 	padding-right: 50px;
 	width: auto;

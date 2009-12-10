@@ -1,0 +1,12 @@
+h1 span, h2 a, #menu, .sideBar, .episodeLinks {
+	display: none;
+}
+body, html {
+	background: #fff;
+}
+body {
+	padding: 1em;
+}
+.main {
+	width: 100%;
+}

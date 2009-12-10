@@ -1,0 +1,428 @@
+
+body {
+	padding: 0px 0px 0px 0px;
+	margin: 0px;
+	background-color: gray;
+	font-family: verdana, arial, sans-serif;
+	font-size: 10px;
+	
+	
+}
+
+body, html {
+	scrollbar-3dLight-Color: #9FB7CA;	
+	scrollbar-Arrow-Color: #CA9703;
+	scrollbar-Base-Color: #7993A9;
+	scrollbar-DarkShadow-Color: #193044;
+	scrollbar-Face-Color: #8FAAC2;
+	scrollbar-Highlight-Color: #D8E7F4;
+	scrollbar-Shadow-Color: #537B98;
+	scrollbar-Track-Color: #E5E5E5;
+}
+
+a {
+	color: #BC7712;
+	text-decoration: none;
+	font-weight: bold;
+
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/* a.more {
+	display: block;
+	clear: both;
+	margin: 16px 0px 0px 14px;
+	padding-left: 13px;
+	background-image: url("/images/arrow.gif");
+	background-position: 0px 3px;
+	background-repeat: no-repeat;
+	font-weight: bold;
+	font-size: 10px;
+	color: #BC7712;
+	text-decoration: none;
+}
+
+a.product {
+	display: block;
+	margin: 0px 0px 15px 30px;
+	padding-left: 18px;
+	background-image: url("/images/boxed_arrow_right.gif");
+	background-position: 0px 2px;
+	background-repeat: no-repeat;
+	font-weight: bold;
+}
+ */
+img {
+	border: none;
+}
+/* div {
+	
+} */
+	
+div.wrapper {
+	padding:20px;
+	background-color: #F2F2F2;
+	border: 1px solid black;
+	margin-top:100px;
+	margin-left:auto;
+	margin-right:auto;
+	width:90%;
+}
+
+
+#images {
+	padding:20px;
+	background-color: #F2F2F2;
+	border: 1px solid black;
+	margin-top:100px;
+	margin-left:auto;
+	margin-right:auto;
+	width:90%;
+}
+
+
+
+
+
+
+
+/* .center
+{
+	margin-left:auto;
+	margin-right:auto;
+	text-align:left;
+} */
+/* 
+fieldset {
+	margin: 5px;
+	padding: 3px;
+	border: grat;
+}
+ */
+h1 {
+	margin: 3px 0px;
+	font-size: 14px;
+	color: #396080;
+}
+
+/* 
+h1.title {
+	font-size: 14px;
+	margin: 16px 0px 20px 0px;
+}
+ */
+h2 {
+	margin: 2px 0px;
+	font-size: 12px;
+	color: #396080;
+}
+
+/* img.title {
+	margin: 11px 0px 15px 0px;
+} */
+/* 
+input.btn { 
+	color:#050; 
+	font: bold 84% 'trebuchet ms',helvetica,sans-serif; 
+	background-color:#fed; 
+	border:1px solid; 
+	border-color: #696 #363 #363 #696; 
+} 
+ */
+.input-small input{
+	width:50px;
+}
+.input-date{
+	width:60px;
+}
+
+.input-long input{
+	width:95%;
+}
+
+textarea{
+	width: 99%;
+
+}
+
+
+/* input.text {
+	border-top: 2px inset #1F1F1F;
+	border-left: 2px inset #1F1F1F;
+	width: 116px;
+	font-size: 10px;
+} */
+
+p {
+	margin: 0px 0px 10px 0px;
+	line-height: 130%;
+}
+
+/* .overview {
+	float: left;
+	margin: 0px 15px 15px 0px;
+} */
+
+select {
+
+	width:100%;
+	size: 20;
+}
+/* 
+span.caption {
+	font-size: 9px;
+}
+ */
+/* tr {
+	border-bottom: 1px solid #8DA5BA;
+} */
+/* 
+th, td{
+padding: 2px 15px 2px 2px;
+
+} */
+table{
+	width: 100%;	
+	
+
+}
+
+table.list{
+	border-collapse: collapse;
+	width:100%;	
+	
+}
+
+table.list tr , td{
+	
+	border-collapse: collapse;
+}
+
+table.form-view tr , td{
+	
+	border-collapse: collapse;
+	padding: 5px 10px 5px 10px;
+	
+}	
+label{
+
+	font-weight: bold;
+	color: #396080;
+	font-size: 11px;
+	
+}	
+	
+tr.odd td{
+ background-color:#fff;
+}
+
+tr.even td{
+ background-color: #ccc; 
+}
+/* 
+tr.list{[/color][snip][color=blue] border-bottom: 5px solid black;}[/color]
+
+}
+
+tr.alternate {
+	border-bottom: 1px dotted #8DA5BA;
+} */
+
+/* .list table td{color:red;}
+
+.list table {
+	color:red;
+	border-collapse: collapse;
+} */
+
+/* tr.list{
+	
+	padding:0px 0px 0px 0px;
+	background-color: #F2F2F2;
+	border-bottom: 1px dotted #8DA5BA;
+	color: black;
+} */
+
+.list tr {
+	border-bottom: 1px solid #8DA5BA;
+
+}
+
+.list th{
+	text-align:left;
+	border-bottom: 1px solid gray;
+	font-weight: bold;
+	background-color: #8DA5BA;
+	color: white;
+}
+
+table.form  td , tr{
+	
+	margin:5px;
+	padding:5px;
+	background-color: #ccc;
+	border-bottom: 1px solid gray;
+	border-right: 1px solid gray;
+	vertical-align: top;
+
+
+
+}
+
+/* 
+table.branch-office {
+	color: #396080;  
+}
+
+table.branch-office h2 {
+	margin: 19px 0px 2px 0px;
+}
+ */
+/* h6 {
+	text-align: justify;
+	font-weight: normal;
+}
+
+ */
+/* Start ------ This is the list-icon styles code -----------------------*/
+
+#list-icons div{
+	visibility: hidden;
+
+}
+#list-icons table{
+	
+
+}
+#list-icons table{
+	border-collapse: collapse;
+	margin:0px;
+	padding:0px;
+	border: 0px;
+	
+}
+#list-icons td{
+	margin:0px;
+	padding:0px;
+	border: 1px solid #E2E2E2;
+	width: auto;
+	}
+
+
+#list-icons td a {
+	display: block;
+	margin:0px;
+	padding:0px;
+	background-color: #E5E5E5;
+	text-align: center;
+	width: 4px;
+	height: 15px;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+#list-icons td a:hover, #topnav td a:hover {
+	text-decoration: none;
+}
+
+#list-icons td a.icon-view {
+	background-image: url("/images/list-icons/icon-view-off.png");
+	background-color: #F2F2F2;
+}
+
+#list-icons td a.icon-view:hover {
+	background-image: url("/images/list-icons/icon-view-on.png");
+	background-color: #E5E5E5;
+}
+
+#list-icons td a.icon-edit {
+	background-image: url("/images/list-icons/icon-edit-off.png");
+	background-color: #F2F2F2;
+}
+
+#list-icons td a.icon-edit:hover {
+	background-image: url("/images/list-icons/icon-edit-on.png");
+	background-color: #E5E5E5;
+}
+
+#list-icons td a.icon-delete {
+	background-image: url("/images/list-icons/icon-delete-off.png");
+	background-color: #F2F2F2;
+}
+
+#list-icons td a.icon-delete:hover {
+	background-image: url("/images/list-icons/icon-delete-on.png");
+	background-color: #E5E5E5;
+}
+
+#list-icons td a.icon-publish {
+	background-image: url("/images/icon-publish-off.png");
+	background-color: #F2F2F2;
+}
+
+#list-icons td a.icon-publish:hover {
+	background-image: url("/images/icon-publish-on.png");
+	background-color: #E5E5E5;
+}
+a.icon-delete{
+    position:relative; /*this is the key*/
+    z-index:24; background-color:#ccc;
+    color:#000;
+    text-decoration:none}
+
+	
+
+	
+	
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}	
+	
+	
+	
+/* End  ------ This is the list-icon styles code -----------------------*/	
+
+
+
+
+
+/* Start  ------ ############# Testing Area ###########################*/	
+
+
+
+/* Start  ------ ############# Testing Area ###########################*/	

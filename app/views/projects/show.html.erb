@@ -19,31 +19,28 @@
   <%= @project.currency.name %>
 <% end %>
 <br>
-
-<td>
+<table>
+<tr>
       <label for="project_media">Project Media</label><br>
-      <ul>
+     
 	  <% for medium in @project.media.find(:all) %>
 	    
-		<td style=width="30%";>
-	       <label>Image:</label><%= medium.title rescue nil%>
-	       <%= image_tag medium.photo.url(:thumbnail) rescue nil %>
-	    </td>
-          
+		<div class="framediv">
+	       <%= image_tag medium.photo.url(:thumbnail) rescue nil %><br>
+		   <label>Image:</label><%= medium.title rescue nil%>
+	    </div>
+        
 	  <% end %>
-      </ul>
-    </td>
+     
+    </tr>
+</table>
 
-
-
-
-
-
-
+<div>
 <label>Units:</label><br>
 <% if @project.unit %>
   <%= @project.unit.name %>
 <% end %>
+</div>
 <br>
 <label>Commencement Date:</label><br>
 <% if @project.commencement_date %>

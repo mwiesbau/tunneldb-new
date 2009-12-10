@@ -1,4 +1,7 @@
 require 'paperclip'
+
+
+
 # Be sure to restart your server when you modify this file
 
 # Uncomment below to force Rails into production mode when
@@ -61,4 +64,6 @@ Rails::Initializer.run do |config|
 
   # Make Active Record use UTC-base instead of local time
   # config.active_record.default_timezone = :utc
+  config.gem "searchlogic" 
 end
+require "will_paginate"

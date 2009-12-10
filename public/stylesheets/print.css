@@ -1,0 +1,112 @@
+a:after { content:' [' attr(href) '] '}
+
+
+
+body {
+	font-family: verdana, arial, sans-serif;
+	color: black;
+	font-size:10px;
+	width:850px;
+}
+
+#header {
+	display: none;
+}
+
+#top-nav{
+	display: none;
+}
+
+#list-icons {
+	display: none;
+}
+
+h1 {
+	margin: 3px 0px;
+	font-size: 16px;
+}
+
+h2 {
+	margin: 2px 0px;
+	font-size: 14px;
+}
+
+.input-small input{
+	width:50px;
+}
+
+.input-date{
+	width:50px;
+}
+
+.input-long input{
+	width:95%;
+}
+
+textarea{
+	width: 99%;
+}
+
+p {
+	margin: 0px 0px 10px 0px;
+	line-height: 130%;
+}
+
+select {
+	width:100%;
+}
+
+table{
+	width: 100%;	
+}
+
+table.list{
+	border-collapse: collapse;
+}
+
+table.list tr , td{
+	border: 0px;
+}
+
+table.form-view tr , td{
+	padding: 5px 10px 5px 10px;	
+}	
+
+label{
+	font-weight: bold;
+	font-size: 12px;
+}	
+	
+tr.odd td{
+ background-color:#fff;
+ border-bottom: 1px solid #8DA5BA;
+}
+
+tr.even td{
+ background-color: #ccc;
+ border-bottom: 1px solid #8DA5BA;
+}
+
+.list tr {
+
+}
+
+.list th{
+	text-align:left;
+	border-bottom: 1px solid gray;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+table.form {
+	border-collapse: collapse;
+}
+
+table.form  td , tr{
+
+	margin:5px;
+	padding:5px;
+	background-color: #ccc;
+	border: 1px solid gray;
+	vertical-align: top;
+}

@@ -4,9 +4,13 @@ layout 'projects'
   # GET /categories
   # GET /categories.xml
   def index
-   @projects = Project.find(:all)
-  
+   #@projects = Project.find(:all)
+   #@projects = Project.name_like_all(params[:search].to_s.split).ascend_by_name  
 
+	@search = Project.search(params[:search])  
+   
+	#@projects, @projects_count = @search.all, @search.count  
+	@projects, @projects_count = @search.paginate(:page => params[:page], :per_page => 25), @search.count  
 
     respond_to do |format|
       format.html # index.html.erb
