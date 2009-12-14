@@ -56,7 +56,9 @@ layout 'projects'
 
   # GET /categories/1/edit
   def edit
+   
     @project = Project.find(params[:id])
+	@media = @project.media.all(:order => 'position')
     @activities = Activity.find(:all)
     @categories = Category.find(:all)
     @clients = Client.find(:all)
@@ -73,7 +75,7 @@ layout 'projects'
     @tunneling_unders = TunnelingUnder.find(:all)
     @types = Type.find(:all)       
     @units = Unit.find(:all)
-	@media = Medium.find(:all)
+	
  end
 
   # POST /categories

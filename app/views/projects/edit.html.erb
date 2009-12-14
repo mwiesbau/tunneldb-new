@@ -2,6 +2,30 @@
 <br>
 <% form_for(@project) do |f| %>
   <%= f.error_messages %>
+  
+  	 <div id="mlist">
+      <label for="project_media">Project Media</label><br>
+     
+	  <% for medium in @media  %>	
+		<% content_tag_for :div, medium do %>  	  
+	       <%= image_tag medium.photo.url(:thumbnail) rescue nil %><br>
+		   <%= link_to medium.title, medium_path(medium) %>
+	
+		<% end %>
+	  <% end %>  
+</div>     
+  
+  <%= sortable_element('mlist',:tag =>'DIV', :constraint => false, :url => sort_projects_path) %> 
+	
+	
+
+  
+  
+  
+  
+  
+  
+  
 <table class = "form">
   <tr>
     <td class="input-long" input-long colspan="3"><label for="project_name">Name:</label><br><%= text_field 'project', 'name' %></td>
@@ -248,7 +272,17 @@
         <% end %>
       </td>
     </tr>
-  </table>
+	</tr>
+	
+ </table>	
+	
+	
+	
+	
+ 
+  
+  
+  
   <br>
     <%= f.submit 'Update' %>
   </p>
