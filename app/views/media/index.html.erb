@@ -1,11 +1,19 @@
 <h1>Listing media</h1>
 
+<%if @media_count > 0 %>
+ <%= @media_count %> Media found
+<%= will_paginate @media %>
+
+
+
 <table class='list'>
   <tr>
      <th>Image</th>
-    <th>Title</th>
-    <th>Description</th>
-	<th></th>
+    <th><%= order @search, :by => :title %></th>
+    <th><%= order @search, :by => :description %></th>
+	<th><%= order @search, :by => "Project Number" %></th>
+	<th><%= order @search, :by => "Project Name" %></th>
+	<th</th>
 	<th</th>
   </tr>
 
@@ -15,12 +23,14 @@
 	<td><%=image_tag medium.photo.url(:thumbnail) rescue nil %></td>
 	<td><%= link_to medium.title, medium %></td>
     <td><%=h medium.description %></td>
+	<td><%=h medium.project ? medium.project.number : "-" %></td>
+	<td><%=h medium.project ? medium.project.name : "-" %></td>
     <td><%= link_to 'Edit', edit_medium_path(medium) %></td>
     <td><%= link_to 'Destroy', medium, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
-
+<% end %>
 <br />
 
 <%= link_to 'New media', new_medium_path %>

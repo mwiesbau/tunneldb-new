@@ -1,6 +1,17 @@
+
+
+
 <% if @project.name %>
 <h1><%= @project.name %></h1>
 <% end %>
+
+
+
+
+
+
+
+
 
 <label>Project Number:</label><br><%= @project.number %>
 <br>
@@ -19,21 +30,12 @@
   <%= @project.currency.name %>
 <% end %>
 <br>
-<table>
-<tr>
-      <label for="project_media">Project Media</label><br>
-     
-	  <% for medium in @project.media.find(:all) %>
-	    
-		<div class="framediv">
-	       <%= image_tag medium.photo.url(:thumbnail) rescue nil %><br>
-		   <label>Image:</label><%= medium.title rescue nil%>
-	    </div>
-        
-	  <% end %>
-     
-    </tr>
-</table>
+
+
+
+
+
+
 
 <div>
 <label>Units:</label><br>
@@ -312,11 +314,25 @@
       </ul>
     </td>
   </tr>
+  
+   
+  <div id="mlist">
+      <label for="project_media">Project Media</label><br>
+     
+	  <% for medium in @media  %>	
+		<% content_tag_for :div, medium do %>  	  
+	       <%= image_tag medium.photo.url(:thumbnail) rescue nil %><br>
+		   <%= link_to medium.title, medium_path(medium) %>
+	
+		<% end %>
+	  <% end %>  
+</div>     
+  
+  <%= sortable_element('mlist',:tag =>'DIV', :constraint => false, :url => sort_projects_path) %> 
+  
  </table> 
   
-  
-  
-  
+
 
 
 

@@ -13,7 +13,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :categories
 
- 
+  map.resources :projects, :collection => { :sort => :post}  
 
   # The priority is based upon order of creation: first created -> highest priority.
 

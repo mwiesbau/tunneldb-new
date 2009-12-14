@@ -11,6 +11,7 @@ class Media < ActiveRecord::Migration
 	  t.string		:volume
 	  t.string		:number
 	  t.string		:isbn
+	  t.integer		:position
 	  t.timestamps
 	  end
   end

@@ -5,11 +5,7 @@ layout 'projects'
   # GET /categories.xml
   def index
    #@projects = Project.find(:all)
-   #@projects = Project.name_like_all(params[:search].to_s.split).ascend_by_name  
-
 	@search = Project.search(params[:search])  
-   
-	#@projects, @projects_count = @search.all, @search.count  
 	@projects, @projects_count = @search.paginate(:page => params[:page], :per_page => 25), @search.count  
 
     respond_to do |format|
@@ -22,7 +18,7 @@ layout 'projects'
   # GET /categories/1.xml
   def show
     @project = Project.find(params[:id])
-
+    @media = @project.media.all(:order => 'position')
 
     respond_to do |format|
       format.html # show.html.erb
@@ -163,6 +159,18 @@ def state_select_box
     render :layout => false
   end
 
+  def inspect_params
+    render :text => params.inspect
+  end
+
+  def sort  
+   
+    params[:mlist].each_with_index do |id, index|  
+    Medium.update_all(["position=?", index+1], ["id=?", id])  
+    end  
+    render :nothing => true  
+  end  
+  
   
   
 end
