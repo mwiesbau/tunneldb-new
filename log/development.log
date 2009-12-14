@@ -16835,3 +16835,557 @@ ActionController::RoutingError (No route matches "/images/favicon.ico" with {:me
   D:/Development/ruby186-26/lib/ruby/1.8/webrick/server.rb:82:in `start'
 
 Rendering rescues/layout (not_found)
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#edit (for 127.0.0.1 at 2009-12-14 09:11:28) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mProject Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `projects`[0m
+  [4;35;1mProject Load (2.0ms)[0m   [0mSELECT * FROM `projects` WHERE (`projects`.`id` = 2) [0m
+  [4;36;1mMedium Load (2.0ms)[0m   [0;1mSELECT * FROM `media` WHERE (`media`.project_id = 2) ORDER BY position[0m
+  [4;35;1mActivity Load (1.0ms)[0m   [0mSELECT * FROM `activities` [0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM `categories` [0m
+  [4;35;1mClient Load (1.0ms)[0m   [0mSELECT * FROM `clients` [0m
+  [4;36;1mConstructionMethod Load (1.0ms)[0m   [0;1mSELECT * FROM `construction_methods` [0m
+  [4;35;1mConstructionTechnique Load (2.0ms)[0m   [0mSELECT * FROM `construction_techniques` [0m
+  [4;36;1mContractor Load (1.0ms)[0m   [0;1mSELECT * FROM `contractors` [0m
+  [4;35;1mCountry Load (4.0ms)[0m   [0mSELECT * FROM `countries` [0m
+  [4;36;1mCurrency Load (1.0ms)[0m   [0;1mSELECT * FROM `currencies` [0m
+  [4;35;1mDesigner Load (1.0ms)[0m   [0mSELECT * FROM `designers` [0m
+  [4;36;1mGeology Load (1.0ms)[0m   [0;1mSELECT * FROM `geologies` [0m
+  [4;35;1mOwner Load (1.0ms)[0m   [0mSELECT * FROM `owners` [0m
+  [4;36;1mService Load (2.0ms)[0m   [0;1mSELECT * FROM `services` [0m
+  [4;35;1mState Load (2.0ms)[0m   [0mSELECT * FROM `states` [0m
+  [4;36;1mTunnelingUnder Load (1.0ms)[0m   [0;1mSELECT * FROM `tunneling_unders` [0m
+  [4;35;1mType Load (1.0ms)[0m   [0mSELECT * FROM `types` [0m
+  [4;36;1mUnit Load (1.0ms)[0m   [0;1mSELECT * FROM `units` [0m
+Rendering template within layouts/projects
+Rendering projects/edit
+  [4;35;1mMedium Columns (13.0ms)[0m   [0mSHOW FIELDS FROM `media`[0m
+  [4;36;1mOwner Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `owners`[0m
+  [4;35;1mCountry Columns (9.0ms)[0m   [0mSHOW FIELDS FROM `countries`[0m
+  [4;36;1mState Columns (11.0ms)[0m   [0;1mSHOW FIELDS FROM `states`[0m
+  [4;35;1mType Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `types`[0m
+  [4;36;1mActivity Columns (11.0ms)[0m   [0;1mSHOW FIELDS FROM `activities`[0m
+  [4;35;1mClient Columns (13.0ms)[0m   [0mSHOW FIELDS FROM `clients`[0m
+  [4;36;1mDesigner Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `designers`[0m
+  [4;35;1mCurrency Columns (9.0ms)[0m   [0mSHOW FIELDS FROM `currencies`[0m
+  [4;36;1mUnit Columns (7.0ms)[0m   [0;1mSHOW FIELDS FROM `units`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `categories` [0m
+  [4;36;1mCategory Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT `categories`.id FROM `categories` INNER JOIN `categories_projects` ON `categories`.id = `categories_projects`.category_id WHERE (`categories`.`id` = 1) AND (`categories_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT `categories`.id FROM `categories` INNER JOIN `categories_projects` ON `categories`.id = `categories_projects`.category_id WHERE (`categories`.`id` = 2) AND (`categories_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT `categories`.id FROM `categories` INNER JOIN `categories_projects` ON `categories`.id = `categories_projects`.category_id WHERE (`categories`.`id` = 3) AND (`categories_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;36;1mCategory Load (2.0ms)[0m   [0;1mSELECT `categories`.id FROM `categories` INNER JOIN `categories_projects` ON `categories`.id = `categories_projects`.category_id WHERE (`categories`.`id` = 4) AND (`categories_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT `categories`.id FROM `categories` INNER JOIN `categories_projects` ON `categories`.id = `categories_projects`.category_id WHERE (`categories`.`id` = 5) AND (`categories_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;36;1mCategory Load (3.0ms)[0m   [0;1mSELECT `categories`.id FROM `categories` INNER JOIN `categories_projects` ON `categories`.id = `categories_projects`.category_id WHERE (`categories`.`id` = 6) AND (`categories_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT `categories`.id FROM `categories` INNER JOIN `categories_projects` ON `categories`.id = `categories_projects`.category_id WHERE (`categories`.`id` = 7) AND (`categories_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT `categories`.id FROM `categories` INNER JOIN `categories_projects` ON `categories`.id = `categories_projects`.category_id WHERE (`categories`.`id` = 8) AND (`categories_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT `categories`.id FROM `categories` INNER JOIN `categories_projects` ON `categories`.id = `categories_projects`.category_id WHERE (`categories`.`id` = 9) AND (`categories_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT `categories`.id FROM `categories` INNER JOIN `categories_projects` ON `categories`.id = `categories_projects`.category_id WHERE (`categories`.`id` = 10) AND (`categories_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT `categories`.id FROM `categories` INNER JOIN `categories_projects` ON `categories`.id = `categories_projects`.category_id WHERE (`categories`.`id` = 11) AND (`categories_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `services` [0m
+  [4;35;1mService Columns (9.0ms)[0m   [0mSHOW FIELDS FROM `services`[0m
+  [4;36;1mService Load (1.0ms)[0m   [0;1mSELECT `services`.id FROM `services` INNER JOIN `projects_services` ON `services`.id = `projects_services`.service_id WHERE (`services`.`id` = 1) AND (`projects_services`.project_id = 2 ) LIMIT 1[0m
+  [4;35;1mService Load (1.0ms)[0m   [0mSELECT `services`.id FROM `services` INNER JOIN `projects_services` ON `services`.id = `projects_services`.service_id WHERE (`services`.`id` = 2) AND (`projects_services`.project_id = 2 ) LIMIT 1[0m
+  [4;36;1mService Load (1.0ms)[0m   [0;1mSELECT `services`.id FROM `services` INNER JOIN `projects_services` ON `services`.id = `projects_services`.service_id WHERE (`services`.`id` = 3) AND (`projects_services`.project_id = 2 ) LIMIT 1[0m
+  [4;35;1mService Load (1.0ms)[0m   [0mSELECT `services`.id FROM `services` INNER JOIN `projects_services` ON `services`.id = `projects_services`.service_id WHERE (`services`.`id` = 4) AND (`projects_services`.project_id = 2 ) LIMIT 1[0m
+  [4;36;1mService Load (0.0ms)[0m   [0;1mSELECT `services`.id FROM `services` INNER JOIN `projects_services` ON `services`.id = `projects_services`.service_id WHERE (`services`.`id` = 5) AND (`projects_services`.project_id = 2 ) LIMIT 1[0m
+  [4;35;1mService Load (2.0ms)[0m   [0mSELECT `services`.id FROM `services` INNER JOIN `projects_services` ON `services`.id = `projects_services`.service_id WHERE (`services`.`id` = 6) AND (`projects_services`.project_id = 2 ) LIMIT 1[0m
+  [4;36;1mService Load (1.0ms)[0m   [0;1mSELECT `services`.id FROM `services` INNER JOIN `projects_services` ON `services`.id = `projects_services`.service_id WHERE (`services`.`id` = 7) AND (`projects_services`.project_id = 2 ) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `construction_methods` [0m
+  [4;36;1mConstructionMethod Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `construction_methods`[0m
+  [4;35;1mConstructionMethod Load (1.0ms)[0m   [0mSELECT `construction_methods`.id FROM `construction_methods` INNER JOIN `construction_methods_projects` ON `construction_methods`.id = `construction_methods_projects`.construction_method_id WHERE (`construction_methods`.`id` = 1) AND (`construction_methods_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;36;1mConstructionMethod Load (1.0ms)[0m   [0;1mSELECT `construction_methods`.id FROM `construction_methods` INNER JOIN `construction_methods_projects` ON `construction_methods`.id = `construction_methods_projects`.construction_method_id WHERE (`construction_methods`.`id` = 2) AND (`construction_methods_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;35;1mConstructionMethod Load (0.0ms)[0m   [0mSELECT `construction_methods`.id FROM `construction_methods` INNER JOIN `construction_methods_projects` ON `construction_methods`.id = `construction_methods_projects`.construction_method_id WHERE (`construction_methods`.`id` = 3) AND (`construction_methods_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;36;1mConstructionMethod Load (1.0ms)[0m   [0;1mSELECT `construction_methods`.id FROM `construction_methods` INNER JOIN `construction_methods_projects` ON `construction_methods`.id = `construction_methods_projects`.construction_method_id WHERE (`construction_methods`.`id` = 4) AND (`construction_methods_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;35;1mConstructionMethod Load (1.0ms)[0m   [0mSELECT `construction_methods`.id FROM `construction_methods` INNER JOIN `construction_methods_projects` ON `construction_methods`.id = `construction_methods_projects`.construction_method_id WHERE (`construction_methods`.`id` = 5) AND (`construction_methods_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `construction_techniques` [0m
+  [4;35;1mConstructionTechnique Columns (7.0ms)[0m   [0mSHOW FIELDS FROM `construction_techniques`[0m
+  [4;36;1mConstructionTechnique Load (1.0ms)[0m   [0;1mSELECT `construction_techniques`.id FROM `construction_techniques` INNER JOIN `construction_techniques_projects` ON `construction_techniques`.id = `construction_techniques_projects`.construction_technique_id WHERE (`construction_techniques`.`id` = 1) AND (`construction_techniques_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;35;1mConstructionTechnique Load (1.0ms)[0m   [0mSELECT `construction_techniques`.id FROM `construction_techniques` INNER JOIN `construction_techniques_projects` ON `construction_techniques`.id = `construction_techniques_projects`.construction_technique_id WHERE (`construction_techniques`.`id` = 2) AND (`construction_techniques_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;36;1mConstructionTechnique Load (1.0ms)[0m   [0;1mSELECT `construction_techniques`.id FROM `construction_techniques` INNER JOIN `construction_techniques_projects` ON `construction_techniques`.id = `construction_techniques_projects`.construction_technique_id WHERE (`construction_techniques`.`id` = 3) AND (`construction_techniques_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;35;1mConstructionTechnique Load (1.0ms)[0m   [0mSELECT `construction_techniques`.id FROM `construction_techniques` INNER JOIN `construction_techniques_projects` ON `construction_techniques`.id = `construction_techniques_projects`.construction_technique_id WHERE (`construction_techniques`.`id` = 4) AND (`construction_techniques_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;36;1mConstructionTechnique Load (0.0ms)[0m   [0;1mSELECT `construction_techniques`.id FROM `construction_techniques` INNER JOIN `construction_techniques_projects` ON `construction_techniques`.id = `construction_techniques_projects`.construction_technique_id WHERE (`construction_techniques`.`id` = 5) AND (`construction_techniques_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;35;1mConstructionTechnique Load (1.0ms)[0m   [0mSELECT `construction_techniques`.id FROM `construction_techniques` INNER JOIN `construction_techniques_projects` ON `construction_techniques`.id = `construction_techniques_projects`.construction_technique_id WHERE (`construction_techniques`.`id` = 6) AND (`construction_techniques_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;36;1mConstructionTechnique Load (1.0ms)[0m   [0;1mSELECT `construction_techniques`.id FROM `construction_techniques` INNER JOIN `construction_techniques_projects` ON `construction_techniques`.id = `construction_techniques_projects`.construction_technique_id WHERE (`construction_techniques`.`id` = 7) AND (`construction_techniques_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;35;1mConstructionTechnique Load (1.0ms)[0m   [0mSELECT `construction_techniques`.id FROM `construction_techniques` INNER JOIN `construction_techniques_projects` ON `construction_techniques`.id = `construction_techniques_projects`.construction_technique_id WHERE (`construction_techniques`.`id` = 8) AND (`construction_techniques_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;36;1mConstructionTechnique Load (1.0ms)[0m   [0;1mSELECT `construction_techniques`.id FROM `construction_techniques` INNER JOIN `construction_techniques_projects` ON `construction_techniques`.id = `construction_techniques_projects`.construction_technique_id WHERE (`construction_techniques`.`id` = 9) AND (`construction_techniques_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;35;1mConstructionTechnique Load (0.0ms)[0m   [0mSELECT `construction_techniques`.id FROM `construction_techniques` INNER JOIN `construction_techniques_projects` ON `construction_techniques`.id = `construction_techniques_projects`.construction_technique_id WHERE (`construction_techniques`.`id` = 10) AND (`construction_techniques_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;36;1mConstructionTechnique Load (0.0ms)[0m   [0;1mSELECT `construction_techniques`.id FROM `construction_techniques` INNER JOIN `construction_techniques_projects` ON `construction_techniques`.id = `construction_techniques_projects`.construction_technique_id WHERE (`construction_techniques`.`id` = 11) AND (`construction_techniques_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `geologies` [0m
+  [4;36;1mGeology Columns (7.0ms)[0m   [0;1mSHOW FIELDS FROM `geologies`[0m
+  [4;35;1mGeology Load (1.0ms)[0m   [0mSELECT `geologies`.id FROM `geologies` INNER JOIN `geologies_projects` ON `geologies`.id = `geologies_projects`.geology_id WHERE (`geologies`.`id` = 1) AND (`geologies_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;36;1mGeology Load (1.0ms)[0m   [0;1mSELECT `geologies`.id FROM `geologies` INNER JOIN `geologies_projects` ON `geologies`.id = `geologies_projects`.geology_id WHERE (`geologies`.`id` = 2) AND (`geologies_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;35;1mGeology Load (1.0ms)[0m   [0mSELECT `geologies`.id FROM `geologies` INNER JOIN `geologies_projects` ON `geologies`.id = `geologies_projects`.geology_id WHERE (`geologies`.`id` = 3) AND (`geologies_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `tunneling_unders` [0m
+  [4;35;1mTunnelingUnder Columns (7.0ms)[0m   [0mSHOW FIELDS FROM `tunneling_unders`[0m
+  [4;36;1mTunnelingUnder Load (1.0ms)[0m   [0;1mSELECT `tunneling_unders`.id FROM `tunneling_unders` INNER JOIN `projects_tunneling_unders` ON `tunneling_unders`.id = `projects_tunneling_unders`.tunneling_under_id WHERE (`tunneling_unders`.`id` = 1) AND (`projects_tunneling_unders`.project_id = 2 ) LIMIT 1[0m
+  [4;35;1mTunnelingUnder Load (1.0ms)[0m   [0mSELECT `tunneling_unders`.id FROM `tunneling_unders` INNER JOIN `projects_tunneling_unders` ON `tunneling_unders`.id = `projects_tunneling_unders`.tunneling_under_id WHERE (`tunneling_unders`.`id` = 2) AND (`projects_tunneling_unders`.project_id = 2 ) LIMIT 1[0m
+  [4;36;1mTunnelingUnder Load (1.0ms)[0m   [0;1mSELECT `tunneling_unders`.id FROM `tunneling_unders` INNER JOIN `projects_tunneling_unders` ON `tunneling_unders`.id = `projects_tunneling_unders`.tunneling_under_id WHERE (`tunneling_unders`.`id` = 3) AND (`projects_tunneling_unders`.project_id = 2 ) LIMIT 1[0m
+  [4;35;1mTunnelingUnder Load (1.0ms)[0m   [0mSELECT `tunneling_unders`.id FROM `tunneling_unders` INNER JOIN `projects_tunneling_unders` ON `tunneling_unders`.id = `projects_tunneling_unders`.tunneling_under_id WHERE (`tunneling_unders`.`id` = 4) AND (`projects_tunneling_unders`.project_id = 2 ) LIMIT 1[0m
+  [4;36;1mTunnelingUnder Load (1.0ms)[0m   [0;1mSELECT `tunneling_unders`.id FROM `tunneling_unders` INNER JOIN `projects_tunneling_unders` ON `tunneling_unders`.id = `projects_tunneling_unders`.tunneling_under_id WHERE (`tunneling_unders`.`id` = 5) AND (`projects_tunneling_unders`.project_id = 2 ) LIMIT 1[0m
+  [4;35;1mTunnelingUnder Load (1.0ms)[0m   [0mSELECT `tunneling_unders`.id FROM `tunneling_unders` INNER JOIN `projects_tunneling_unders` ON `tunneling_unders`.id = `projects_tunneling_unders`.tunneling_under_id WHERE (`tunneling_unders`.`id` = 6) AND (`projects_tunneling_unders`.project_id = 2 ) LIMIT 1[0m
+  [4;36;1mGroundwaterControl Load (1.0ms)[0m   [0;1mSELECT * FROM `groundwater_controls` [0m
+  [4;35;1mGroundwaterControl Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `groundwater_controls`[0m
+  [4;36;1mGroundwaterControl Load (1.0ms)[0m   [0;1mSELECT `groundwater_controls`.id FROM `groundwater_controls` INNER JOIN `groundwater_controls_projects` ON `groundwater_controls`.id = `groundwater_controls_projects`.groundwater_control_id WHERE (`groundwater_controls`.`id` = 1) AND (`groundwater_controls_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;35;1mGroundwaterControl Load (0.0ms)[0m   [0mSELECT `groundwater_controls`.id FROM `groundwater_controls` INNER JOIN `groundwater_controls_projects` ON `groundwater_controls`.id = `groundwater_controls_projects`.groundwater_control_id WHERE (`groundwater_controls`.`id` = 2) AND (`groundwater_controls_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;36;1mGroundwaterControl Load (0.0ms)[0m   [0;1mSELECT `groundwater_controls`.id FROM `groundwater_controls` INNER JOIN `groundwater_controls_projects` ON `groundwater_controls`.id = `groundwater_controls_projects`.groundwater_control_id WHERE (`groundwater_controls`.`id` = 3) AND (`groundwater_controls_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;35;1mGroundwaterControl Load (0.0ms)[0m   [0mSELECT `groundwater_controls`.id FROM `groundwater_controls` INNER JOIN `groundwater_controls_projects` ON `groundwater_controls`.id = `groundwater_controls_projects`.groundwater_control_id WHERE (`groundwater_controls`.`id` = 4) AND (`groundwater_controls_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;36;1mGroundwaterControl Load (1.0ms)[0m   [0;1mSELECT `groundwater_controls`.id FROM `groundwater_controls` INNER JOIN `groundwater_controls_projects` ON `groundwater_controls`.id = `groundwater_controls_projects`.groundwater_control_id WHERE (`groundwater_controls`.`id` = 5) AND (`groundwater_controls_projects`.project_id = 2 ) LIMIT 1[0m
+  [4;35;1mGroundwaterControl Load (1.0ms)[0m   [0mSELECT `groundwater_controls`.id FROM `groundwater_controls` INNER JOIN `groundwater_controls_projects` ON `groundwater_controls`.id = `groundwater_controls_projects`.groundwater_control_id WHERE (`groundwater_controls`.`id` = 6) AND (`groundwater_controls_projects`.project_id = 2 ) LIMIT 1[0m
+Completed in 1347ms (View: 508, DB: 236) | 200 OK [http://localhost/projects/2/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-14 09:11:32) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  D:/Development/ruby186-26/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  D:/Development/ruby186-26/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  D:/Development/ruby186-26/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  D:/Development/ruby186-26/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  D:/Development/ruby186-26/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  D:/Development/ruby186-26/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  D:/Development/ruby186-26/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  D:/Development/ruby186-26/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  D:/Development/ruby186-26/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  D:/Development/ruby186-26/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#sort (for 127.0.0.1 at 2009-12-14 09:11:34) [POST]
+  Parameters: {"mlist"=>["1", "4", "7", "6", "2", "3", "5"], "authenticity_token"=>"gJBVMNyLhoP/rkab2Yk5Tg+0G/VSZG5eTuqgua6WVQw="}
+  [4;36;1mMedium Update (1.0ms)[0m   [0;1mUPDATE `media` SET position=1 WHERE (id='1') [0m
+  [4;35;1mMedium Update (54.0ms)[0m   [0mUPDATE `media` SET position=2 WHERE (id='4') [0m
+  [4;36;1mMedium Update (2.0ms)[0m   [0;1mUPDATE `media` SET position=3 WHERE (id='7') [0m
+  [4;35;1mMedium Update (4.0ms)[0m   [0mUPDATE `media` SET position=4 WHERE (id='6') [0m
+  [4;36;1mMedium Update (3.0ms)[0m   [0;1mUPDATE `media` SET position=5 WHERE (id='2') [0m
+  [4;35;1mMedium Update (3.0ms)[0m   [0mUPDATE `media` SET position=6 WHERE (id='3') [0m
+  [4;36;1mMedium Update (1.0ms)[0m   [0;1mUPDATE `media` SET position=7 WHERE (id='5') [0m
+Completed in 160ms (View: 5, DB: 70) | 200 OK [http://localhost/projects/sort]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#sort (for 127.0.0.1 at 2009-12-14 09:57:08) [POST]
+  Parameters: {"mlist"=>["4", "1", "7", "6", "2", "3", "5"], "authenticity_token"=>"gJBVMNyLhoP/rkab2Yk5Tg+0G/VSZG5eTuqgua6WVQw="}
+  [4;35;1mMedium Update (52.0ms)[0m   [0mUPDATE `media` SET position=1 WHERE (id='4') [0m
+  [4;36;1mMedium Update (2.0ms)[0m   [0;1mUPDATE `media` SET position=2 WHERE (id='1') [0m
+  [4;35;1mMedium Update (1.0ms)[0m   [0mUPDATE `media` SET position=3 WHERE (id='7') [0m
+  [4;36;1mMedium Update (0.0ms)[0m   [0;1mUPDATE `media` SET position=4 WHERE (id='6') [0m
+  [4;35;1mMedium Update (1.0ms)[0m   [0mUPDATE `media` SET position=5 WHERE (id='2') [0m
+  [4;36;1mMedium Update (0.0ms)[0m   [0;1mUPDATE `media` SET position=6 WHERE (id='3') [0m
+  [4;35;1mMedium Update (1.0ms)[0m   [0mUPDATE `media` SET position=7 WHERE (id='5') [0m
+Completed in 114ms (View: 4, DB: 57) | 200 OK [http://localhost/projects/sort]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#sort (for 127.0.0.1 at 2009-12-14 09:57:10) [POST]
+  Parameters: {"mlist"=>["4", "1", "3", "7", "6", "2", "5"], "authenticity_token"=>"gJBVMNyLhoP/rkab2Yk5Tg+0G/VSZG5eTuqgua6WVQw="}
+  [4;36;1mMedium Update (2.0ms)[0m   [0;1mUPDATE `media` SET position=1 WHERE (id='4') [0m
+  [4;35;1mMedium Update (2.0ms)[0m   [0mUPDATE `media` SET position=2 WHERE (id='1') [0m
+  [4;36;1mMedium Update (50.0ms)[0m   [0;1mUPDATE `media` SET position=3 WHERE (id='3') [0m
+  [4;35;1mMedium Update (3.0ms)[0m   [0mUPDATE `media` SET position=4 WHERE (id='7') [0m
+  [4;36;1mMedium Update (3.0ms)[0m   [0;1mUPDATE `media` SET position=5 WHERE (id='6') [0m
+  [4;35;1mMedium Update (2.0ms)[0m   [0mUPDATE `media` SET position=6 WHERE (id='2') [0m
+  [4;36;1mMedium Update (1.0ms)[0m   [0;1mUPDATE `media` SET position=7 WHERE (id='5') [0m
+Completed in 122ms (View: 4, DB: 64) | 200 OK [http://localhost/projects/sort]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#sort (for 127.0.0.1 at 2009-12-14 09:57:13) [POST]
+  Parameters: {"mlist"=>["3", "4", "1", "7", "6", "2", "5"], "authenticity_token"=>"gJBVMNyLhoP/rkab2Yk5Tg+0G/VSZG5eTuqgua6WVQw="}
+  [4;35;1mMedium Update (62.0ms)[0m   [0mUPDATE `media` SET position=1 WHERE (id='3') [0m
+  [4;36;1mMedium Update (3.0ms)[0m   [0;1mUPDATE `media` SET position=2 WHERE (id='4') [0m
+  [4;35;1mMedium Update (5.0ms)[0m   [0mUPDATE `media` SET position=3 WHERE (id='1') [0m
+  [4;36;1mMedium Update (1.0ms)[0m   [0;1mUPDATE `media` SET position=4 WHERE (id='7') [0m
+  [4;35;1mMedium Update (1.0ms)[0m   [0mUPDATE `media` SET position=5 WHERE (id='6') [0m
+  [4;36;1mMedium Update (2.0ms)[0m   [0;1mUPDATE `media` SET position=6 WHERE (id='2') [0m
+  [4;35;1mMedium Update (1.0ms)[0m   [0mUPDATE `media` SET position=7 WHERE (id='5') [0m
+Completed in 130ms (View: 6, DB: 76) | 200 OK [http://localhost/projects/sort]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#sort (for 127.0.0.1 at 2009-12-14 09:57:22) [POST]
+  Parameters: {"mlist"=>["4", "3", "1", "7", "6", "2", "5"], "authenticity_token"=>"gJBVMNyLhoP/rkab2Yk5Tg+0G/VSZG5eTuqgua6WVQw="}
+  [4;36;1mMedium Update (48.0ms)[0m   [0;1mUPDATE `media` SET position=1 WHERE (id='4') [0m
+  [4;35;1mMedium Update (2.0ms)[0m   [0mUPDATE `media` SET position=2 WHERE (id='3') [0m
+  [4;36;1mMedium Update (1.0ms)[0m   [0;1mUPDATE `media` SET position=3 WHERE (id='1') [0m
+  [4;35;1mMedium Update (1.0ms)[0m   [0mUPDATE `media` SET position=4 WHERE (id='7') [0m
+  [4;36;1mMedium Update (0.0ms)[0m   [0;1mUPDATE `media` SET position=5 WHERE (id='6') [0m
+  [4;35;1mMedium Update (1.0ms)[0m   [0mUPDATE `media` SET position=6 WHERE (id='2') [0m
+  [4;36;1mMedium Update (1.0ms)[0m   [0;1mUPDATE `media` SET position=7 WHERE (id='5') [0m
+Completed in 112ms (View: 5, DB: 54) | 200 OK [http://localhost/projects/sort]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#sort (for 127.0.0.1 at 2009-12-14 10:08:04) [POST]
+  Parameters: {"mlist"=>["3", "4", "1", "7", "6", "2", "5"], "authenticity_token"=>"gJBVMNyLhoP/rkab2Yk5Tg+0G/VSZG5eTuqgua6WVQw="}
+  [4;35;1mMedium Update (50.0ms)[0m   [0mUPDATE `media` SET position=1 WHERE (id='3') [0m
+  [4;36;1mMedium Update (2.0ms)[0m   [0;1mUPDATE `media` SET position=2 WHERE (id='4') [0m
+  [4;35;1mMedium Update (1.0ms)[0m   [0mUPDATE `media` SET position=3 WHERE (id='1') [0m
+  [4;36;1mMedium Update (0.0ms)[0m   [0;1mUPDATE `media` SET position=4 WHERE (id='7') [0m
+  [4;35;1mMedium Update (0.0ms)[0m   [0mUPDATE `media` SET position=5 WHERE (id='6') [0m
+  [4;36;1mMedium Update (1.0ms)[0m   [0;1mUPDATE `media` SET position=6 WHERE (id='2') [0m
+  [4;35;1mMedium Update (0.0ms)[0m   [0mUPDATE `media` SET position=7 WHERE (id='5') [0m
+Completed in 116ms (View: 4, DB: 54) | 200 OK [http://localhost/projects/sort]
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#sort (for 127.0.0.1 at 2009-12-14 10:08:05) [POST]
+  Parameters: {"mlist"=>["3", "2", "4", "1", "7", "6", "5"], "authenticity_token"=>"gJBVMNyLhoP/rkab2Yk5Tg+0G/VSZG5eTuqgua6WVQw="}
+  [4;36;1mMedium Update (2.0ms)[0m   [0;1mUPDATE `media` SET position=1 WHERE (id='3') [0m
+  [4;35;1mMedium Update (53.0ms)[0m   [0mUPDATE `media` SET position=2 WHERE (id='2') [0m
+  [4;36;1mMedium Update (3.0ms)[0m   [0;1mUPDATE `media` SET position=3 WHERE (id='4') [0m
+  [4;35;1mMedium Update (2.0ms)[0m   [0mUPDATE `media` SET position=4 WHERE (id='1') [0m
+  [4;36;1mMedium Update (3.0ms)[0m   [0;1mUPDATE `media` SET position=5 WHERE (id='7') [0m
+  [4;35;1mMedium Update (2.0ms)[0m   [0mUPDATE `media` SET position=6 WHERE (id='6') [0m
+  [4;36;1mMedium Update (1.0ms)[0m   [0;1mUPDATE `media` SET position=7 WHERE (id='5') [0m
+Completed in 123ms (View: 5, DB: 71) | 200 OK [http://localhost/projects/sort]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#sort (for 127.0.0.1 at 2009-12-14 10:08:08) [POST]
+  Parameters: {"mlist"=>["6", "3", "2", "4", "1", "7", "5"], "authenticity_token"=>"gJBVMNyLhoP/rkab2Yk5Tg+0G/VSZG5eTuqgua6WVQw="}
+  [4;35;1mMedium Update (60.0ms)[0m   [0mUPDATE `media` SET position=1 WHERE (id='6') [0m
+  [4;36;1mMedium Update (2.0ms)[0m   [0;1mUPDATE `media` SET position=2 WHERE (id='3') [0m
+  [4;35;1mMedium Update (3.0ms)[0m   [0mUPDATE `media` SET position=3 WHERE (id='2') [0m
+  [4;36;1mMedium Update (2.0ms)[0m   [0;1mUPDATE `media` SET position=4 WHERE (id='4') [0m
+  [4;35;1mMedium Update (3.0ms)[0m   [0mUPDATE `media` SET position=5 WHERE (id='1') [0m
+  [4;36;1mMedium Update (3.0ms)[0m   [0;1mUPDATE `media` SET position=6 WHERE (id='7') [0m
+  [4;35;1mMedium Update (2.0ms)[0m   [0mUPDATE `media` SET position=7 WHERE (id='5') [0m
+Completed in 131ms (View: 4, DB: 77) | 200 OK [http://localhost/projects/sort]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#sort (for 127.0.0.1 at 2009-12-14 10:08:10) [POST]
+  Parameters: {"mlist"=>["3", "6", "2", "4", "1", "7", "5"], "authenticity_token"=>"gJBVMNyLhoP/rkab2Yk5Tg+0G/VSZG5eTuqgua6WVQw="}
+  [4;36;1mMedium Update (52.0ms)[0m   [0;1mUPDATE `media` SET position=1 WHERE (id='3') [0m
+  [4;35;1mMedium Update (2.0ms)[0m   [0mUPDATE `media` SET position=2 WHERE (id='6') [0m
+  [4;36;1mMedium Update (1.0ms)[0m   [0;1mUPDATE `media` SET position=3 WHERE (id='2') [0m
+  [4;35;1mMedium Update (0.0ms)[0m   [0mUPDATE `media` SET position=4 WHERE (id='4') [0m
+  [4;36;1mMedium Update (2.0ms)[0m   [0;1mUPDATE `media` SET position=5 WHERE (id='1') [0m
+  [4;35;1mMedium Update (1.0ms)[0m   [0mUPDATE `media` SET position=6 WHERE (id='7') [0m
+  [4;36;1mMedium Update (1.0ms)[0m   [0;1mUPDATE `media` SET position=7 WHERE (id='5') [0m
+Completed in 113ms (View: 5, DB: 61) | 200 OK [http://localhost/projects/sort]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#sort (for 127.0.0.1 at 2009-12-14 10:08:16) [POST]
+  Parameters: {"mlist"=>["6", "3", "2", "4", "1", "7", "5"], "authenticity_token"=>"gJBVMNyLhoP/rkab2Yk5Tg+0G/VSZG5eTuqgua6WVQw="}
+  [4;35;1mMedium Update (56.0ms)[0m   [0mUPDATE `media` SET position=1 WHERE (id='6') [0m
+  [4;36;1mMedium Update (2.0ms)[0m   [0;1mUPDATE `media` SET position=2 WHERE (id='3') [0m
+  [4;35;1mMedium Update (3.0ms)[0m   [0mUPDATE `media` SET position=3 WHERE (id='2') [0m
+  [4;36;1mMedium Update (0.0ms)[0m   [0;1mUPDATE `media` SET position=4 WHERE (id='4') [0m
+  [4;35;1mMedium Update (3.0ms)[0m   [0mUPDATE `media` SET position=5 WHERE (id='1') [0m
+  [4;36;1mMedium Update (1.0ms)[0m   [0;1mUPDATE `media` SET position=6 WHERE (id='7') [0m
+  [4;35;1mMedium Update (0.0ms)[0m   [0mUPDATE `media` SET position=7 WHERE (id='5') [0m
+Completed in 121ms (View: 4, DB: 66) | 200 OK [http://localhost/projects/sort]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#sort (for 127.0.0.1 at 2009-12-14 10:08:18) [POST]
+  Parameters: {"mlist"=>["1", "6", "3", "2", "4", "7", "5"], "authenticity_token"=>"gJBVMNyLhoP/rkab2Yk5Tg+0G/VSZG5eTuqgua6WVQw="}
+  [4;36;1mMedium Update (53.0ms)[0m   [0;1mUPDATE `media` SET position=1 WHERE (id='1') [0m
+  [4;35;1mMedium Update (4.0ms)[0m   [0mUPDATE `media` SET position=2 WHERE (id='6') [0m
+  [4;36;1mMedium Update (3.0ms)[0m   [0;1mUPDATE `media` SET position=3 WHERE (id='3') [0m
+  [4;35;1mMedium Update (2.0ms)[0m   [0mUPDATE `media` SET position=4 WHERE (id='2') [0m
+  [4;36;1mMedium Update (2.0ms)[0m   [0;1mUPDATE `media` SET position=5 WHERE (id='4') [0m
+  [4;35;1mMedium Update (1.0ms)[0m   [0mUPDATE `media` SET position=6 WHERE (id='7') [0m
+  [4;36;1mMedium Update (1.0ms)[0m   [0;1mUPDATE `media` SET position=7 WHERE (id='5') [0m
+Completed in 123ms (View: 5, DB: 68) | 200 OK [http://localhost/projects/sort]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#sort (for 127.0.0.1 at 2009-12-14 10:08:20) [POST]
+  Parameters: {"mlist"=>["6", "1", "3", "2", "4", "7", "5"], "authenticity_token"=>"gJBVMNyLhoP/rkab2Yk5Tg+0G/VSZG5eTuqgua6WVQw="}
+  [4;35;1mMedium Update (48.0ms)[0m   [0mUPDATE `media` SET position=1 WHERE (id='6') [0m
+  [4;36;1mMedium Update (3.0ms)[0m   [0;1mUPDATE `media` SET position=2 WHERE (id='1') [0m
+  [4;35;1mMedium Update (0.0ms)[0m   [0mUPDATE `media` SET position=3 WHERE (id='3') [0m
+  [4;36;1mMedium Update (1.0ms)[0m   [0;1mUPDATE `media` SET position=4 WHERE (id='2') [0m
+  [4;35;1mMedium Update (0.0ms)[0m   [0mUPDATE `media` SET position=5 WHERE (id='4') [0m
+  [4;36;1mMedium Update (0.0ms)[0m   [0;1mUPDATE `media` SET position=6 WHERE (id='7') [0m
+  [4;35;1mMedium Update (1.0ms)[0m   [0mUPDATE `media` SET position=7 WHERE (id='5') [0m
+Completed in 105ms (View: 4, DB: 54) | 200 OK [http://localhost/projects/sort]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#sort (for 127.0.0.1 at 2009-12-14 10:08:22) [POST]
+  Parameters: {"mlist"=>["6", "1", "3", "2", "7", "4", "5"], "authenticity_token"=>"gJBVMNyLhoP/rkab2Yk5Tg+0G/VSZG5eTuqgua6WVQw="}
+  [4;36;1mMedium Update (1.0ms)[0m   [0;1mUPDATE `media` SET position=1 WHERE (id='6') [0m
+  [4;35;1mMedium Update (1.0ms)[0m   [0mUPDATE `media` SET position=2 WHERE (id='1') [0m
+  [4;36;1mMedium Update (1.0ms)[0m   [0;1mUPDATE `media` SET position=3 WHERE (id='3') [0m
+  [4;35;1mMedium Update (1.0ms)[0m   [0mUPDATE `media` SET position=4 WHERE (id='2') [0m
+  [4;36;1mMedium Update (48.0ms)[0m   [0;1mUPDATE `media` SET position=5 WHERE (id='7') [0m
+  [4;35;1mMedium Update (2.0ms)[0m   [0mUPDATE `media` SET position=6 WHERE (id='4') [0m
+  [4;36;1mMedium Update (0.0ms)[0m   [0;1mUPDATE `media` SET position=7 WHERE (id='5') [0m
+Completed in 112ms (View: 4, DB: 56) | 200 OK [http://localhost/projects/sort]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#sort (for 127.0.0.1 at 2009-12-14 10:08:25) [POST]
+  Parameters: {"mlist"=>["6", "1", "5", "3", "2", "7", "4"], "authenticity_token"=>"gJBVMNyLhoP/rkab2Yk5Tg+0G/VSZG5eTuqgua6WVQw="}
+  [4;35;1mMedium Update (5.0ms)[0m   [0mUPDATE `media` SET position=1 WHERE (id='6') [0m
+  [4;36;1mMedium Update (1.0ms)[0m   [0;1mUPDATE `media` SET position=2 WHERE (id='1') [0m
+  [4;35;1mMedium Update (56.0ms)[0m   [0mUPDATE `media` SET position=3 WHERE (id='5') [0m
+  [4;36;1mMedium Update (3.0ms)[0m   [0;1mUPDATE `media` SET position=4 WHERE (id='3') [0m
+  [4;35;1mMedium Update (3.0ms)[0m   [0mUPDATE `media` SET position=5 WHERE (id='2') [0m
+  [4;36;1mMedium Update (5.0ms)[0m   [0;1mUPDATE `media` SET position=6 WHERE (id='7') [0m
+  [4;35;1mMedium Update (2.0ms)[0m   [0mUPDATE `media` SET position=7 WHERE (id='4') [0m
+Completed in 129ms (View: 5, DB: 77) | 200 OK [http://localhost/projects/sort]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#sort (for 127.0.0.1 at 2009-12-14 10:10:24) [POST]
+  Parameters: {"mlist"=>["6", "4", "1", "5", "3", "2", "7"], "authenticity_token"=>"gJBVMNyLhoP/rkab2Yk5Tg+0G/VSZG5eTuqgua6WVQw="}
+  [4;36;1mMedium Update (1.0ms)[0m   [0;1mUPDATE `media` SET position=1 WHERE (id='6') [0m
+  [4;35;1mMedium Update (3.0ms)[0m   [0mUPDATE `media` SET position=2 WHERE (id='4') [0m
+  [4;36;1mMedium Update (3.0ms)[0m   [0;1mUPDATE `media` SET position=3 WHERE (id='1') [0m
+  [4;35;1mMedium Update (4.0ms)[0m   [0mUPDATE `media` SET position=4 WHERE (id='5') [0m
+  [4;36;1mMedium Update (2.0ms)[0m   [0;1mUPDATE `media` SET position=5 WHERE (id='3') [0m
+  [4;35;1mMedium Update (2.0ms)[0m   [0mUPDATE `media` SET position=6 WHERE (id='2') [0m
+  [4;36;1mMedium Update (2.0ms)[0m   [0;1mUPDATE `media` SET position=7 WHERE (id='7') [0m
+Completed in 114ms (View: 4, DB: 17) | 200 OK [http://localhost/projects/sort]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#sort (for 127.0.0.1 at 2009-12-14 10:10:28) [POST]
+  Parameters: {"mlist"=>["6", "7", "4", "1", "5", "3", "2"], "authenticity_token"=>"gJBVMNyLhoP/rkab2Yk5Tg+0G/VSZG5eTuqgua6WVQw="}
+  [4;35;1mMedium Update (2.0ms)[0m   [0mUPDATE `media` SET position=1 WHERE (id='6') [0m
+  [4;36;1mMedium Update (46.0ms)[0m   [0;1mUPDATE `media` SET position=2 WHERE (id='7') [0m
+  [4;35;1mMedium Update (2.0ms)[0m   [0mUPDATE `media` SET position=3 WHERE (id='4') [0m
+  [4;36;1mMedium Update (2.0ms)[0m   [0;1mUPDATE `media` SET position=4 WHERE (id='1') [0m
+  [4;35;1mMedium Update (3.0ms)[0m   [0mUPDATE `media` SET position=5 WHERE (id='5') [0m
+  [4;36;1mMedium Update (4.0ms)[0m   [0;1mUPDATE `media` SET position=6 WHERE (id='3') [0m
+  [4;35;1mMedium Update (3.0ms)[0m   [0mUPDATE `media` SET position=7 WHERE (id='2') [0m
+Completed in 113ms (View: 5, DB: 64) | 200 OK [http://localhost/projects/sort]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#sort (for 127.0.0.1 at 2009-12-14 10:10:32) [POST]
+  Parameters: {"mlist"=>["6", "7", "4", "1", "5", "2", "3"], "authenticity_token"=>"gJBVMNyLhoP/rkab2Yk5Tg+0G/VSZG5eTuqgua6WVQw="}
+  [4;36;1mMedium Update (2.0ms)[0m   [0;1mUPDATE `media` SET position=1 WHERE (id='6') [0m
+  [4;35;1mMedium Update (1.0ms)[0m   [0mUPDATE `media` SET position=2 WHERE (id='7') [0m
+  [4;36;1mMedium Update (1.0ms)[0m   [0;1mUPDATE `media` SET position=3 WHERE (id='4') [0m
+  [4;35;1mMedium Update (1.0ms)[0m   [0mUPDATE `media` SET position=4 WHERE (id='1') [0m
+  [4;36;1mMedium Update (1.0ms)[0m   [0;1mUPDATE `media` SET position=5 WHERE (id='5') [0m
+  [4;35;1mMedium Update (48.0ms)[0m   [0mUPDATE `media` SET position=6 WHERE (id='2') [0m
+  [4;36;1mMedium Update (4.0ms)[0m   [0;1mUPDATE `media` SET position=7 WHERE (id='3') [0m
+Completed in 124ms (View: 5, DB: 60) | 200 OK [http://localhost/projects/sort]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#sort (for 127.0.0.1 at 2009-12-14 10:10:33) [POST]
+  Parameters: {"mlist"=>["6", "5", "7", "4", "1", "2", "3"], "authenticity_token"=>"gJBVMNyLhoP/rkab2Yk5Tg+0G/VSZG5eTuqgua6WVQw="}
+  [4;35;1mMedium Update (1.0ms)[0m   [0mUPDATE `media` SET position=1 WHERE (id='6') [0m
+  [4;36;1mMedium Update (49.0ms)[0m   [0;1mUPDATE `media` SET position=2 WHERE (id='5') [0m
+  [4;35;1mMedium Update (2.0ms)[0m   [0mUPDATE `media` SET position=3 WHERE (id='7') [0m
+  [4;36;1mMedium Update (2.0ms)[0m   [0;1mUPDATE `media` SET position=4 WHERE (id='4') [0m
+  [4;35;1mMedium Update (2.0ms)[0m   [0mUPDATE `media` SET position=5 WHERE (id='1') [0m
+  [4;36;1mMedium Update (1.0ms)[0m   [0;1mUPDATE `media` SET position=6 WHERE (id='2') [0m
+  [4;35;1mMedium Update (0.0ms)[0m   [0mUPDATE `media` SET position=7 WHERE (id='3') [0m
+Completed in 313ms (View: 4, DB: 58) | 200 OK [http://localhost/projects/sort]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#sort (for 127.0.0.1 at 2009-12-14 10:10:37) [POST]
+  Parameters: {"mlist"=>["6", "5", "4", "1", "2", "7", "3"], "authenticity_token"=>"gJBVMNyLhoP/rkab2Yk5Tg+0G/VSZG5eTuqgua6WVQw="}
+  [4;36;1mMedium Update (9.0ms)[0m   [0;1mUPDATE `media` SET position=1 WHERE (id='6') [0m
+  [4;35;1mMedium Update (1.0ms)[0m   [0mUPDATE `media` SET position=2 WHERE (id='5') [0m
+  [4;36;1mMedium Update (48.0ms)[0m   [0;1mUPDATE `media` SET position=3 WHERE (id='4') [0m
+  [4;35;1mMedium Update (3.0ms)[0m   [0mUPDATE `media` SET position=4 WHERE (id='1') [0m
+  [4;36;1mMedium Update (3.0ms)[0m   [0;1mUPDATE `media` SET position=5 WHERE (id='2') [0m
+  [4;35;1mMedium Update (3.0ms)[0m   [0mUPDATE `media` SET position=6 WHERE (id='7') [0m
+  [4;36;1mMedium Update (0.0ms)[0m   [0;1mUPDATE `media` SET position=7 WHERE (id='3') [0m
+Completed in 123ms (View: 5, DB: 67) | 200 OK [http://localhost/projects/sort]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#sort (for 127.0.0.1 at 2009-12-14 11:03:11) [POST]
+  Parameters: {"mlist"=>["6", "4", "5", "1", "2", "7", "3"], "authenticity_token"=>"gJBVMNyLhoP/rkab2Yk5Tg+0G/VSZG5eTuqgua6WVQw="}
+  [4;35;1mMedium Update (8.0ms)[0m   [0mUPDATE `media` SET position=1 WHERE (id='6') [0m
+  [4;36;1mMedium Update (5.0ms)[0m   [0;1mUPDATE `media` SET position=2 WHERE (id='4') [0m
+  [4;35;1mMedium Update (2.0ms)[0m   [0mUPDATE `media` SET position=3 WHERE (id='5') [0m
+  [4;36;1mMedium Update (1.0ms)[0m   [0;1mUPDATE `media` SET position=4 WHERE (id='1') [0m
+  [4;35;1mMedium Update (1.0ms)[0m   [0mUPDATE `media` SET position=5 WHERE (id='2') [0m
+  [4;36;1mMedium Update (1.0ms)[0m   [0;1mUPDATE `media` SET position=6 WHERE (id='7') [0m
+  [4;35;1mMedium Update (1.0ms)[0m   [0mUPDATE `media` SET position=7 WHERE (id='3') [0m
+Completed in 92ms (View: 5, DB: 21) | 200 OK [http://localhost/projects/sort]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#sort (for 127.0.0.1 at 2009-12-14 11:03:12) [POST]
+  Parameters: {"mlist"=>["6", "7", "4", "5", "1", "2", "3"], "authenticity_token"=>"gJBVMNyLhoP/rkab2Yk5Tg+0G/VSZG5eTuqgua6WVQw="}
+  [4;36;1mMedium Update (1.0ms)[0m   [0;1mUPDATE `media` SET position=1 WHERE (id='6') [0m
+  [4;35;1mMedium Update (50.0ms)[0m   [0mUPDATE `media` SET position=2 WHERE (id='7') [0m
+  [4;36;1mMedium Update (2.0ms)[0m   [0;1mUPDATE `media` SET position=3 WHERE (id='4') [0m
+  [4;35;1mMedium Update (3.0ms)[0m   [0mUPDATE `media` SET position=4 WHERE (id='5') [0m
+  [4;36;1mMedium Update (3.0ms)[0m   [0;1mUPDATE `media` SET position=5 WHERE (id='1') [0m
+  [4;35;1mMedium Update (2.0ms)[0m   [0mUPDATE `media` SET position=6 WHERE (id='2') [0m
+  [4;36;1mMedium Update (1.0ms)[0m   [0;1mUPDATE `media` SET position=7 WHERE (id='3') [0m
+Completed in 110ms (View: 4, DB: 64) | 200 OK [http://localhost/projects/sort]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#sort (for 127.0.0.1 at 2009-12-14 11:03:20) [POST]
+  Parameters: {"mlist"=>["6", "7", "5", "4", "1", "2", "3"], "authenticity_token"=>"gJBVMNyLhoP/rkab2Yk5Tg+0G/VSZG5eTuqgua6WVQw="}
+  [4;35;1mMedium Update (6.0ms)[0m   [0mUPDATE `media` SET position=1 WHERE (id='6') [0m
+  [4;36;1mMedium Update (1.0ms)[0m   [0;1mUPDATE `media` SET position=2 WHERE (id='7') [0m
+  [4;35;1mMedium Update (49.0ms)[0m   [0mUPDATE `media` SET position=3 WHERE (id='5') [0m
+  [4;36;1mMedium Update (3.0ms)[0m   [0;1mUPDATE `media` SET position=4 WHERE (id='4') [0m
+  [4;35;1mMedium Update (1.0ms)[0m   [0mUPDATE `media` SET position=5 WHERE (id='1') [0m
+  [4;36;1mMedium Update (0.0ms)[0m   [0;1mUPDATE `media` SET position=6 WHERE (id='2') [0m
+  [4;35;1mMedium Update (1.0ms)[0m   [0mUPDATE `media` SET position=7 WHERE (id='3') [0m
+Completed in 118ms (View: 7, DB: 62) | 200 OK [http://localhost/projects/sort]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#sort (for 127.0.0.1 at 2009-12-14 11:03:21) [POST]
+  Parameters: {"mlist"=>["3", "6", "7", "5", "4", "1", "2"], "authenticity_token"=>"gJBVMNyLhoP/rkab2Yk5Tg+0G/VSZG5eTuqgua6WVQw="}
+  [4;36;1mMedium Update (3.0ms)[0m   [0;1mUPDATE `media` SET position=1 WHERE (id='3') [0m
+  [4;35;1mMedium Update (2.0ms)[0m   [0mUPDATE `media` SET position=2 WHERE (id='6') [0m
+  [4;36;1mMedium Update (2.0ms)[0m   [0;1mUPDATE `media` SET position=3 WHERE (id='7') [0m
+  [4;35;1mMedium Update (3.0ms)[0m   [0mUPDATE `media` SET position=4 WHERE (id='5') [0m
+  [4;36;1mMedium Update (2.0ms)[0m   [0;1mUPDATE `media` SET position=5 WHERE (id='4') [0m
+  [4;35;1mMedium Update (2.0ms)[0m   [0mUPDATE `media` SET position=6 WHERE (id='1') [0m
+  [4;36;1mMedium Update (2.0ms)[0m   [0;1mUPDATE `media` SET position=7 WHERE (id='2') [0m
+Completed in 69ms (View: 5, DB: 16) | 200 OK [http://localhost/projects/sort]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#sort (for 127.0.0.1 at 2009-12-14 11:03:21) [POST]
+  Parameters: {"mlist"=>["6", "3", "7", "5", "4", "1", "2"], "authenticity_token"=>"gJBVMNyLhoP/rkab2Yk5Tg+0G/VSZG5eTuqgua6WVQw="}
+  [4;35;1mMedium Update (52.0ms)[0m   [0mUPDATE `media` SET position=1 WHERE (id='6') [0m
+  [4;36;1mMedium Update (3.0ms)[0m   [0;1mUPDATE `media` SET position=2 WHERE (id='3') [0m
+  [4;35;1mMedium Update (1.0ms)[0m   [0mUPDATE `media` SET position=3 WHERE (id='7') [0m
+  [4;36;1mMedium Update (1.0ms)[0m   [0;1mUPDATE `media` SET position=4 WHERE (id='5') [0m
+  [4;35;1mMedium Update (0.0ms)[0m   [0mUPDATE `media` SET position=5 WHERE (id='4') [0m
+  [4;36;1mMedium Update (1.0ms)[0m   [0;1mUPDATE `media` SET position=6 WHERE (id='1') [0m
+  [4;35;1mMedium Update (1.0ms)[0m   [0mUPDATE `media` SET position=7 WHERE (id='2') [0m
+Completed in 302ms (View: 4, DB: 59) | 200 OK [http://localhost/projects/sort]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#sort (for 127.0.0.1 at 2009-12-14 11:03:22) [POST]
+  Parameters: {"mlist"=>["6", "4", "3", "7", "5", "1", "2"], "authenticity_token"=>"gJBVMNyLhoP/rkab2Yk5Tg+0G/VSZG5eTuqgua6WVQw="}
+  [4;36;1mMedium Update (2.0ms)[0m   [0;1mUPDATE `media` SET position=1 WHERE (id='6') [0m
+  [4;35;1mMedium Update (54.0ms)[0m   [0mUPDATE `media` SET position=2 WHERE (id='4') [0m
+  [4;36;1mMedium Update (3.0ms)[0m   [0;1mUPDATE `media` SET position=3 WHERE (id='3') [0m
+  [4;35;1mMedium Update (2.0ms)[0m   [0mUPDATE `media` SET position=4 WHERE (id='7') [0m
+  [4;36;1mMedium Update (2.0ms)[0m   [0;1mUPDATE `media` SET position=5 WHERE (id='5') [0m
+  [4;35;1mMedium Update (1.0ms)[0m   [0mUPDATE `media` SET position=6 WHERE (id='1') [0m
+  [4;36;1mMedium Update (1.0ms)[0m   [0;1mUPDATE `media` SET position=7 WHERE (id='2') [0m
+Completed in 121ms (View: 5, DB: 67) | 200 OK [http://localhost/projects/sort]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#sort (for 127.0.0.1 at 2009-12-14 11:03:24) [POST]
+  Parameters: {"mlist"=>["6", "4", "7", "5", "1", "3", "2"], "authenticity_token"=>"gJBVMNyLhoP/rkab2Yk5Tg+0G/VSZG5eTuqgua6WVQw="}
+  [4;35;1mMedium Update (1.0ms)[0m   [0mUPDATE `media` SET position=1 WHERE (id='6') [0m
+  [4;36;1mMedium Update (1.0ms)[0m   [0;1mUPDATE `media` SET position=2 WHERE (id='4') [0m
+  [4;35;1mMedium Update (53.0ms)[0m   [0mUPDATE `media` SET position=3 WHERE (id='7') [0m
+  [4;36;1mMedium Update (2.0ms)[0m   [0;1mUPDATE `media` SET position=4 WHERE (id='5') [0m
+  [4;35;1mMedium Update (3.0ms)[0m   [0mUPDATE `media` SET position=5 WHERE (id='1') [0m
+  [4;36;1mMedium Update (3.0ms)[0m   [0;1mUPDATE `media` SET position=6 WHERE (id='3') [0m
+  [4;35;1mMedium Update (1.0ms)[0m   [0mUPDATE `media` SET position=7 WHERE (id='2') [0m
+Completed in 138ms (View: 5, DB: 65) | 200 OK [http://localhost/projects/sort]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#sort (for 127.0.0.1 at 2009-12-14 11:03:26) [POST]
+  Parameters: {"mlist"=>["6", "4", "2", "7", "5", "1", "3"], "authenticity_token"=>"gJBVMNyLhoP/rkab2Yk5Tg+0G/VSZG5eTuqgua6WVQw="}
+  [4;36;1mMedium Update (3.0ms)[0m   [0;1mUPDATE `media` SET position=1 WHERE (id='6') [0m
+  [4;35;1mMedium Update (1.0ms)[0m   [0mUPDATE `media` SET position=2 WHERE (id='4') [0m
+  [4;36;1mMedium Update (54.0ms)[0m   [0;1mUPDATE `media` SET position=3 WHERE (id='2') [0m
+  [4;35;1mMedium Update (2.0ms)[0m   [0mUPDATE `media` SET position=4 WHERE (id='7') [0m
+  [4;36;1mMedium Update (4.0ms)[0m   [0;1mUPDATE `media` SET position=5 WHERE (id='5') [0m
+  [4;35;1mMedium Update (3.0ms)[0m   [0mUPDATE `media` SET position=6 WHERE (id='1') [0m
+  [4;36;1mMedium Update (2.0ms)[0m   [0;1mUPDATE `media` SET position=7 WHERE (id='3') [0m
+Completed in 124ms (View: 5, DB: 70) | 200 OK [http://localhost/projects/sort]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#sort (for 127.0.0.1 at 2009-12-14 11:03:27) [POST]
+  Parameters: {"mlist"=>["6", "4", "1", "2", "7", "5", "3"], "authenticity_token"=>"gJBVMNyLhoP/rkab2Yk5Tg+0G/VSZG5eTuqgua6WVQw="}
+  [4;35;1mMedium Update (14.0ms)[0m   [0mUPDATE `media` SET position=1 WHERE (id='6') [0m
+  [4;36;1mMedium Update (1.0ms)[0m   [0;1mUPDATE `media` SET position=2 WHERE (id='4') [0m
+  [4;35;1mMedium Update (3.0ms)[0m   [0mUPDATE `media` SET position=3 WHERE (id='1') [0m
+  [4;36;1mMedium Update (3.0ms)[0m   [0;1mUPDATE `media` SET position=4 WHERE (id='2') [0m
+  [4;35;1mMedium Update (3.0ms)[0m   [0mUPDATE `media` SET position=5 WHERE (id='7') [0m
+  [4;36;1mMedium Update (5.0ms)[0m   [0;1mUPDATE `media` SET position=6 WHERE (id='5') [0m
+  [4;35;1mMedium Update (1.0ms)[0m   [0mUPDATE `media` SET position=7 WHERE (id='3') [0m
+Completed in 108ms (View: 5, DB: 31) | 200 OK [http://localhost/projects/sort]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#sort (for 127.0.0.1 at 2009-12-14 11:03:29) [POST]
+  Parameters: {"mlist"=>["4", "6", "1", "2", "7", "5", "3"], "authenticity_token"=>"gJBVMNyLhoP/rkab2Yk5Tg+0G/VSZG5eTuqgua6WVQw="}
+  [4;36;1mMedium Update (50.0ms)[0m   [0;1mUPDATE `media` SET position=1 WHERE (id='4') [0m
+  [4;35;1mMedium Update (3.0ms)[0m   [0mUPDATE `media` SET position=2 WHERE (id='6') [0m
+  [4;36;1mMedium Update (2.0ms)[0m   [0;1mUPDATE `media` SET position=3 WHERE (id='1') [0m
+  [4;35;1mMedium Update (1.0ms)[0m   [0mUPDATE `media` SET position=4 WHERE (id='2') [0m
+  [4;36;1mMedium Update (1.0ms)[0m   [0;1mUPDATE `media` SET position=5 WHERE (id='7') [0m
+  [4;35;1mMedium Update (1.0ms)[0m   [0mUPDATE `media` SET position=6 WHERE (id='5') [0m
+  [4;36;1mMedium Update (0.0ms)[0m   [0;1mUPDATE `media` SET position=7 WHERE (id='3') [0m
+Completed in 117ms (View: 5, DB: 59) | 200 OK [http://localhost/projects/sort]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#sort (for 127.0.0.1 at 2009-12-14 11:03:35) [POST]
+  Parameters: {"mlist"=>["4", "6", "2", "7", "5", "1", "3"], "authenticity_token"=>"gJBVMNyLhoP/rkab2Yk5Tg+0G/VSZG5eTuqgua6WVQw="}
+  [4;35;1mMedium Update (1.0ms)[0m   [0mUPDATE `media` SET position=1 WHERE (id='4') [0m
+  [4;36;1mMedium Update (1.0ms)[0m   [0;1mUPDATE `media` SET position=2 WHERE (id='6') [0m
+  [4;35;1mMedium Update (56.0ms)[0m   [0mUPDATE `media` SET position=3 WHERE (id='2') [0m
+  [4;36;1mMedium Update (4.0ms)[0m   [0;1mUPDATE `media` SET position=4 WHERE (id='7') [0m
+  [4;35;1mMedium Update (2.0ms)[0m   [0mUPDATE `media` SET position=5 WHERE (id='5') [0m
+  [4;36;1mMedium Update (3.0ms)[0m   [0;1mUPDATE `media` SET position=6 WHERE (id='1') [0m
+  [4;35;1mMedium Update (2.0ms)[0m   [0mUPDATE `media` SET position=7 WHERE (id='3') [0m
+Completed in 149ms (View: 5, DB: 70) | 200 OK [http://localhost/projects/sort]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProjectsController#sort (for 127.0.0.1 at 2009-12-14 11:03:37) [POST]
+  Parameters: {"mlist"=>["4", "5", "6", "2", "7", "1", "3"], "authenticity_token"=>"gJBVMNyLhoP/rkab2Yk5Tg+0G/VSZG5eTuqgua6WVQw="}
+  [4;36;1mMedium Update (1.0ms)[0m   [0;1mUPDATE `media` SET position=1 WHERE (id='4') [0m
+  [4;35;1mMedium Update (53.0ms)[0m   [0mUPDATE `media` SET position=2 WHERE (id='5') [0m
+  [4;36;1mMedium Update (3.0ms)[0m   [0;1mUPDATE `media` SET position=3 WHERE (id='6') [0m
+  [4;35;1mMedium Update (3.0ms)[0m   [0mUPDATE `media` SET position=4 WHERE (id='2') [0m
+  [4;36;1mMedium Update (3.0ms)[0m   [0;1mUPDATE `media` SET position=5 WHERE (id='7') [0m
+  [4;35;1mMedium Update (0.0ms)[0m   [0mUPDATE `media` SET position=6 WHERE (id='1') [0m
+  [4;36;1mMedium Update (0.0ms)[0m   [0;1mUPDATE `media` SET position=7 WHERE (id='3') [0m
+Completed in 116ms (View: 5, DB: 65) | 200 OK [http://localhost/projects/sort]
