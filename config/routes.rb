@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :media
 
-   map.resources :projects
+  map.resources :projects
    
   map.resources :states
 
@@ -14,6 +14,14 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :categories
 
   map.resources :projects, :collection => { :sort => :post}  
+  
+   map.resources :users
+  
+   map.login 'login', :controller => 'user_sessions', :action => 'new'  
+   map.logout 'logout', :controller => 'user_sessions', :action => 'destroy'  
+   map.resources :user_sessions 
+  
+   map.root :controller => :home
 
   # The priority is based upon order of creation: first created -> highest priority.
 

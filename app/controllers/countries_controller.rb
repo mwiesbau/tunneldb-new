@@ -1,5 +1,5 @@
 class CountriesController < ApplicationController
- layout 'projects' 
+
  # GET /countries
   # GET /countries.xml
   def index

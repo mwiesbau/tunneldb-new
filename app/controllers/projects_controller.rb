@@ -1,5 +1,7 @@
 class ProjectsController < ApplicationController
-layout 'projects'
+
+
+ 
  
   # GET /categories
   # GET /categories.xml
@@ -147,11 +149,14 @@ layout 'projects'
   # DELETE /categories/1
   # DELETE /categories/1.xml
   def destroy
-    @project = Project.find(params[:id])
+    
+	
+	
+	@project = Project.find(params[:id])
     @project.destroy
 
     respond_to do |format|
-      format.html { redirect_to :action => 'list' }
+      format.html { redirect_to :action => 'index' }
       format.xml  { head :ok }
     end
   end

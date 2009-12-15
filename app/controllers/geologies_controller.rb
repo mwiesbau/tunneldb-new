@@ -1,5 +1,5 @@
 class GeologiesController < ApplicationController
-  layout 'projects'
+
   
   # GET /geologies
   # GET /geologies.xml

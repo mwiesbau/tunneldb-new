@@ -1,0 +1,31 @@
+<div>
+The Dr. Sauer Group has carried out Consulting, Design, Site Supervision and Construction Management&nbsp;Services on more than 400 Tunneling Projects all over the world over the last 25 years.<br><br>
+
+In this section, we have compiled a selection of&nbsp; projects with summary information, images and brief descriptions. The projects are grouped into the ctegories below. Currently, about 20 percent of the projects we carried out can be researched through this database; we will continue adding&nbsp;information in the future, so be sure to check back!<br> 
+For an in-depth review of selected projects, please visit our <a href="/projects/featured"><strong>Featured Projects Section</strong>.<br>
+Please do not hesitate to contact us.<br>
+<a href="/contact_us"><strong>using&nbsp;the&nbsp;information request form</strong>&nbsp;</a>or by<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/company/locations"><strong>emailing or calling any of our offices</strong> </a><br/>to receive additional information about the projects listed in this section!<br>
+
+</div><br><br>
+
+<label>Select Project Category</label><br>
+
+<% @categories.each do |c| %>
+  <% content_tag_for :div, c do %>  
+  <label><%= c.name %></label><br>
+     <% c.projects.each do |project| %> 
+		<div>
+        <% if project.published  %>	
+	      <%= project.number %> -
+	      <%= link_to project.name, :projects %>
+	    <% end %>
+       <% end %>
+    <% end %><br>
+  </p>
+<% end %>
+
+</div>
+					
+
+											
+											

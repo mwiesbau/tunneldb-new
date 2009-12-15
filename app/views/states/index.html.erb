@@ -3,23 +3,30 @@
 
 <table class="list">
   <tr>
+  <th></th>
     <th>Symbol</th>
    <th>Name</th>
-    <th></th>
-   
-    
+   <th>Country</th>   
   </tr>
 
   
   
   
 <% for state in @states %>
-  <tr>
-    <td><%=h state.symbol %></td>
+  <tr class="<%= alternate %>">		
+			<td width ="60px">
+  
+   
+   <%= link_to (image_tag("list-icons/icon-view-off.png", :border => 0, :mouseover => "list-icons/icon-view-on.png"), :action =>'show', :id => state.id) %>
+   <%= link_to (image_tag("list-icons/icon-edit-off.png", :border => 0, :mouseover => "list-icons/icon-edit-on.png"), :action =>'edit', :id => state.id) %>
+  <%= link_to (image_tag("list-icons/icon-delete-off.png", :border => 0, :mouseover => "list-icons/icon-delete-on.png"), state, :confirm => 'Are you sure?', :method => :delete) %>
+
+	
+	
+	 <td><%=h state.symbol %></td>
     <td><%=h state.name %></td>
-    <td><%= link_to 'Show', state %> | 
-    <%= link_to 'Edit', edit_state_path(state) %> | 
-    <%= link_to 'Destroy', state, :confirm => 'Are you sure?', :method => :delete %></td>
+	<td><%=h state.country ? state.country.name : "-" %></td>
+	
   </tr>
 <% end %>
 </table>

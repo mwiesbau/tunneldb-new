@@ -3,22 +3,26 @@
 
 <table class = "list">
   <tr>
-    <th>Name</th>
-	<th></th>
-		
+    <th></th>
+    <th>Name</th>		
   </tr>
 
 <% for service in @services %>
-  <tr>
-    <td><%=h service.name %></td>
-    <td width = "150px"><%= link_to 'Show', service %> |
-   <%= link_to 'Edit', edit_service_path(service) %> |
-    <%= link_to 'Delete', service, :confirm => 'Are you sure?', :method => :delete %></td>
+  <tr class="<%= alternate %>">		
+  <td width ="60px">
+ 
+   <%= link_to (image_tag("list-icons/icon-view-off.png", :border => 0, :mouseover => "list-icons/icon-view-on.png"), :action =>'show', :id => service.id) %>
+   <%= link_to (image_tag("list-icons/icon-edit-off.png", :border => 0, :mouseover => "list-icons/icon-edit-on.png"), :action =>'edit', :id => service.id) %>
+  <%= link_to (image_tag("list-icons/icon-delete-off.png", :border => 0, :mouseover => "list-icons/icon-delete-on.png"), service, :confirm => 'Are you sure?', :method => :delete) %>
+  
+   </td>	
+	
+	<td><%=h service.name %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to '&nbsp New service |', new_service_path %>
-<%= link_to '&nbsp Back to Projects', projects_path %>
+<%= link_to '&nbsp New service ', new_service_path %>
+

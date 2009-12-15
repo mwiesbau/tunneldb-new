@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  layout 'projects'
+
   
   # GET /categories
   # GET /categories.xml

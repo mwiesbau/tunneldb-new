@@ -1,5 +1,5 @@
 class ServicesController < ApplicationController
- layout 'projects'
+
  # GET /services
   # GET /services.xml
   def index

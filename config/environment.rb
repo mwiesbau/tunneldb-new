@@ -1,4 +1,4 @@
-require 'paperclip'
+
 
 
 
@@ -65,5 +65,8 @@ Rails::Initializer.run do |config|
   # Make Active Record use UTC-base instead of local time
   # config.active_record.default_timezone = :utc
   config.gem "searchlogic" 
+  config.gem "authlogic"
+  config.gem "declarative_authorization", :source => "http://gemcutter.org"  
 end
+require 'paperclip'
 require "will_paginate"

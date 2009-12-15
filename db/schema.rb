@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 30) do
+ActiveRecord::Schema.define(:version => 20091215135540) do
 
   create_table "activities", :force => true do |t|
     t.string   "symbol",     :default => "", :null => false
@@ -153,6 +153,7 @@ ActiveRecord::Schema.define(:version => 30) do
     t.string   "photo_file_name"
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
+    t.integer  "position"
   end
 
   create_table "owners", :force => true do |t|
@@ -209,6 +210,19 @@ ActiveRecord::Schema.define(:version => 30) do
     t.datetime "updated_at"
   end
 
+  create_table "roles", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "roles_users", :force => true do |t|
+    t.integer  "role_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "services", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -239,6 +253,16 @@ ActiveRecord::Schema.define(:version => 30) do
     t.string   "symbol"
     t.string   "name"
     t.float    "conversion_factor"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "username"
+    t.string   "email"
+    t.string   "crypted_password"
+    t.string   "password_salt"
+    t.string   "persistence_token"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

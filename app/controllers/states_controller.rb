@@ -1,5 +1,5 @@
 class StatesController < ApplicationController
-  layout 'projects'
+
   # GET /states
   # GET /states.xml
   def index
