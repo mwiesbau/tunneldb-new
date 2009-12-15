@@ -8,16 +8,16 @@ Please do not hesitate to contact us.<br>
 
 </div><br><br>
 
-<label>Select Project Category</label><br>
+<label>Select Project Category</label><br><br>
 
-<% @categories.each do |c| %>
-  <% content_tag_for :div, c do %>  
-  <label><%= c.name %></label><br>
-     <% c.projects.each do |project| %> 
+<% @categories.each do |category| %>
+  <% content_tag_for :div, category do %>  
+  <label><%= category.name %></label><br>
+     <% category.projects.each do |project| %> 
 		<div>
         <% if project.published  %>	
 	      <%= project.number %> -
-	      <%= link_to project.name, :projects %>
+	      <%= link_to project.name, project_path(project) %>
 	    <% end %>
        <% end %>
     <% end %><br>
