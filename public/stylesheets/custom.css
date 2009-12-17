@@ -1,0 +1,262 @@
+/* This CSS sets the costum styles for the DSC-original-Theme components. */
+
+/* ========= DSC-Original Custom Styles (Welcome Page Flash Area) ========= HM 2008-12-05 ========= */
+
+#vp_home {
+	width: 100%;
+	height: 183px;
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+	background-image: url(../images/dsc-home/dsc-home_flash_stretch.png);
+}
+
+/* ========= DSC-Original Custom Styles (Welcome Page Service Menu) ========= HM 2008-12-05 ========= */
+
+#service-nav {
+	padding: 5px 59px 5px 45px;
+	width: auto;
+	height: 36px;
+	background-color: #BFBFBF;
+}
+#service-nav td a {
+	display: block;
+	border: 1px solid #FFFFFF;
+	background-color: #E5E5E5;
+	text-align: center;
+	width: auto;
+	height: 34px;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+#service-nav td a:hover {
+	text-decoration: none;
+	background-color: #F2F2F2;
+}
+#service-nav td div {
+	visibility: hidden;
+}
+
+#service-nav a.tunnel_design {
+	background-image: url(../images/dsc-nav-service/tunnel_design_off.png);
+}
+#service-nav td a.tunnel_design:hover {
+	background-image: url(../images/dsc-nav-service/tunnel_design_on.png);
+}
+
+#service-nav a.geotechnical {
+	background-image: url(../images/dsc-nav-service/geotechnical_off.png);
+}
+#service-nav td a.geotechnical:hover {
+	background-image: url(../images/dsc-nav-service/geotechnical_on.png);
+}
+
+#service-nav a.waterproofing {
+	background-image: url(../images/dsc-nav-service/waterproofing_off.png);
+}
+#service-nav td a.waterproofing:hover {
+	background-image: url(../images/dsc-nav-service/waterproofing_on.png);
+}
+
+#service-nav a.site_supervision {
+	background-image: url(../images/dsc-nav-service/site_supervision_off.png);
+}
+#service-nav td a.site_supervision:hover {
+	background-image: url(../images/dsc-nav-service/site_supervision_on.png);
+}
+
+#service-nav td a.documentation:hover {
+	background-image: url(../images/dsc-nav-service/documentation_on.png);
+}
+#service-nav a.documentation {
+	background-image: url(../images/dsc-nav-service/documentation_off.png);
+}
+
+#service-nav a.inspection {
+	background-image: url(../images/dsc-nav-service/inspection_off.png);
+}
+#service-nav td a.inspection:hover {
+	background-image: url(../images/dsc-nav-service/inspection_on.png);
+}
+
+#service-nav a.tunnel_widening {
+	background-image: url(../images/dsc-nav-service/tunnel_widening_off.png);
+}
+#service-nav td a.tunnel_widening:hover {
+	background-image: url(../images/dsc-nav-service/tunnel_widening_on.png);
+}
+
+/* ========= DSC-Original Custom Styles (Typical Page-Top Background) ========= HM 2008-12-05 ========= */
+
+#page-top {
+	position:absolute;
+	left:0px;
+	top:85px;
+	background: url(../images/dsc-page-top/page-top_bg.png);
+	margin: 0px;
+	width: 100%;
+}
+
+
+/* ========= DSC-Original Custom Styles (Sevices Page - List) ========= HM 2008-12-05 ========= */
+
+#services {
+}
+
+#services h4 {
+	margin: 7px 0px 0px 0px;
+	height: 20px;
+	background-color: #8DA5BA;
+	
+	font-size:1.1em;
+	padding-top:2px;
+	background-image:url(../images/dsc-services/title-arrow.png);
+	background-position: 15px 5px;
+	background-repeat: no-repeat;
+}
+
+#services h4  a {
+
+	color:#FFF;
+	margin: 10px;
+}
+
+#services img {
+	margin: -5px 20px 15px -5px;
+}
+
+#services p {
+ 
+	min-height:43px;
+	background-color: #D9D9D9;
+	
+}
+
+/*  Footer and Bottom Navigation Added By HM*/
+
+#footer .copyright-notice {
+    background-color: #90AEC5;
+	font-weight: bold;
+	color: #FFF;
+	border-top: 3px solid #BFBFBF;
+	border-bottom: 1px solid #396080;
+	padding: 2px;
+	
+}
+
+#footer div {
+	background-image: url(../images/dsc-misc/footer-right.png);
+}
+
+#footer a {
+	color: #D7D7D7;
+	text-decoration: none;
+}
+
+#footer li a:hover {
+	color: #D7D7D7;
+	text-decoration: underline;
+}
+
+#footer ul {
+	right: 0;
+	text-align: center;
+}
+#footer li {
+	color: #396080;
+	display: inline;
+	margin-left: 9px;
+	padding-right: 8px;
+}
+
+#list-01{
+	width: 100%;
+	float: right;
+	font-size:1.0em;
+	font-weight: bold;
+	min-height:300px;
+	color: #BC7712;
+	display: inline;
+
+}
+
+#list-01 li {
+	width: 50%;
+	float: right;
+	list-style-image: url(../images/boxed_arrow_right.png);
+	list-style-position:inside;
+	padding-bottom: 0px;
+}
+
+#list-01 th{
+	background-color: #fff;
+	background: url(../images/dsc-misc/th-background.png) repeat-x top;
+	padding: 2px;
+}
+
+#list-01 td{
+	background-color: #fff;
+	background: url(../images/dsc-misc/background-01.png) no-repeat top;
+	padding: 50px;
+	border: 1px solid #396080;
+}
+
+
+#list-01 a {
+	font-size:2.0em;
+
+}
+
+#header-menu {
+	position: fixed; right:20px; top:10px;
+	color:#fff;
+	font-size:0.9em;
+}
+
+#header-menu a {
+	color:#fff;
+	font-weight: normal;
+}
+
+#header-menu input {
+padding:1px;
+}
+
+#header-menu-botton {
+	background: url(../images/dsc-misc/dsc-submit_arrow.png) no-repeat center;
+	padding:1px;
+	border: 0px;
+	width:16px;
+}
+/* ---------- Main navigation ---Modified for DSC-Original Theme------- */
+
+#leftnav {
+	position:absolute;
+	left:0px;
+	top:150px;
+	min-height:500px;
+	width: 20%;
+	vertical-align: top;
+}
+
+
+#leftnav a {
+	display: block;
+	border-top: 0px solid #FFFFFF;
+	border-bottom: 1px solid #C1C1C1;
+	padding: 5px 10px 3px 35px;
+	height: auto;
+	background-color: #EDEDED;
+	font-size: 10px;
+	font-weight: bold;
+	color: #396080;
+	text-decoration: none;
+}
+
+#leftnav a:hover, #leftnav a.down {
+	background-image: url("../images/dsc-leftnav/leftnav_selected_bg.png");
+	background-position: 0px 0px;
+	background-repeat: repeat-y;
+}
+
+	
+/* --End---- Main navigation ---Modified for DSC-Original Theme------- */

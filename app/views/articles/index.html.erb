@@ -1,0 +1,29 @@
+<h1>Featured Projects</h1>
+
+<div>
+<% @articles.each do |article| %>
+  
+    <div>
+	 <label><%= article.project.name %> | <%= article.title %></label><br> 
+    </div>
+  <br><br>
+  
+    
+    <div>
+	<%= link_to 'Show |', article %>
+	<%= link_to 'Edit |', edit_article_path(article) %>
+	<%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete %>
+	</div> 
+  
+ 
+      
+     <div>
+     
+      <% if article.article %>
+        <%= article.article %>
+      <% end %>
+    </div>            
+<% end %>
+</table>
+<br>
+<%= link_to 'New article', new_article_path %>
