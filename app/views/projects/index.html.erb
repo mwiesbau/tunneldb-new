@@ -64,6 +64,7 @@
 			<th></th>   
 			<th><%= order @search, :by => :number %></th>
 			<th><%= order @search, :by => :name %></th>
+			<th><%= order @search, :by => :category %></th>
 			<th><%= order @search, :by => :country %></th>
 			<th><%= order @search, :by => :state %></th>
 			<th><%= order @search, :by => :city %></th>
@@ -81,6 +82,12 @@
 			</td>
 			<td><%=h project.number%></td>
 			<td><%=h project.name %></td>
+			<td><%for category in project.categories do  %>
+			<%= category.name %>
+			<% end %>
+			</td>
+			
+			
 			<td><%=h project.country ? project.country.name : "-" %></td>
 			<td><%=h project.state ? project.state.name : "-" %></td>
 			<td><%=h project.city %></td>

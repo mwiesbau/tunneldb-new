@@ -10,7 +10,7 @@
 	height: 60px;
 	background-image: url(../images/header_bg.png);
 	position: fixed; left:0px; width:100%; top: 0px; height:60px;
-	/* background-color: red; */
+	z-index: 1000;
 	background-position: 0px 0px;
 	background-repeat: repeat-x;
 }

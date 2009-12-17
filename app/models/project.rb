@@ -18,7 +18,7 @@ class Project < ActiveRecord::Base
 	has_and_belongs_to_many	:tunneling_under
 	has_and_belongs_to_many	:groundwater_control
 	has_many				:media
-	
+	has_many				:articles
 	validates_presence_of :name, :number
 
 end

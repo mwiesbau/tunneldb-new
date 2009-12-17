@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :articles
+
   map.resources :media
 
   map.resources :projects
@@ -21,6 +23,8 @@ ActionController::Routing::Routes.draw do |map|
    map.login 'login', :controller => 'user_sessions', :action => 'new'  
    map.logout 'logout', :controller => 'user_sessions', :action => 'destroy'  
    map.resources :user_sessions 
+   
+   map.featured 'featured', :controller => 'articles', :action => 'index' 
   
    map.root :controller => :home
 

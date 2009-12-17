@@ -6,26 +6,35 @@ For an in-depth review of selected projects, please visit our <a href="/projects
 Please do not hesitate to contact us.<br>
 <a href="/contact_us"><strong>using&nbsp;the&nbsp;information request form</strong>&nbsp;</a>or by<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/company/locations"><strong>emailing or calling any of our offices</strong> </a><br/>to receive additional information about the projects listed in this section!<br>
 
-</div><br><br>
-
-<label>Select Project Category</label><br><br>
-
-<% @categories.each do |category| %>
-  <% content_tag_for :div, category do %>  
-  <label><%= category.name %></label><br>
-     <% category.projects.each do |project| %> 
-		<div>
-        <% if project.published  %>	
-	      <%= project.number %> -
-	      <%= link_to project.name, project_path(project) %>
-	    <% end %>
-       <% end %>
-    <% end %><br>
-  </p>
-<% end %>
-
 </div>
-					
+<br><br>
+<h1>Select Project Category</h1><br><br>
+
+<table id="list-01">
+<tr><th>
+<%= image_tag "foo.gif", :alt => 'foo' %>
+</th>
+</tr>
+
+<tr>
+<td>
+<% @categories.each do |category| %>
+<div>
+  <li><%= category.name %></li>
+     <% category.projects.each do |project| %> 
+		
+        <% if project.published  %>	
+	      <%= project.number %>
+	      <%= link_to project.name, project_path(project) %>
+
+       <% end %>
+    <% end %>
+</div>
+<% end %>
+</td>
+</tr>
+
+</table>					
 
 											
 											

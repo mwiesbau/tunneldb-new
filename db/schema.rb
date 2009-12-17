@@ -9,11 +9,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091215135540) do
+ActiveRecord::Schema.define(:version => 20091217152437) do
 
   create_table "activities", :force => true do |t|
     t.string   "symbol",     :default => "", :null => false
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "articles", :force => true do |t|
+    t.integer  "project_id"
+    t.string   "title"
+    t.text     "article"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -206,19 +214,6 @@ ActiveRecord::Schema.define(:version => 20091215135540) do
   create_table "projects_tunneling_unders", :id => false, :force => true do |t|
     t.integer  "project_id"
     t.integer  "tunneling_under_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "roles", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "roles_users", :force => true do |t|
-    t.integer  "role_id"
-    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
