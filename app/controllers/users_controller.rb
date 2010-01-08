@@ -1,6 +1,20 @@
 class UsersController < ApplicationController
-     def new  
-        @user = User.new  
+     
+	 def index
+    @users = User.find(:all)
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @Users }
+    end
+  end
+	 
+	 
+	 
+	 
+	 def new  
+        @user = User.new
+		
     end  
       
     def create  

@@ -1,0 +1,31 @@
+<h1>Listing Currencies</h1>
+<br>
+
+<table class= "list">
+  <tr>
+	<th></th>
+	<th>Symbol</th>
+    <th>Name</th>
+    </tr>
+
+<% for currency in @currencies %>
+
+
+
+ 		 <tr class="<%= alternate %>">		
+			<td width ="60px">
+              <%= link_to (image_tag("list-icons/icon-view-off.png", :border => 0, :mouseover => "list-icons/icon-view-on.png"), :action =>'show', :id => currency.id) %>
+              <%= link_to (image_tag("list-icons/icon-edit-off.png", :border => 0, :mouseover => "list-icons/icon-edit-on.png"), :action =>'edit', :id => currency.id) %>
+              <%= link_to (image_tag("list-icons/icon-delete-off.png", :border => 0, :mouseover => "list-icons/icon-delete-on.png"), currency, :confirm => 'Are you sure?', :method => :delete) %>
+            </td>
+		
+			<td><%=h currency.symbol %></td>
+            <td><%=h currency.name %></td>
+          </tr>
+ 
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New currency', new_currency_path %>

@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   # See ActionController::RequestForgeryProtection for details
   # Uncomment the :secret if you're not using the cookie session store
   protect_from_forgery # :secret => 'b459a0a8ce81f6adb647c985542e1a33'
-    
+
   
     helper_method :current_user  
      
@@ -22,6 +22,10 @@ class ApplicationController < ActionController::Base
      @current_user = current_user_session && current_user_session.record  
    end  
   
-  
+    rescue_from CanCan::AccessDenied do |exception|  
+	  logger.error("Access denied! #{exception.message}")
+      flash[:error] = "Access denied!"  
+      redirect_to(:action => 'index')  
+    end  
   
 end

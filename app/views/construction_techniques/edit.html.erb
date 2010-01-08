@@ -1,0 +1,16 @@
+<h1>Editing construction_technique</h1>
+
+<% form_for(@construction_technique) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @construction_technique %> |
+<%= link_to 'Back', construction_techniques_path %>

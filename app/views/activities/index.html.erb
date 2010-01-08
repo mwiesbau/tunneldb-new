@@ -1,0 +1,32 @@
+<h1>Listing Activities</h1>
+<br>
+
+<table class= "list">
+  <tr>
+	<th></th>
+	<th>Symbol</th>
+    <th>Name</th>
+    </tr>
+
+<% for activity in @activities %>
+
+
+
+ 		 <tr class="<%= alternate %>">		
+			<td width ="60px">
+              <%= link_to (image_tag("list-icons/icon-view-off.png", :border => 0, :mouseover => "list-icons/icon-view-on.png"), :action =>'show', :id => activity.id) %>
+              <%= link_to (image_tag("list-icons/icon-edit-off.png", :border => 0, :mouseover => "list-icons/icon-edit-on.png"), :action =>'edit', :id => activity.id) %>
+              <%= link_to (image_tag("list-icons/icon-delete-off.png", :border => 0, :mouseover => "list-icons/icon-delete-on.png"), activity, :confirm => 'Are you sure?', :method => :delete) %>
+            </td>
+		
+            <td><%=h activity.symbol %></td>
+            <td><%=h activity.name %></td>
+          </tr>
+ 
+<% end %>
+</table>
+
+<br />
+
+
+<%= link_to 'New activity', new_activity_path %>

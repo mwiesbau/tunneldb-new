@@ -1,0 +1,30 @@
+<h1>Listing Designers</h1>
+<br>
+
+<table class= "list">
+  <tr>
+	<th></th>
+    <th>Name</th>
+    </tr>
+
+<% for designer in @designers %>
+
+
+
+ 		 <tr class="<%= alternate %>">		
+			<td width ="60px">
+              <%= link_to (image_tag("list-icons/icon-view-off.png", :border => 0, :mouseover => "list-icons/icon-view-on.png"), :action =>'show', :id => designer.id) %>
+              <%= link_to (image_tag("list-icons/icon-edit-off.png", :border => 0, :mouseover => "list-icons/icon-edit-on.png"), :action =>'edit', :id => designer.id) %>
+              <%= link_to (image_tag("list-icons/icon-delete-off.png", :border => 0, :mouseover => "list-icons/icon-delete-on.png"), designer, :confirm => 'Are you sure?', :method => :delete) %>
+            </td>
+		
+        
+            <td><%=h designer.name %></td>
+          </tr>
+ 
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New designer', new_designer_path %>

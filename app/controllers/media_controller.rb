@@ -1,4 +1,5 @@
 class MediaController < ApplicationController
+load_and_authorize_resource
   # GET /medias
   # GET /medias.xml
   def index

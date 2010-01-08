@@ -1,0 +1,16 @@
+<h1>Editing tunneling_under</h1>
+
+<% form_for(@tunneling_under) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @tunneling_under %> |
+<%= link_to 'Back', tunneling_unders_path %>

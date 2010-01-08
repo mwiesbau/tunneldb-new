@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+ load_and_authorize_resource
 
 
  
@@ -178,6 +179,9 @@ def state_select_box
     render :nothing => true  
   end  
   
+
+  
+   
   
   
 end

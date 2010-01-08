@@ -1,9 +1,12 @@
-
+    <% flash.each do |key,msg| %>  
+      <%= content_tag :p, msg, :id => key %>  
+    <% end %>  
 
 
 <h1>Listing Projects</h1><br>
 
-    <% form_for @search do |f| %>     
+    <% form_for @search do |f| %>   
+     
       <table>
 	   <tr>
 	     <td> 
@@ -75,10 +78,17 @@
     <% @projects.each do |project| %>
 		<tr class="<%= alternate %>">		
 			<td width ="60px">
+			    <% if can? :read, @project %>
 				<%= link_to (image_tag("list-icons/icon-view-off.png", :border => 0, :mouseover => "list-icons/icon-view-on.png"), :action =>'show', :id => project.id) %>
-				<%= link_to (image_tag("list-icons/icon-edit-off.png", :border => 0, :mouseover => "list-icons/icon-edit-on.png"), :action =>'edit', :id => project.id) %>
-				<%= link_to (image_tag("list-icons/icon-delete-off.png", :border => 0, :mouseover => "list-icons/icon-delete-on.png"), project , :confirm => 'Are you sure?', :method => :delete) %>
-
+				<% end %>
+				
+				<% if can? :update, @project %>
+				  <%= link_to (image_tag("list-icons/icon-edit-off.png", :border => 0, :mouseover => "list-icons/icon-edit-on.png"), :action =>'edit', :id => project.id) %>
+				<% end %>
+				
+				<% if can? :destroy, @project %>
+				  <%= link_to (image_tag("list-icons/icon-delete-off.png", :border => 0, :mouseover => "list-icons/icon-delete-on.png"), project , :confirm => 'Are you sure?', :method => :delete) %>
+				<% end %>
 			</td>
 			<td><%=h project.number%></td>
 			<td><%=h project.name %></td>

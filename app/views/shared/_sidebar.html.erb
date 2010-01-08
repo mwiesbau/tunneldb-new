@@ -1,5 +1,31 @@
-<div id="leftnav">
-<li><%= link_to "Overview", :root %></li>
-<li><%= link_to "Featured Projects", :articles %></li>
-<li><%= link_to "Advanced Search", :root %></li>
+<div>
+  <div id="leftnav">
+    <h2>Admin</h2>
+    <li><%= link_to "Overview", :root %></li>
+    <li><%= link_to "Featured Projects", :articles %></li>
+    <li><%= link_to "Advanced Search", :root %></li>
+
+	<% if can? :manage, @Project %>
+    <div id="admin">
+      <label>Admin</label>
+	  <li><%= link_to "Activities", :activities %></li>
+	  <li><%= link_to "Construction Methods", :construction_methods %></li>
+	  <li><%= link_to "Construction Techniques", :construction_techniques %></li>
+	  <li><%= link_to "Currencies", :currencies %></li>
+      <li><%= link_to "Countries", :countries %></li>
+	  <li><%= link_to "Designers", :designers %></li>
+	  <li><%= link_to "Groundwater Control", :groundwater_controls %></li>
+	  <li><%= link_to "States", :states %></li>
+	  <li><%= link_to "Tunneling Under", :tunneling_unders %></li>
+	  <li><%= link_to "Project Type", :types %></li>
+	  <li><%= link_to "Geologies", :geologies %></li>
+	  <li><%= link_to "Categories", :categories %></li>
+	  <li><%= link_to "Services", :services %></li>
+	  <li><%= link_to "Owners", :owners %></li>
+	  <li><%= link_to "Users", :users %></li>
+	  <li><%= link_to "Clients", :clients %></li>
+    </div>
+	<% end %>
+  </div>
 </div>
+

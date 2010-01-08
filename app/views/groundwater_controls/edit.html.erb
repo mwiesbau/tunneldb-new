@@ -1,0 +1,16 @@
+<h1>Editing groundwater_control</h1>
+
+<% form_for(@groundwater_control) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @groundwater_control %> |
+<%= link_to 'Back', groundwater_controls_path %>

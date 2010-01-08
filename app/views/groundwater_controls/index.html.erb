@@ -1,0 +1,30 @@
+<h1>Listing Groundwater Controls</h1>
+<br>
+
+<table class= "list">
+  <tr>
+	<th></th>
+    <th>Name</th>
+    </tr>
+
+<% for groundwater_control in @groundwater_controls %>
+
+
+
+ 		 <tr class="<%= alternate %>">		
+			<td width ="60px">
+              <%= link_to (image_tag("list-icons/icon-view-off.png", :border => 0, :mouseover => "list-icons/icon-view-on.png"), :action =>'show', :id => groundwater_control.id) %>
+              <%= link_to (image_tag("list-icons/icon-edit-off.png", :border => 0, :mouseover => "list-icons/icon-edit-on.png"), :action =>'edit', :id => groundwater_control.id) %>
+              <%= link_to (image_tag("list-icons/icon-delete-off.png", :border => 0, :mouseover => "list-icons/icon-delete-on.png"), groundwater_control, :confirm => 'Are you sure?', :method => :delete) %>
+            </td>
+		
+        
+            <td><%=h groundwater_control.name %></td>
+          </tr>
+ 
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New groundwater control', new_groundwater_control_path %>

@@ -1,5 +1,5 @@
 class ServicesController < ApplicationController
-
+load_and_authorize_resource
  # GET /services
   # GET /services.xml
   def index

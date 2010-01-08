@@ -1,4 +1,26 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :types
+
+  map.resources :tunneling_unders
+
+  map.resources :groundwater_controls
+
+  map.resources :designers
+
+  map.resources :currencies
+
+  map.resources :construction_techniques
+
+  map.resources :construction_methods
+
+  map.resources :activities
+
+  map.resources :clients
+
+  map.resources :owners
+
+  map.resources :roles
+
   map.resources :articles
 
   map.resources :media
@@ -59,7 +81,7 @@ ActionController::Routing::Routes.draw do |map|
   # See how all your routes lay out with "rake routes"
 
   # Install the default routes as the lowest priority.
- 
+  
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
 end

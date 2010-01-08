@@ -18,13 +18,12 @@
        <%= form.password_field :password_confirmation %>  
      </p>  
 	 
-	 <p>  
-		
-       <%= form.label :password_confirmation, "Password confirmation" %>  
-       <%= form.password_field :password_confirmation %>  
-     </p>  
-	
-	 
+	<% if can? :manage, @Project %>
+	  <p>
+	  <%= form.label :roles %>  
+      <%= form.collection_select :role, User::ROLES, :to_s, :humanize %>     
+	 </p>
+	<% end %> 
 	 
      <p>  
        <%= form.submit "Submit" %>  

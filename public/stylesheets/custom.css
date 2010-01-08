@@ -260,3 +260,12 @@ padding:1px;
 
 	
 /* --End---- Main navigation ---Modified for DSC-Original Theme------- */
+
+#admin {
+	position:relative;
+	left:0px;
+	top:10px;
+	min-height:500px;
+	width: 100%;
+	vertical-align: top;
+}

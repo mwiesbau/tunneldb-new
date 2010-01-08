@@ -1,5 +1,5 @@
 class StatesController < ApplicationController
-
+load_and_authorize_resource
   # GET /states
   # GET /states.xml
   def index
