@@ -1,0 +1,10 @@
+
+bin_path: D:/Development/sphinx-0.9.9-win32/bin/
+development:
+port: 13000
+test:
+port: 13001
+staging:
+port: 13002
+production:
+port: 13003

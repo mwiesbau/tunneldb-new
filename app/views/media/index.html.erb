@@ -8,25 +8,42 @@
 
 <table class='list'>
   <tr>
+     <th></th>
      <th>Image</th>
-    <th><%= order @search, :by => :title %></th>
-    <th><%= order @search, :by => :description %></th>
-	<th><%= order @search, :by => "Project Number" %></th>
-	<th><%= order @search, :by => "Project Name" %></th>
-	<th</th>
-	<th</th>
+     <th</th>
+	
   </tr>
 
 <% @media.each do |medium| %>
-  <tr class="<%= alternate %>">
-    
-	<td><%=image_tag medium.photo.url(:thumbnail) rescue nil %></td>
-	<td><%= link_to medium.title, medium %></td>
-    <td><%=h medium.description %></td>
-	<td><%=h medium.project ? medium.project.number : "-" %></td>
-	<td><%=h medium.project ? medium.project.name : "-" %></td>
-    <td><%= link_to 'Edit', edit_medium_path(medium) %></td>
-    <td><%= link_to 'Destroy', medium, :confirm => 'Are you sure?', :method => :delete %></td>
+  <tr class="<%= alternate %>">		
+			<td class="symbols">
+			    <% if can? :read, @project %>
+				<%= link_to (image_tag("list-icons/icon-view-off.png", :border => 0, :mouseover => "list-icons/icon-view-on.png"), :action =>'show', :id => medium.id) %>
+				<% end %>
+				
+				<% if can? :update, @project %>
+				  <%= link_to (image_tag("list-icons/icon-edit-off.png", :border => 0, :mouseover => "list-icons/icon-edit-on.png"), :action =>'edit', :id => medium.id) %>
+				<% end %>
+				
+				<% if can? :destroy, @project %>
+				  <%= link_to (image_tag("list-icons/icon-delete-off.png", :border => 0, :mouseover => "list-icons/icon-delete-on.png"), medium , :confirm => 'Are you sure?', :method => :delete) %>
+				<% end %>
+			</td>
+			
+			
+			
+	        <td width="100px">
+	          <div class="medium-list">
+	            <%=image_tag medium.photo.url(:thumbnail) rescue nil %>
+		      </div>
+			</td>
+	          
+	        <td class="desc-list">
+	          <%= link_to medium.project.number, medium.project %>
+	          <%= link_to medium.project.name, medium.project %><br>
+	          <%= link_to medium.title, medium %><br>
+	          <%=h truncate(medium.description, :length => 50) %>
+	        </td>
   </tr>
 <% end %>
 </table>

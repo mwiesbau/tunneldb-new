@@ -69,4 +69,4 @@ Rails::Initializer.run do |config|
   config.gem "declarative_authorization", :source => "http://gemcutter.org"  
 end
 require 'paperclip'
-require "will_paginate"
+require 'will_paginate'

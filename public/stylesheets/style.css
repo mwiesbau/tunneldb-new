@@ -49,12 +49,12 @@ div.wrapper {
 #footer {
 	position:relative;
 	left:0px;
-	top:500px;
+	bottom:0px;
 	padding:20px;
 	background-color: #F2F2F2;
 	border-bottom: 3px solid #9FB7CA;
 	width:100%;
-	height:60px;
+	height:20px;
 }
 .medium  {
 	position:relative;
@@ -154,7 +154,7 @@ tr.even td{
 
 .list{
 	border-collapse: collapse;
-
+   
 }
 
 .list tr{

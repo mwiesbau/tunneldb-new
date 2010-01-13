@@ -1,18 +1,17 @@
 <div id="header"><%= image_tag('logo.png') %>
-  <form action="/search" name="search" method="">
+  <form>
+  
+   
 
 	<% if current_user %>
      <%= current_user.username.titleize %> |	
      <%= link_to "EDIT |", edit_user_path(:current) %>  
      <%= link_to "LOGOUT |", logout_path %>  
-   <% else %>  
-      
+   <% else %>     
      <%= link_to "LOG IN |", login_path %>  
+	
+
    <% end %> 
-    <label for="keyword">SEARCH
-      <input id="keyword" name="keyword" class="text" type="text">
-    </label>
-    <input src="/images/submit_arrow.png" type="image">
-  </form>
+ </form>   
   
 </div>

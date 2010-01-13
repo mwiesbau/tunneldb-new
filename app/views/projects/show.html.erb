@@ -316,15 +316,25 @@
   </tr>
   
    
-  <div id="mlist">
+  <div >
       <label for="project_media">Project Media</label><br>
-     
-	  <% for medium in @media  %>	
-		<% content_tag_for :div, medium do %>  	  
-	       <%= image_tag medium.photo.url(:thumbnail) rescue nil %><br>
-		   <%= link_to medium.title, medium_path(medium) %>
-	
+   
+	    <% for medium in @media  %>	
+		<% content_tag_for :div, medium do %>  	    
+	      <%= link_to image_tag(medium.photo.url(:thumbnail)), medium.photo.url(:original), :class => "top_up" %>
+		  <div class="desc">
+	        <%= link_to medium.title, medium_path(medium) %><br>
+			<%= truncate(medium.description, :length => 20) %>
+		  </div>
 		<% end %>
+		
+		<script type="text/javascript">
+          TopUp.addPresets({
+            ".top_up": {
+            group: "images",
+            layout: "quicklook",
+                         }}) </script> 
+		
 	  <% end %>  
 </div>     
   

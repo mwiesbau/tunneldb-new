@@ -7,8 +7,11 @@ class ProjectsController < ApplicationController
   # GET /categories
   # GET /categories.xml
   def index
-   #@projects = Project.find(:all)
-	@search = Project.search(params[:search])  
+   #@projects = Project.search(params[:search])
+	
+	
+	
+	@search = Project.searchlogic(params[:search])  
 	@projects, @projects_count = @search.paginate(:page => params[:page], :per_page => 25), @search.count  
 
     respond_to do |format|
