@@ -180,18 +180,24 @@
 }
 
 #list-01 li {
-	width: 50%;
+	width: 100%;
 	float: right;
 	list-style-image: url(../images/boxed_arrow_right.png);
 	list-style-position:inside;
 	padding-bottom: 0px;
 }
 
-#list-01 th{
+#list-01 .head{
 	background-color: #fff;
 	background: url(../images/dsc-misc/th-background.png) repeat-x top;
 	padding: 2px;
 }
+
+#list-01 .entry{
+	font-size: medium;
+	
+}
+
 
 #list-01 td{
 	background-color: #fff;

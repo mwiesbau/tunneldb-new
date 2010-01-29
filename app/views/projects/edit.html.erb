@@ -15,16 +15,16 @@
 	        <%= link_to medium.title, medium_path(medium) %><br>
 			<%= truncate(medium.description, :length => 20) %>
 		  </div>
-		   
-	
 		<% end %>
 		
 		<script type="text/javascript">
+		  TopUp.images_path = "/images/top_up/";
           TopUp.addPresets({
             ".top_up": {
             group: "images",
             layout: "quicklook",
                          }}) </script> 
+		
 		
 		
 	  <% end %>  

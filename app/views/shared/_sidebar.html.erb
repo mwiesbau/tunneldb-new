@@ -6,7 +6,7 @@
     <li><%= link_to "Advanced Search", :root %></li>
 
 	<% if can? :manage, @Project %>
-    <div id="admin">
+    <div>
       <label>Admin</label>
 	  <li><%= link_to "Activities", :activities %></li>
 	  <li><%= link_to "Construction Methods", :construction_methods %></li>

@@ -11,33 +11,44 @@ Please do not hesitate to contact us.<br>
 
 </div>
 <br><br>
-<h1>Select Project Category</h1><br><br>
 
-<table id="list-01">
-<tr><th>
-<%= image_tag "foo.gif", :alt => 'foo' %>
-</th>
-</tr>
 
-<tr>
-<td>
+
+
+
+<div id="list-01">
+
+<h1 class="head">Select Project Category</h1><br><br>
+
 <% @categories.each do |category| %>
-<div>
-  <li><%= category.name %></li>
-     <% category.projects.each do |project| %> 
-		
+  
+  
+  
+  
+  <li><%= link_to category.name, "#", :onclick => "Effect.toggle('category_#{category.id}', 'slide'); return true;" %></li>
+  
+  <% div_for(category, :class => "list", :style => "display:none;" ) do %>
+
+  
+    <div>
+	  <% category.projects.each do |project| %> 
         <% if project.published  %>	
-	      <%= project.number %>
-	      <%= link_to project.name, project_path(project) %>
-
-       <% end %>
-    <% end %>
-</div>
+	      <%= link_to project.number, project_path(project), :class => "entry" %>
+	      <%= link_to project.name, project_path(project), :class => "entry" %>
+        <% end %>
+	  <% end %>
+    </div>
+  <% end %>
 <% end %>
-</td>
-</tr>
+</div>
+				
 
-</table>					
+
+
+
+
+
+
 
 											
 											
