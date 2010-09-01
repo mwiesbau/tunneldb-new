@@ -1,0 +1,113 @@
+
+
+
+<h1>Listing Projects</h1><br>
+
+    <% form_for @search do |f| %>     
+      <table>
+	   <tr>
+	     <td> 
+		   <%= f.label :number_like_or_name_like_or_city_like, "Keyword:" %><br>  
+           <%= f.text_field :number_like_or_name_like_or_city_like %>      
+		 </td>
+	     <td> 
+	       <%= f.label :number_like, "Number:" %> <br>
+           <%= f.text_field :number_like %>
+         </td> 
+	   </tr>
+	   
+	   <tr>
+	     <td>  
+            <%= f.label :name_like, "Name:" %> <br> 
+            <%= f.text_field :name_like %>  
+          </td>  
+		  <td>  
+          <%= f.label :country_id_equals, "Country:" %>  
+          <%= f.collection_select :country_id_equals, Country.all, :id, :name, :include_blank => true %>  
+       </td>  
+        </tr>
+		
+        <tr>		
+        <td>  
+         
+		 
+		 
+       </td>
+       <td>  
+            <%= f.label :city_like, "City:" %>  <br>
+            <%= f.text_field :city_like %>  
+          </td>
+	  
+	   </tr>
+	   </table>
+         <%= f.submit "Search" %>  
+       
+   <% end %>  					
+
+
+
+
+
+					
+<% if @projects.blank? %>
+  <p>No Projects to Display.</p>
+	
+	<% else %>
+	
+<%if @projects_count > 0 %>
+ <%= @projects_count %> Projects found
+<%= will_paginate @projects %>
+
+
+	<table class = "list">
+		<tr>
+			<th></th>   
+			<th><%= order @search, :by => :number %></th>
+			<th><%= order @search, :by => :name %></th>
+			<th><%= order @search, :by => :country %></th>
+			<th><%= order @search, :by => :state %></th>
+			<th><%= order @search, :by => :city %></th>
+			<th>Commencement Date</th>
+			<th>Completion Date</th>
+		</tr>
+ 
+    <% @projects.each do |project| %>
+		<tr class="<%= alternate %>">		
+			<td width ="60px">
+				<%= link_to (image_tag("list-icons/icon-view-off.png", :border => 0, :mouseover => "list-icons/icon-view-on.png"), :action =>'show', :id => project.id) %>
+				<%= link_to (image_tag("list-icons/icon-edit-off.png", :border => 0, :mouseover => "list-icons/icon-edit-on.png"), :action =>'edit', :id => project.id) %>
+				<%= link_to (image_tag("list-icons/icon-delete-off.png", :border => 0, :mouseover => "list-icons/icon-delete-on.png"), project , :confirm => 'Are you sure?', :method => :delete) %>
+
+			</td>
+			<td><%=h project.number%></td>
+			<td><%=h project.name %></td>
+			<td><%=h project.country ? project.country.name : "-" %></td>
+			<td><%=h project.state ? project.state.name : "-" %></td>
+			<td><%=h project.city %></td>
+			<td><%=h project.commencement_date %></td>
+			<td><%=h project.completion_date %></td>		
+		</tr>
+		
+		
+<% end %>
+	
+    <% end %>
+<% end %>
+</table>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+<%= link_to 'New project', {:action => "new"} %>
+</div>
+
+
+

@@ -1,0 +1,26 @@
+<h1>Featured Projects</h1><br>
+<div>
+<% @articles.each do |article| %>
+  
+    <div>
+	  <h2><%= article.title %> - <%= article.created_at.to_formatted_s(:short) %></h2>
+	  <label><%= article.project.number %> - <%= article.project.name %> </label> 
+	  <% if can? :update, @article %>
+	    <%= link_to 'Edit ', edit_article_path(article) %>
+	  <% end %>
+	  
+	  <% if can? :delete, @article %>
+	    <%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete %>
+	  <% end %>
+	  <br>  
+        <%= truncate(article.article, :length => 300) %>
+		<%= link_to 'Read&nbsp;more&nbsp;>>', article %>	
+     
+     </div>
+
+<% end %>
+
+<br>
+<% if can? :create, @article %>
+<%= link_to 'New article', new_article_path %>
+<% end %>

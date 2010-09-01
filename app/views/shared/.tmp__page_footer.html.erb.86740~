@@ -1,0 +1,12 @@
+<div>
+	<div class="copyrights">&copy; Copyrights 2010 Dr. G. Sauer Corporation, All Rights Reserved</div>
+    <div class="login">
+	<% if current_user %>
+	<%= link_to "EDIT MY PROFILE", edit_user_path(:current) %>&nbsp;|&nbsp;
+    <%= link_to "LOGOUT", logout_path %>
+    <% else %>
+	<%= link_to "REGISTER", new_user_path %>&nbsp;|&nbsp;
+    <%= link_to "LOG IN", login_path %>
+    <% end %>
+	</div>
+

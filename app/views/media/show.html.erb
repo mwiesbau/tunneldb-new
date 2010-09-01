@@ -1,10 +1,4 @@
-<p>
-
-
-
 <label>Project:</label><%= @medium.project.name rescue nil%><br>
-
-
 
 <p>
   <b>Title:</b>
@@ -52,7 +46,7 @@
   <%=h @medium.isbn %>
 </p>
 
-<td>
+<p>
       <label for="medium_construction_methods">Construction Methods</label><br>
       <ul>
 	  <% for construction_method in @medium.construction_methods.find(:all) %>
@@ -63,9 +57,9 @@
           </li>
 	  <% end %>
       </ul>
-    </td>
+</p>
 
-<td>
+<p>
       <label for="medium_construction_technique">Construction Techniques</label><br>
       <ul>
 	  <% for construction_technique in @medium.construction_techniques.find(:all) %>
@@ -76,26 +70,20 @@
           </li>
 	  <% end %>
       </ul>
-    </td>
+</p>
 
-<td>
+<p>
       <label for="medium_geology">Geologies</label><br>
       <ul>
 	  <% for geology in @medium.geologies.find(:all) %>
 	    <li>
-	      <div>
+
 	        <%= geology.name %>
-	      </div>
+
           </li>
 	  <% end %>
       </ul>
-    </td>
-
-
-
-
-
-
+</p>
 
 <p>
 <%= image_tag @medium.photo.url(:original) rescue nil %>

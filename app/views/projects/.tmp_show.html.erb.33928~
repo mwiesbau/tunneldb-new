@@ -1,0 +1,357 @@
+
+
+
+<% if @project.name %>
+<h1><%= @project.name %></h1>
+<% end %>
+
+
+
+
+
+
+
+
+
+<label>Project Number:</label><br><%= @project.number %>
+<br>
+<label>Project Type:</label><br>
+<% if @project.type %>
+  <%= @project.type.name %>
+<% end %>
+<br>
+<label>On Website:</label><br>
+<% if @project.published %>
+  <%= @project.published %>
+<% end %>
+<br>
+<label>Currency:</label><br>
+<% if @project.currency %>
+  <%= @project.currency.name %>
+<% end %>
+<br>
+
+
+
+
+
+
+
+<div>
+<label>Units:</label><br>
+<% if @project.unit %>
+  <%= @project.unit.name %>
+<% end %>
+</div>
+<br>
+<label>Commencement Date:</label><br>
+<% if @project.commencement_date %>
+  <%= @project.commencement_date %>
+<% end %>
+<br>
+<label>Completion Date:</label><br>
+<% if @project.completion_date %>
+  <%= @project.completion_date %>
+<% end %>
+
+
+<label>Last Updated:</label><br><%= @project.updated_at %><br>
+<br>
+<table class="form-view">
+  <tr>
+    <td>
+      <label>Country:</label><br>
+      <% if @project.country %>
+        <%= @project.country.name %>
+      <% end %>
+    </td>
+    
+    <td>      
+      <label>State:</label><br>
+      <% if @project.state %>
+        <%= @project.state.name %>
+      <% end %> 
+    </td>
+    
+    <td>   
+      <label>City:</label><br>
+      <% if @project.city %>
+        <%= @project.city %>
+      <% end %>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+    <label>Activity:</label><br>
+    <% if @project.activity %>
+      <%= @project.activity.name %>
+    <% end %>
+    </td>
+
+    <td>
+    <label>Owner:</label><br>
+    <% if @project.owner %>
+      <%= @project.owner.name %>
+    <% end %>
+    </td>
+
+    <td>
+      <label>Designer:</label><br>
+      <% if @project.designer %>
+        <%= @project.designer.name %>
+      <% end %>
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      <label>Contractor:</label><br>
+      <% if @project.contractor %>
+        <%= @project.contractor.name %>
+      <% end %>
+    </td>
+    
+    <td>
+      <label>Client:</label><br>
+      <% if @project.client %>
+        <%= @project.client.name %>
+      <% end %>
+    </td>    
+    
+    <td>
+      <label>Project Type:</label><br>
+      <% if @project.type %>
+        <%= @project.type.name %>
+      <% end %>
+    </td>    
+  </tr>
+  
+  <tr>
+    <td>
+      <label>Estimated Cost:</label><br>
+      <% if @project.estimated_cost %>
+        <%= @project.estimated_cost %>
+      <% end %>
+    </td>        
+    <td>
+      <label>Bid Price:</label><br>
+      <% if @project.bid_price %>
+        <%= @project.bid_price %>
+      <% end %>
+    </td>           
+    <td>
+      <label>Final Cost:</label><br>
+      <% if @project.final_cost %>
+        <%= @project.final_cost %>
+      <% end %>
+    </td>            
+  </tr>
+  
+  <tr>
+     <td colspan = 3>
+      <label>Services Performed:</label><br>
+      <% if @project.services_performed %>
+        <%= @project.services_performed %>
+      <% end %>
+    </td>            
+  </tr>
+  <tr>
+     <td colspan = 3>
+      <label>Geology:</label><br>
+      <% if @project.geology %>
+        <%= @project.geology %>
+      <% end %>
+    </td>            
+  </tr>  
+   <tr>
+     <td colspan = 3>
+      <label>Technical Data:</label><br>
+      <% if @project.technical_data %>
+        <%= @project.technical_data %>
+      <% end %>
+    </td>            
+  </tr>    
+  <tr>
+     <td colspan = 3>
+      <label>Description:</label><br>
+      <% if @project.description %>
+        <%= @project.description %>
+      <% end %>
+    </td>            
+  </tr>        
+  
+ <tr>
+     <td>
+      <label>Overburden Min:</label><br>
+      <% if @project.overburden_min %>
+        <%= @project.overburden_min %>
+      <% end %>
+	<label>Overburden Max:</label><br>
+	 <% if @project.overburden_max %>
+        <%= @project.overburden_max %>
+	<% end %>  
+    </td>            
+    
+    <td>
+      <label>Excavation Area Min:</label><br>
+      <% if @project.excavation_area_min %>
+        <%= @project.excavation_area_min %>
+      <% end %>
+	<label>Excavation Area Max:</label><br>
+	 <% if @project.excavation_area_max %>
+        <%= @project.excavation_area_max %>
+	<% end %>  
+    </td>            
+    
+    <td>
+      <label>Tunnel Length Min:</label><br>
+      <% if @project.tunnel_length_min %>
+        <%= @project.tunnel_length_min %>
+      <% end %>
+	<label>Tunnel Length Max:</label><br>
+	 <% if @project.tunnel_length_max %>
+        <%= @project.tunnel_length_max %>
+	<% end %>  
+    </td>            
+  </tr>
+  <tr>
+    <td>  
+      <label for="project_category">Project Category</label><br>
+      <ul>
+	  <% for category in @project.categories.find(:all) %>
+	    <li>
+	      <div>
+	        <%= category.name %>
+	      </div>
+	    </li>
+	  <% end %>
+      </ul>
+    </td>
+    
+    <td>
+      <label for="project_service">Project Service Areas</label><br>
+      <ul>
+	  <% for service in @project.services.find(:all) %>
+	    <li>
+	      <div>
+	        <%= service.name %>
+	      </div>
+          </li>
+	  <% end %>
+      </ul>
+    </td>
+    
+    <td>
+      <label for="project_service">Construction Method</label><br>
+      <ul>
+	  <% for construction_method in @project.construction_methods.find(:all) %>
+	    <li>
+	      <div>
+	        <%= construction_method.name %>
+	      </div>
+	    </li>
+	  <% end %>
+      </ul>
+    </td>
+  </tr>
+
+  
+  
+  <tr>
+    <td>  
+      <label for="project_special_construction_technique">Special Construction Technique</label><br>
+      <ul>
+	  <% for construction_technique in @project.construction_techniques.find(:all) %>
+	    <li>
+	      <div>
+	        <%= construction_technique.name %>
+	      </div>
+	    </li>
+	  <% end %>
+      </ul>
+    </td>
+    
+    <td>
+      <label for="project_geology">Geology</label><br>
+      <ul>
+	  <% for geology in @project.geologies.find(:all) %>
+	    <li>
+	      <div>
+	        <%= geology.name %>
+	      </div>
+          </li>
+	  <% end %>
+      </ul>
+    </td>
+    
+    
+       <td>
+      <label for="project_tunneling_under">Tunneling Under</label><br>
+      <ul>
+	  <% for tunneling_under in @project.tunneling_under.find(:all) %>
+	    <li>
+	      <div>
+	        <%= tunneling_under.name %>
+	      </div>
+          </li>
+	  <% end %>
+      </ul>
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      <label for="project_groundwater_control">Groundwater Control</label><br>
+      <ul>
+	  <% for groundwater_control in @project.groundwater_control.find(:all) %>
+	    <li>
+	      <div>
+	        <%= groundwater_control.name %>
+	      </div>
+          </li>
+	  <% end %>
+      </ul>
+    </td>
+  </tr>
+  
+   
+  <div >
+      <label for="project_media">Project Media</label><br>
+   
+	    <% for medium in @media  %>	
+		<% content_tag_for :div, medium do %>  	    
+	      <%= link_to image_tag(medium.photo.url(:thumbnail)), medium.photo.url(:original), :class => "top_up" %>
+		  <div class="desc">
+	        <%= link_to medium.title, medium_path(medium) %><br>
+			<%= truncate(medium.description, :length => 20) %>
+		  </div>
+		<% end %>
+		
+		
+		<script type="text/javascript">
+		  TopUp.images_path = "/images/top_up/";
+          TopUp.addPresets({
+            ".top_up": {
+            group: "images",
+            layout: "quicklook",
+                         }}) </script> 
+		
+		
+	  <% end %>  
+</div>     
+  
+ 
+  
+ </table> 
+  
+
+
+
+
+<br>
+<div  align = "right">
+<%= link_to 'Back', {:action => 'index'} %> |
+<%= link_to 'Edit ', {:action => 'edit'} %> |
+<%= link_to 'Delete', {:action => 'destroy'} %>
+

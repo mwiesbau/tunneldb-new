@@ -1,0 +1,52 @@
+<h1>Listing media</h1>
+
+<%if @media_count > 0 %>
+ <%= @media_count %> Media found
+<%= will_paginate @media %>
+
+
+
+<table id="media-index-table">
+  <tr>
+     <th></th>
+     <th>Image</th>
+     <th</th>
+  </tr>
+
+<% @media.each do |medium| %>
+  <tr>		
+			<td>
+			    <% if can? :read, @project %>
+				<%= link_to (image_tag("list-icons/icon-view-off.png", :border => 0, :mouseover => "list-icons/icon-view-on.png"), :action =>'show', :id => medium.id) %>
+				<% end %>
+				
+				<% if can? :update, @project %>
+				  <%= link_to (image_tag("list-icons/icon-edit-off.png", :border => 0, :mouseover => "list-icons/icon-edit-on.png"), :action =>'edit', :id => medium.id) %>
+				<% end %>
+				
+				<% if can? :destroy, @project %>
+				  <%= link_to (image_tag("list-icons/icon-delete-off.png", :border => 0, :mouseover => "list-icons/icon-delete-on.png"), medium , :confirm => 'Are you sure?', :method => :delete) %>
+				<% end %>
+			</td>
+			
+			
+			
+	        <td width="100px">
+	          <div class="medium-list">
+	            <%=image_tag medium.photo.url(:thumbnail) rescue nil %>
+		      </div>
+			</td>
+	          
+	        <td>
+	          <%= link_to medium.project.number, medium.project %><br>
+	          <%= link_to medium.project.name, medium.project %><br>
+	          <%= link_to medium.title, medium %><br>
+	          <%=h truncate(medium.description, :length => 50) %>
+	        </td>
+  </tr>
+<% end %>
+</table>
+<% end %>
+<br />
+
+<%= link_to 'New media', new_medium_path %>

@@ -2,10 +2,10 @@
 body {
 	padding: 0px 0px 0px 0px;
 	margin: 0px;
-	background-color: gray;
+	background-color: #F2F2F2;
+;
 	font-family: verdana, arial, sans-serif;
 	font-size: 10px;
-	
 	
 }
 
@@ -20,7 +20,7 @@ body, html {
 	scrollbar-Track-Color: #E5E5E5;
 }
 
-a {
+a, a:link, a:visited {
 	color: #BC7712;
 	text-decoration: none;
 	font-weight: bold;
@@ -34,28 +34,43 @@ a:hover {
 img {
 	border: none;
 }
-	
 
-div.wrapper {
-	position:absolute;
-	left:20%;
-	top:149px;
-	padding:20px;
-	background-color: #F2F2F2;
-	border-left: 1px solid #9FB7CA;
-	width:77%;
+.body-content img {
+	border: 1px solid #A0A0A0;
+	font-weight: normal;
+	margin: 0px 12px 12px 12px;
 }
 
-#footer {
-	position:relative;
-	left:0px;
-	bottom:0px;
-	padding:20px;
-	background-color: #F2F2F2;
-	border-bottom: 3px solid #9FB7CA;
-	width:100%;
-	height:20px;
+.photo-left, .photo-right, h4, h5 {
+	font-weight: normal;
+	margin: 0px 0px 16px 0px;
+	padding: 10px 0px 7px 0px;
+	background-color: #E1E1E1;
+	font-size: 9px;
+	text-align: center;
 }
+
+.photo-left img, .photo-right img, h4 img, h5 img {
+	display: block;
+	margin: 0px 0px 0px 0px;
+	border: 1px solid #A0A0A0;
+}
+
+.photo-left div, .photo-right div, h4 div, h5 div {
+	clear: both;
+} 
+
+.photo-left, h4 {
+	float: left;
+	margin-right: 10px;
+}
+
+.photo-right, h5 {
+	float: right;
+	margin-left: 10px;
+}
+
+
 .medium  {
 	position:relative;
 	padding:15px;
@@ -66,9 +81,6 @@ div.wrapper {
 	margin-right:auto;
 	float: left; 
 }
-
-
-
 
 fieldset {
 	margin: 5px;
@@ -138,6 +150,25 @@ table.form-view tr , td{
 	padding: 5px 10px 5px 10px;
 }	
 
+
+table.media-index-table tr , td{
+	padding: 5px 10px 5px 10px;
+}
+	
+.media-index-table {
+	border-collapse: collapse;
+	background-color: red;
+}
+
+.media-index-table td{
+	background-color: #f2f2f2;
+}
+
+.media-index-table tr {
+	border-bottom: 1px solid #8DA5BA;
+	vertical-align:top;
+}
+
 label{
 	font-weight: bold;
 	color: #396080;
@@ -148,13 +179,19 @@ tr.odd td{
  background-color:#fff;
 }
 
+tr.odd:hover{
+ background-color: #dde8e7;
+}
+
+tr.even:hover{
+ background-color: #cad3d5;
+}
 tr.even td{
  background-color: #ccc; 
 }
 
 .list{
 	border-collapse: collapse;
-   
 }
 
 .list tr{
@@ -176,6 +213,13 @@ tr.even td{
 	color: white;
 }
 
+.list a:link {
+	color: white;
+}
+
+.list a:visited {
+	color: white;
+}
 table.form  td , tr{
 	
 	margin:5px;
@@ -284,20 +328,20 @@ margin: 2px;
 border: 1px solid #AAAADD;
 
 text-decoration: none; /* no underline */
-color: #000099;
+color: gray;
 }
 div.pagination a:hover, div.pagination a:active {
-border: 1px solid #000099;
+border: 1px solid gray;
 
 color: #000;
 }
 div.pagination span.current {
 padding: 2px 5px 2px 5px;
 margin: 2px;
-border: 1px solid #000099;
+border: 1px solid gray;
 
 font-weight: bold;
-background-color: #000099;
+background-color: gray;
 color: #FFF;
 }
 div.pagination span.disabled {
@@ -308,24 +352,19 @@ border: 1px solid #EEE;
 color: #DDD;
 }
 
-
-
-
 /* Start  ------ ############# Testing Area ###########################*/	
 #notice {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
-	width: 40%;
-	border: 4px solid red;
+	width: 30%;
+	border: 2px solid gray;
 	margin-top: 50px;
 	font-weight: bold;
 	font-size: medium;
 	color: red;
-	padding: 20px;
+	padding: 10px;
 	font-weight: bold;
 }
-
-
 
 /* Start  ------ ############# Testing Area ###########################*/	

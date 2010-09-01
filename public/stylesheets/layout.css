@@ -1,0 +1,248 @@
+#page-header {
+    position: fixed;
+    z-index: 1000;
+    top: 0px;
+    left: 0px;
+    height: 60px;
+    width: 100%;
+    background-image: url(../images/header_bg.png);
+}
+
+#page-header form {
+    position: absolute;
+    top: 20px;
+    right: 12px;
+    margin: 0px;
+    padding: 0px;
+    width: 380px;
+    color: #FFFFFF;
+}
+
+#page-header form a {
+    font-size: 10px;
+    color: #FFFFFF;
+    font-weight: normal;
+}
+
+#page-header label {
+    width: auto;
+    font-size: 10px;
+    color: #FFFFFF;
+}
+
+#page-header input.text {
+    border-top: 2px inset #1F1F1F;
+    border-left: 2px inset #1F1F1F;
+    width: 116px;
+    background-color: #D8E7F4;
+    font-size: 10px;
+}
+
+#header-menu-botton {
+    background: url(../images/submit_arrow.png) no-repeat center;
+    padding: 1px;
+    border: 0px;
+    width: 16px;
+}
+
+/*
+ Top Navigation Menue
+ */
+
+#top-nav {
+    position: fixed;
+    z-index: 1000;
+    top: 60px;
+    left: 0px;
+    height: 25px;
+    width: 100%;
+    background: url(../images/topnav_bg.png) repeat-x;
+    padding: 0px 0px 0px 0px;
+}
+
+#top-nav ul {
+    margin: 0 auto;
+    background: url(../images/topnav_bg.png);
+    min-height: 1.0em;
+    width: 100%;
+    border-bottom: 3px solid #455E74;
+    z-index: 10;
+}
+
+#top-nav div {
+    background-color: #009;
+    min-height: 1.0em;
+}
+
+#top-nav span {
+}
+
+#top-nav ul:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.ie6 #top-nav, .ie6 #top-nav ul {
+    height: 2em;
+    overflow: visible;
+}
+
+#top-nav li {
+    border-left: 1px solid #7993A9;
+    float: left;
+    min-width: 15%;
+    list-style-type: none;
+    position: relative;
+    z-index: 100;
+    text-align: center;
+}
+
+#top-nav a {
+    color: #D3DADD;
+    padding: 5px 15px 5px 15px;
+}
+
+#top-nav li a {
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#top-nav li a span {
+    text-decoration: none;
+}
+
+#top-nav li.selected a, #top-nav li a:hover {
+    Background-color: #455E74;
+}
+
+#top-nav li.selected a span {
+    background: url(../images/bullet_selected.png) no-repeat 0 50%;
+    padding-left: 10px;
+}
+
+#top-nav .child-menu {
+    display: none;
+}
+
+/*
+ Side bar and left Navigation
+ */
+
+#sidebar {
+    margin-top: 83px;
+    float: left;
+    min-height: 500px;
+    width: 15%;
+    background-color: #F2F2F2;
+
+}
+
+#sidebar a {
+    display: block;
+    border-top: 0px solid #FFFFFF;
+    border-bottom: 1px solid #C1C1C1;
+    padding: 5px 10px 3px 0px;
+    height: auto;
+    background-color: #EDEDED;
+    font-size: 10px;
+    font-weight: bold;
+    color: #396080;
+    text-decoration: none;
+}
+
+#sidebar a:hover, #leftnav a.down {
+    background-image: url("../images/dsc-leftnav/leftnav_selected_bg.png");
+    background-position: 0px 0px;
+    background-repeat: repeat-y;
+}
+
+/*
+ Main Content Area
+ */
+
+#main-area {
+    margin-top: 83px;
+    float: left;
+    min-height: 500px;
+    width: 85%;
+    background-color: #e0dfe3;
+}
+
+#wrapper {
+    background-color:#f2f2f2;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #f0f0f0;
+    margin: 2px;
+    padding: 25px;
+	min-height: 460px;
+}
+
+    /*
+     Page Footer
+     */
+#page-footer {
+        clear: both;
+        min-height: 18px;
+        color: #FDF2DF;
+        padding: 2px;
+        background-color: #7993a9;
+        border-top: 3px solid #d1d1d1;
+        width: 100%;
+        margin-bottom: 20px;
+		padding: 
+}
+
+div.copyrights {
+	font-weight:bold;
+	margin:0px 50px 0px 50px;
+	float:left;
+}
+
+div.login {
+	float:right;
+	margin:0px 50px 0px 50px;
+	color:#e8f7ff;
+}
+
+div.login a:link, a:visited {
+	color:#e8f7ff;
+}
+
+div.login a:hover{
+	color:#ffff95;
+}
+table.v-aligned-form-fields {
+	margin:20px;
+	width:inherit;
+	 
+}
+.v-aligned-form-fields th {
+	 
+	text-align:right;
+	vertical-align:middle;
+	
+}
+
+fieldset {
+	   -moz-border-radius-bottomleft: 15px;
+	   -moz-border-radius-bottomright: 15px;
+	   -moz-border-radius-topleft: 15px;
+	   -moz-border-radius-topright: 15px;
+	   -webkit-border-radius: 15px;
+	   border-radius: 15px;
+	   padding:15px;
+	   border-color:#c8c8c8
+	   width:inherit;
+}
+
+fieldset legend{
+	color:#005b88;
+	font-size:16px;
+	font-weight:bold;
+	padding:15px;
+}

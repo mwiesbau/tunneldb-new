@@ -4,11 +4,7 @@
   <%= f.error_messages %>
 
  
-  <p>  	
-	<td><label for="project">Project:</label>
-	<%= collection_select(:medium,:project_id,@projects,:id,:name) %>
- </p> 
-  
+
   <p>
     <%= f.label :title %><br />
     <%= f.text_field :title %>
@@ -24,7 +20,7 @@
   </p>
   
   <p>
-     <td class="input-date"><label for="date">Date:</label><br>
+    <label for="date">Date:</label><br>
     <%= calendar_field 'medium', 'date',
        { :class => 'date',         
          :field_title => 'Date',
@@ -34,7 +30,7 @@
          :step => 1,
          :showOthers => true,
          :cache => true }
-      %> </td>  
+      %> 
   </p>
   
    <p>
@@ -62,25 +58,23 @@
     <%= f.text_field :isbn %>
   </p>
   
-  
-   <td width=33%><label for="medium_construction_method">
+ <label for="medium_construction_method">
         <h2>Construction Method</h2>
         </label>
         <br/>
         <% for construction_method in ConstructionMethod.find(:all) %>
         <div> <%= check_box_tag"medium[construction_method_ids][]",construction_method.id,@medium.construction_methods.include?(construction_method) %> <%= construction_method.name %> </div>
         <% end %>
-      </td width=25%>
+   
   
-	<td width=33%><label for="medium_construction_technique">
+<label for="medium_construction_technique">
         <h2>Special Construction Technique</h2>
         </label>
         <br/>
         <% for construction_technique in ConstructionTechnique.find(:all) %>
         <div> <%= check_box_tag"medium[construction_technique_ids][]",construction_technique.id,@medium.construction_techniques.include?(construction_technique) %> <%= construction_technique.name %> </div>
         <% end %>
-      </td> 
-  
+ 
   <td width=33%><label for="medium_geology">
         <h2>Geology</h2>
         </label>

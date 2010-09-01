@@ -1,0 +1,7 @@
+<%=
+if @country
+  options_from_collection_for_select(@country.states, :id, :name)
+else
+  options_for_select([["Nothing to select", ""]])
+end
+%>

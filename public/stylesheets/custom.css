@@ -133,40 +133,6 @@
 
 /*  Footer and Bottom Navigation Added By HM*/
 
-#footer .copyright-notice {
-    background-color: #90AEC5;
-	font-weight: bold;
-	color: #FFF;
-	border-top: 3px solid #BFBFBF;
-	border-bottom: 1px solid #396080;
-	padding: 2px;
-	
-}
-
-#footer div {
-	background-image: url(../images/dsc-misc/footer-right.png);
-}
-
-#footer a {
-	color: #D7D7D7;
-	text-decoration: none;
-}
-
-#footer li a:hover {
-	color: #D7D7D7;
-	text-decoration: underline;
-}
-
-#footer ul {
-	right: 0;
-	text-align: center;
-}
-#footer li {
-	color: #396080;
-	display: inline;
-	margin-left: 9px;
-	padding-right: 8px;
-}
 
 #list-01{
 	width: 100%;
@@ -212,36 +178,15 @@
 
 }
 
-#header-menu {
-	position: fixed; right:20px; top:10px;
-	color:#fff;
-	font-size:0.9em;
-}
 
-#header-menu a {
-	color:#fff;
-	font-weight: normal;
-}
-
-#header-menu input {
-padding:1px;
-}
-
-#header-menu-botton {
-	background: url(../images/dsc-misc/dsc-submit_arrow.png) no-repeat center;
-	padding:1px;
-	border: 0px;
-	width:16px;
-}
 /* ---------- Main navigation ---Modified for DSC-Original Theme------- */
 
 #leftnav {
 	position:absolute;
 	left:0px;
-	top:150px;
-	height:100%;
+	top:100px;
 	/* min-height:500px; */
-	width: 20%;
+	width: 15%;
 	vertical-align: top;
 	background-color: #EDEDED;
 }

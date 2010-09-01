@@ -1,0 +1,54 @@
+
+ 
+
+<div>
+The Dr. Sauer Group has carried out Consulting, Design, Site Supervision and Construction Management&nbsp;Services on more than 400 Tunneling Projects all over the world over the last 25 years.<br><br>
+
+In this section, we have compiled a selection of&nbsp; projects with summary information, images and brief descriptions. The projects are grouped into the ctegories below. Currently, about 20 percent of the projects we carried out can be researched through this database; we will continue adding&nbsp;information in the future, so be sure to check back!<br> 
+For an in-depth review of selected projects, please visit our <a href="/projects/featured"><strong>Featured Projects Section</strong>.<br>
+Please do not hesitate to contact us.<br>
+<a href="/contact_us"><strong>using&nbsp;the&nbsp;information request form</strong>&nbsp;</a>or by<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/company/locations"><strong>emailing or calling any of our offices</strong> </a><br/>to receive additional information about the projects listed in this section!<br>
+
+</div>
+<br><br>
+
+
+
+
+
+<div id="list-01">
+
+<h1 class="head">Select Project Category</h1><br><br>
+
+<% @categories.each do |category| %>
+  
+  
+  
+  
+  <li><%= link_to category.name, "#", :onclick => "Effect.toggle('category_#{category.id}', 'slide'); return true;" %></li>
+  
+  <% div_for(category, :class => "list", :style => "display:none;" ) do %>
+
+  
+    <div>
+	  <% category.projects.each do |project| %> 
+        <% if project.published  %>	
+	      <%= link_to project.number, project_path(project), :class => "entry" %>
+	      <%= link_to project.name, project_path(project), :class => "entry" %>
+        <% end %>
+	  <% end %>
+    </div>
+  <% end %>
+<% end %>
+</div>
+				
+
+
+
+
+
+
+
+
+											
+											
